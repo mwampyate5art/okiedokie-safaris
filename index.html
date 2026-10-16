@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Okie Dokie Safaris | Luxury Tanzania Safari, Kilimanjaro Trekking & Expeditions</title>
+  <meta name="description" content="Okie Dokie Safaris - We take the world to the nature. Mount Kilimanjaro climbs, Tanzania wildlife safaris, Magoroto forest retreats, volunteer projects, and Zanzibar beach getaways.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/img/logo.png">
+
+  <!-- Google Fonts: Includes Logo Fonts Michroma & Quicksand, plus Cinzel & Plus Jakarta Sans -->
+  <link href="https://fonts.cdnfonts.com/css/neuropol-x" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/neuropol-x" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/neuropol-x" rel="stylesheet">
+  <!-- Font Awesome Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- ===================================================================
+       TOP CONTACT & GLOBAL LANGUAGE SWITCHER BAR
+       =================================================================== -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="top-contact">
+        <span><i class="fa-solid fa-location-dot"></i> Arusha & Moshi, Tanzania</span>
+        <a href="mailto:info@okiedokiesafaris.co.tz"><i class="fa-solid fa-envelope"></i> info@okiedokiesafaris.co.tz</a>
+        <a href="https://wa.me/255744779970" target="_blank"><i class="fa-brands fa-whatsapp"></i> +255 744 779 970</a>
+      </div>
+
+      <div class="top-actions">
+        <!-- Multilingual Global Language Switcher -->
+        <div class="lang-selector-wrapper">
+          <button class="lang-btn" id="langToggleBtn" aria-label="Select Language">
+            <i class="fa-solid fa-globe"></i> English <i class="fa-solid fa-chevron-down" style="font-size: 0.75rem;"></i>
+          </button>
+          <div class="lang-dropdown" id="langDropdown">
+            <a href="javascript:void(0)" onclick="switchLanguage('en', 'English')">
+              <span>🇺🇸</span> English
+            </a>
+            <a href="javascript:void(0)" onclick="switchLanguage('sw', 'Kiswahili')">
+              <span>🇹🇿</span> Kiswahili
+            </a>
+            <a href="javascript:void(0)" onclick="switchLanguage('fr', 'Français')">
+              <span>🇫🇷</span> Français
+            </a>
+            <a href="javascript:void(0)" onclick="switchLanguage('de', 'Deutsch')">
+              <span>🇩🇪</span> Deutsch
+            </a>
+            <a href="javascript:void(0)" onclick="switchLanguage('es', 'Español')">
+              <span>🇪🇸</span> Español
+            </a>
+            <a href="javascript:void(0)" onclick="switchLanguage('it', 'Italiano')">
+              <span>🇮🇹</span> Italiano
+            </a>
+            <a href="javascript:void(0)" onclick="switchLanguage('zh-CN', '中文')">
+              <span>🇨🇳</span> 中文
+            </a>
+          </div>
+        </div>
+
+        <!-- Google Translate Integration Widget for all world languages -->
+        <div id="google_translate_element"></div>
+
+        <div class="top-socials">
+          <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://tripadvisor.com" target="_blank" aria-label="TripAdvisor"><i class="fa-brands fa-tripadvisor"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================================================================
+       MAIN NAVIGATION
+       =================================================================== -->
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" class="brand-logo">
+        <img src="assets/img/logo.png" alt="Okie Dokie Safaris Logo">
+      </a>
+
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link active">Home</a>
+ <a href="safari.html" class="nav-link">Safari Packages</a>
+        <div class="nav-item-dropdown">
+          <a href="kilimanjaro.html" class="nav-link">
+            Kilimanjaro <i class="fa-solid fa-chevron-down" style="font-size: 0.7rem; margin-left: 2px;"></i>
+          </a>
+          <div class="nav-sub-menu">
+            <a href="kilimanjaro.html" class="nav-sub-link"><i class="fa-solid fa-mountain"></i> Overview & Pricing Matrix</a>
+            <a href="kilimanjaro-marangu.html" class="nav-sub-link"><i class="fa-solid fa-hotel"></i> Marangu Route (6 Days)</a>
+            <a href="kilimanjaro-rongai.html" class="nav-sub-link"><i class="fa-solid fa-compass"></i> Rongai Route (6 Days)</a>
+            <a href="kilimanjaro-machame.html" class="nav-sub-link"><i class="fa-solid fa-fire"></i> Machame Route (7 Days VIP)</a>
+            <a href="kilimanjaro-lemosho.html" class="nav-sub-link"><i class="fa-solid fa-eye"></i> Lemosho Route (7 Days VIP)</a>
+          </div>
+        </div>
+
+       <a href="day trips.html" class="nav-link">Day Trips</a>
+        <a href="beach-safari.html" class="nav-link">Beach Safari</a>
+        <a href="volunteers.html" class="nav-link">Volunteers</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="btn btn-primary" onclick="openBookingWhatsApp('General Safari Inquiry', 'VIP/Standard', 'Flexible', 'Hello Okie Dokie Safaris! I want to plan my dream adventure in Tanzania. Please assist me.')">
+          <i class="fa-solid fa-compass"></i> Book Now
+        </button>
+        <button class="mobile-nav-toggle" aria-label="Toggle navigation">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================================================================
+       HERO SECTION WITH LUXURY SLIDER
+       =================================================================== -->
+  <section class="hero-section">
+    <div class="hero-slider-bg">
+      <div class="hero-slide-img active" style="background-image: url('assets/img/COFEE1.jpeg');"></div>
+      <div class="hero-slide-img" style="background-image: url('assets/img/kilimanjaro.jpeg');"></div>
+      <div class="hero-slide-img" style="background-image: url('assets/img/home.jpeg');"></div>
+    </div>
+    <div class="hero-overlay"></div>
+
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <i class="fa-solid fa-award"></i> Premier Tanzanian Safari & Mountain Outfitter
+        </div>
+        <h1 class="hero-title">
+          Experience Pure Africa with <span>Okie Dokie Safaris</span>
+        </h1>
+        <p class="hero-slogan brand-slogan" style="color: #DFB254; font-size: 1.35rem; font-style: normal; margin-bottom: 1.2rem;">"we take the world to the nature"</p>
+        <p class="hero-desc">
+          From the soaring arctic summit of Mount Kilimanjaro to the legendary endless plains of the Serengeti, lush rainforests of Magoroto, and azure waters of Chemka and Zanzibar — your life-changing Tanzanian expedition starts here.
+        </p>
+
+        <div class="hero-btns">
+          <a href="#destinations" class="btn btn-primary btn-lg">
+            <i class="fa-solid fa-mountain-sun"></i> Explore Destinations
+          </a>
+          <button class="btn btn-outline btn-lg" onclick="openVideoModal('kilimanjaro')">
+            <i class="fa-solid fa-circle-play"></i> Watch Experience Film
+          </button>
+          <button class="btn btn-whatsapp btn-lg" onclick="openBookingWhatsApp('General Inquiry', 'Tailor-Made', 'Any', 'Hello Okie Dokie Safaris! I would like to plan a custom trip in Tanzania.')">
+            <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+          </button>
+        </div>
+
+        <!-- Quick Trust Indicators -->
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-num">5,895m</span>
+            <span class="stat-label">Roof of Africa (Uhuru)</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">98.5%</span>
+            <span class="stat-label">VIP Summit Success Rate</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">100%</span>
+            <span class="stat-label">Guaranteed Departures</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">5.0 ★</span>
+            <span class="stat-label">Verified Traveler Reviews</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       THE 6 DESTINATIONS SECTION
+       (6 Cards, each automatically cycling 3 images periodically!)
+       =================================================================== -->
+  <section class="destinations-section" id="destinations">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle"><i class="fa-solid fa-map-location-dot"></i> Unrivaled Experiences</span>
+        <h2 class="section-title">Our Signature Destinations</h2>
+        <p class="section-desc">
+          Click on any destination below to uncover day-by-day itineraries, short cinematic previews, full package rates, VIP vs Standard options, and direct WhatsApp booking.
+        </p>
+      </div>
+
+      <div class="destinations-grid">
+
+        <!-- 1. KILIMANJARO (3 Auto-Rotating Images) -->
+        <div class="dest-card" id="card-kilimanjaro">
+          <div class="dest-media">
+            <a href="kilimanjaro.html" class="dest-media-link" aria-label="Explore Kilimanjaro"></a>
+            <img src="assets/img/kilimanjaro.jpeg" alt="Mount Kilimanjaro Peak" class="dest-slide-img active" loading="lazy" decoding="async">
+            <img src="assets/img/kilimanjaro1.jpeg" alt="Kilimanjaro Trekking Trail" class="dest-slide-img" loading="lazy" decoding="async">
+            <img src="assets/img/kilimanjaro2.jpeg" alt="Uhuru Peak Summit Sign" class="dest-slide-img" loading="lazy" decoding="async">
+            <div class="dest-overlay"></div>
+          </div>
+          <div class="dest-badge"><i class="fa-solid fa-mountain"></i> Trekking & Peaks</div>
+          <div class="dest-indicators">
+            <span class="dest-dot active" title="Image 1"></span>
+            <span class="dest-dot" title="Image 2"></span>
+            <span class="dest-dot" title="Image 3"></span>
+          </div>
+          <div class="dest-content">
+            <h3 class="dest-name"><a href="kilimanjaro.html" style="color: inherit; text-decoration: none;">Kilimanjaro</a></h3>
+            <p class="dest-desc">
+              Conquer the Roof of Africa (5,895m). Explore classic Marangu, scenic Rongai, iconic Machame & pristine Lemosho with VIP luxury gear and certified mountain crews.
+            </p>
+            <div class="dest-footer">
+              <a href="kilimanjaro.html" class="dest-link-btn">
+                Explore Routes & Pricing <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <span class="dest-highlights-count">4 VIP Routes</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. SAFARI (3 Auto-Rotating Images) -->
+        <div class="dest-card" id="card-safari">
+          <div class="dest-media">
+            <a href="safari.html" class="dest-media-link" aria-label="Explore Safari Packages"></a>
+            <img src="assets/img/safari.jpeg" alt="Serengeti Lions" class="dest-slide-img active" loading="lazy" decoding="async">
+            <img src="assets/img/safari1.jpeg" alt="Tarangire Elephants" class="dest-slide-img" loading="lazy" decoding="async">
+            <img src="assets/img/safari2.jpeg" alt="African Wildlife Safari" class="dest-slide-img" loading="lazy" decoding="async">
+            <div class="dest-overlay"></div>
+          </div>
+          <div class="dest-badge"><i class="fa-solid fa-paw"></i> Wildlife & Big Five</div>
+          <div class="dest-indicators">
+            <span class="dest-dot active" title="Image 1"></span>
+            <span class="dest-dot" title="Image 2"></span>
+            <span class="dest-dot" title="Image 3"></span>
+          </div>
+          <div class="dest-content">
+            <h3 class="dest-name"><a href="safari.html" style="color: inherit; text-decoration: none;">Safari</a></h3>
+            <p class="dest-desc">
+              Witness the Great Serengeti Migration, explore Ngorongoro Crater, massive Tarangire elephant herds, Kitulo wildflowers & Gombe chimpanzees.
+            </p>
+            <div class="dest-footer">
+              <a href="safari.html" class="dest-link-btn">
+                View Safari Packages <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <span class="dest-highlights-count">8 Packages</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. COFFEE TOUR & HOTSPRING (3 Auto-Rotating Images) -->
+        <div class="dest-card" id="card-coffee">
+          <div class="dest-media">
+            <a href="day trips.html#materuni-section" class="dest-media-link" aria-label="Explore Coffee Tour & Hotspring"></a>
+            <img src="assets/img/COFEE1.jpeg" alt="Chagga Coffee Plantation" class="dest-slide-img active" loading="lazy" decoding="async">
+            <img src="assets/img/chemka.jpeg" alt="Materuni Waterfalls" class="dest-slide-img" loading="lazy" decoding="async">
+            <img src="assets/img/materuni.jpeg" alt="Chemka Geothermal Hotspring" class="dest-slide-img" loading="lazy" decoding="async">
+            <div class="dest-overlay"></div>
+          </div>
+          <div class="dest-badge"><i class="fa-solid fa-mug-hot"></i> Culture & Thermal Springs</div>
+          <div class="dest-indicators">
+            <span class="dest-dot active" title="Image 1"></span>
+            <span class="dest-dot" title="Image 2"></span>
+            <span class="dest-dot" title="Image 3"></span>
+          </div>
+          <div class="dest-content">
+            <h3 class="dest-name"><a href="day trips.html#materuni-section" style="color: inherit; text-decoration: none;">Coffee Tour & Hotspring</a></h3>
+            <p class="dest-desc">
+              Materuni waterfall hike, organic Chagga coffee making with local folk songs, followed by a warm swim in Chemka (Kikuletwa) turquoise geothermal waters.
+            </p>
+            <div class="dest-footer">
+              <a href="day trips.html#materuni-section" class="dest-link-btn">
+                View Day Trip Itinerary <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <span class="dest-highlights-count">Day & Overnight</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. MAGOROTO TRIP (3 Auto-Rotating Images) -->
+        <div class="dest-card" id="card-magoroto">
+          <div class="dest-media">
+            <a href="day trips.html#magoroto-section" class="dest-media-link" aria-label="Explore Magoroto Trips"></a>
+            <img src="assets/img/magoroto-card-1.jpg" alt="Magoroto Forest Lake" class="dest-slide-img active" loading="lazy" decoding="async">
+            <img src="assets/img/magoroto-card-2.jpg" alt="Lush East Usambara Forest" class="dest-slide-img" loading="lazy" decoding="async">
+            <img src="assets/img/magoroto-card-3.jpg" alt="Magoroto Campfire and Cabins" class="dest-slide-img" loading="lazy" decoding="async">
+            <div class="dest-overlay"></div>
+          </div>
+          <div class="dest-badge"><i class="fa-solid fa-tree"></i> Mountain & Lake Estate</div>
+          <div class="dest-indicators">
+            <span class="dest-dot active" title="Image 1"></span>
+            <span class="dest-dot" title="Image 2"></span>
+            <span class="dest-dot" title="Image 3"></span>
+          </div>
+          <div class="dest-content">
+            <h3 class="dest-name"><a href="day trips.html#magoroto-section" style="color: inherit; text-decoration: none;">Magoroto Trip</a></h3>
+            <p class="dest-desc">
+              Immerse in the pristine Usambara mountain rainforest. Spring-fed lake swimming, waterfalls, canoeing, hiking, spice farm tours & starry campfire nights.
+            </p>
+            <div class="dest-footer">
+              <a href="day trips.html#magoroto-section" class="dest-link-btn">
+                Explore Magoroto Trips <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <span class="dest-highlights-count">3 Escapes</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. BEACH SAFARI (3 Auto-Rotating Images) -->
+        <div class="dest-card" id="card-beach">
+          <div class="dest-media">
+            <a href="beach-safari.html" class="dest-media-link" aria-label="Explore Beach Safari"></a>
+            <img src="assets/img/zanzibar.jpeg" alt="Zanzibar Turquoise Waters" class="dest-slide-img active" loading="lazy" decoding="async">
+            <img src="assets/img/zanzibar1.jpeg" alt="Zanzibar Sunset Dhow Sail" class="dest-slide-img" loading="lazy" decoding="async">
+            <img src="assets/img/zanzibar2.jpeg" alt="Zanzibar White Sand Beach" class="dest-slide-img" loading="lazy" decoding="async">
+            <div class="dest-overlay"></div>
+          </div>
+          <div class="dest-badge"><i class="fa-solid fa-umbrella-beach"></i> Island & Bush-to-Beach</div>
+          <div class="dest-indicators">
+            <span class="dest-dot active" title="Image 1"></span>
+            <span class="dest-dot" title="Image 2"></span>
+            <span class="dest-dot" title="Image 3"></span>
+          </div>
+          <div class="dest-content">
+            <h3 class="dest-name"><a href="beach-safari.html" style="color: inherit; text-decoration: none;">Beach Safari</a></h3>
+            <p class="dest-desc">
+              Relax on powdery white sands in Zanzibar, explore historic Stone Town, snorkel with dolphins at Mnemba Atoll, or pair with a wild bush safari.
+            </p>
+            <div class="dest-footer">
+              <a href="beach-safari.html" class="dest-link-btn">
+                Discover Coastal Getaways <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <span class="dest-highlights-count">Bush + Beach</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. VOLUNTEERS (3 Auto-Rotating Images) -->
+        <div class="dest-card" id="card-volunteers">
+          <div class="dest-media">
+            <a href="volunteers.html" class="dest-media-link" aria-label="Explore Volunteer Projects"></a>
+            <img src="assets/img/volunteer-card-1.jpg" alt="Education Volunteering" class="dest-slide-img active" loading="lazy" decoding="async">
+            <img src="assets/img/volunteer-card-2.jpg" alt="Healthcare Support Tanzania" class="dest-slide-img" loading="lazy" decoding="async">
+            <img src="assets/img/volunteer-card-3.jpg" alt="Conservation and Ecology" class="dest-slide-img" loading="lazy" decoding="async">
+            <div class="dest-overlay"></div>
+          </div>
+          <div class="dest-badge"><i class="fa-solid fa-hand-holding-heart"></i> Community Impact</div>
+          <div class="dest-indicators">
+            <span class="dest-dot active" title="Image 1"></span>
+            <span class="dest-dot" title="Image 2"></span>
+            <span class="dest-dot" title="Image 3"></span>
+          </div>
+          <div class="dest-content">
+            <h3 class="dest-name"><a href="volunteers.html" style="color: inherit; text-decoration: none;">Volunteers</a></h3>
+            <p class="dest-desc">
+              Make a difference in Tanzania. Meaningful community-led programs in healthcare, education, elderly care, children support, disability, and conservation.
+            </p>
+            <div class="dest-footer">
+              <a href="volunteers.html" class="dest-link-btn">
+                Explore Volunteer Projects <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <span class="dest-highlights-count">7 Projects</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       WHY CHOOSE OKIE DOKIE SAFARIS
+       =================================================================== -->
+  <section style="background: var(--dark-surface); color: #FFF; padding: 6rem 0;">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle"><i class="fa-solid fa-shield-halved"></i> The Okie Dokie Standard</span>
+        <h2 class="section-title" style="color: #FFF;">Why Travelers Across the Globe Choose Us</h2>
+        <p class="section-desc" style="color: var(--text-light-muted);">
+          We deliver unmatched safety, authentic local immersion, ethical crew treatment, and luxury field accommodations.
+        </p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2rem;">
+        <div style="background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(212, 163, 89, 0.25); border-radius: var(--radius-md); padding: 2.2rem; text-align: center;">
+          <div style="width: 70px; height: 70px; margin: 0 auto 1.5rem auto; background: rgba(212, 163, 89, 0.15); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; color: var(--primary);">
+            <i class="fa-solid fa-heart-pulse"></i>
+          </div>
+          <h3 style="font-family: var(--font-heading); font-size: 1.25rem; margin-bottom: 0.8rem; color: #FFF;">Wilderness Certified Safety</h3>
+          <p style="color: var(--text-light-muted); font-size: 0.92rem; line-height: 1.6;">
+            Certified Wilderness First Responder (WFR) guides, continuous pulse oximeter monitoring, emergency medical oxygen cylinders, and evacuation protocols.
+          </p>
+        </div>
+
+        <div style="background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(212, 163, 89, 0.25); border-radius: var(--radius-md); padding: 2.2rem; text-align: center;">
+          <div style="width: 70px; height: 70px; margin: 0 auto 1.5rem auto; background: rgba(212, 163, 89, 0.15); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; color: var(--primary);">
+            <i class="fa-solid fa-crown"></i>
+          </div>
+          <h3 style="font-family: var(--font-heading); font-size: 1.25rem; margin-bottom: 0.8rem; color: #FFF;">VIP Luxury Equipment</h3>
+          <p style="color: var(--text-light-muted); font-size: 0.92rem; line-height: 1.6;">
+            Walk-in mountain tents, camping cots with thick foam mattresses, private portable flush toilets, heated dining tents, and 4-5 crew members per client.
+          </p>
+        </div>
+
+        <div style="background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(212, 163, 89, 0.25); border-radius: var(--radius-md); padding: 2.2rem; text-align: center;">
+          <div style="width: 70px; height: 70px; margin: 0 auto 1.5rem auto; background: rgba(212, 163, 89, 0.15); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; color: var(--primary);">
+            <i class="fa-solid fa-utensils"></i>
+          </div>
+          <h3 style="font-family: var(--font-heading); font-size: 1.25rem; margin-bottom: 0.8rem; color: #FFF;">Executive Mountain Chefs</h3>
+          <p style="color: var(--text-light-muted); font-size: 0.92rem; line-height: 1.6;">
+            3 fresh, hot chef-prepared meals daily tailored to vegetarian, vegan, and gluten-free diets, accompanied by purified hot beverages on demand.
+          </p>
+        </div>
+
+        <div style="background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(212, 163, 89, 0.25); border-radius: var(--radius-md); padding: 2.2rem; text-align: center;">
+          <div style="width: 70px; height: 70px; margin: 0 auto 1.5rem auto; background: rgba(212, 163, 89, 0.15); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; color: var(--primary);">
+            <i class="fa-solid fa-people-carry-box"></i>
+          </div>
+          <h3 style="font-family: var(--font-heading); font-size: 1.25rem; margin-bottom: 0.8rem; color: #FFF;">Fair Porter Treatment</h3>
+          <p style="color: var(--text-light-muted); font-size: 0.92rem; line-height: 1.6;">
+            We strictly adhere to fair-wage practices, proper warm gear, balanced load limits, and ethical porter care standards across all routes.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       TESTIMONIALS & TRAVELER STORIES
+       =================================================================== -->
+  <section style="padding: 6.5rem 0; background: #FAF7F2;">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle"><i class="fa-solid fa-comment-dots"></i> Traveler Voices</span>
+        <h2 class="section-title">Memories of a Lifetime</h2>
+        <p class="section-desc">Read how Okie Dokie Safaris transformed dreams into unforgettable African adventures.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem;">
+        <div style="background: #FFF; border-radius: var(--radius-md); padding: 2.2rem; border: 1px solid var(--light-border); box-shadow: var(--shadow-sm);">
+          <div style="color: #F5A623; margin-bottom: 1rem;">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p style="font-style: italic; color: var(--text-main); margin-bottom: 1.5rem; line-height: 1.7;">
+            "Reaching Uhuru Peak via the 7-day Machame VIP package with Okie Dokie was beyond anything I imagined. The guides paced us so carefully, the chef made hot soup at 4,700m, and the private tent was pure luxury."
+          </p>
+          <div style="display: flex; align-items: center; gap: 0.9rem;">
+            <div style="width: 45px; height: 45px; border-radius: 50%; background: var(--primary); display: flex; align-items: center; justify-content: center; font-weight: 700; color: #111;">DW</div>
+            <div>
+              <strong style="display: block; color: var(--dark);">David & Sarah W.</strong>
+              <small style="color: var(--text-muted);">Machame VIP Trek • United Kingdom</small>
+            </div>
+          </div>
+        </div>
+
+        <div style="background: #FFF; border-radius: var(--radius-md); padding: 2.2rem; border: 1px solid var(--light-border); box-shadow: var(--shadow-sm);">
+          <div style="color: #F5A623; margin-bottom: 1rem;">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p style="font-style: italic; color: var(--text-main); margin-bottom: 1.5rem; line-height: 1.7;">
+            "Our 7-Day Serengeti and Ngorongoro safari was breathtaking! We saw the Big Five in just three days. Our Okie Dokie driver had eagle eyes and taught our kids so much about African wildlife."
+          </p>
+          <div style="display: flex; align-items: center; gap: 0.9rem;">
+            <div style="width: 45px; height: 45px; border-radius: 50%; background: var(--primary); display: flex; align-items: center; justify-content: center; font-weight: 700; color: #111;">EL</div>
+            <div>
+              <strong style="display: block; color: var(--dark);">Elena Lindqvist</strong>
+              <small style="color: var(--text-muted);">7-Day Wildlife Safari • Sweden</small>
+            </div>
+          </div>
+        </div>
+
+        <div style="background: #FFF; border-radius: var(--radius-md); padding: 2.2rem; border: 1px solid var(--light-border); box-shadow: var(--shadow-sm);">
+          <div style="color: #F5A623; margin-bottom: 1rem;">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p style="font-style: italic; color: var(--text-main); margin-bottom: 1.5rem; line-height: 1.7;">
+            "The volunteer project in Moshi followed by a weekend in Magoroto Forest Estate was the most enriching month of my life. Okie Dokie Safaris arranged everything seamlessly from airport pickup to orientation."
+          </p>
+          <div style="display: flex; align-items: center; gap: 0.9rem;">
+            <div style="width: 45px; height: 45px; border-radius: 50%; background: var(--primary); display: flex; align-items: center; justify-content: center; font-weight: 700; color: #111;">JM</div>
+            <div>
+              <strong style="display: block; color: var(--dark);">Jessica Miller</strong>
+              <small style="color: var(--text-muted);">Healthcare Volunteer & Magoroto • USA</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       CALL TO ACTION BANNER
+       =================================================================== -->
+  <section style="background: linear-gradient(rgba(17, 20, 19, 0.88), rgba(17, 20, 19, 0.88)), url('assets/img/hero-bg.jpg') center/cover; padding: 5rem 0; text-align: center; color: #FFF;">
+    <div class="container container-narrow">
+      <h2 style="font-family: var(--font-heading); font-size: clamp(2rem, 3.5vw, 3rem); margin-bottom: 1.2rem;">
+        Ready to Step Into the Wild Heart of Africa?
+      </h2>
+      <p style="color: #DDD; font-size: 1.1rem; margin-bottom: 2.2rem; line-height: 1.7;">
+        Whether you desire the thrill of summiting Kilimanjaro, a private Big Five safari, relaxing in Magoroto, or volunteering to empower local communities — our experts are standing by 24/7.
+      </p>
+      <div style="display: flex; justify-content: center; gap: 1.2rem; flex-wrap: wrap;">
+        <button class="btn btn-whatsapp btn-lg" onclick="openBookingWhatsApp('Custom Expedition', 'Tailor-Made', 'Flexible', 'Hello Okie Dokie Safaris! I want to plan my dream safari/trekking adventure.')">
+          <i class="fa-brands fa-whatsapp"></i> Chat With Us on WhatsApp
+        </button>
+        <a href="mailto:info@okiedokiesafaris.co.tz" class="btn btn-outline btn-lg">
+          <i class="fa-solid fa-envelope"></i> Send Email Inquiry
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       FOOTER
+       =================================================================== -->
+  <footer class="footer" id="contact">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="assets/img/logo.png" alt="Okie Dokie Safaris">
+          <p class="footer-desc">
+            <strong>Okie Dokie Safaris</strong> — "We take the world to the nature." Registered and fully licensed Tanzanian tour operator based in Arusha and Moshi. Specialists in Kilimanjaro climbs, wildlife safaris, Magoroto getaways, cultural day tours, and community volunteer programs.
+          </p>
+          <div class="footer-accreditations">
+            <span class="footer-badge"><i class="fa-solid fa-check"></i> TANAPA Licensed</span>
+            <span class="footer-badge"><i class="fa-solid fa-check"></i> TTB Registered</span>
+            <span class="footer-badge"><i class="fa-solid fa-check"></i> WFR Certified</span>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Destinations</h4>
+          <ul class="footer-links">
+            <li><a href="kilimanjaro.html"><i class="fa-solid fa-angle-right"></i> Mount Kilimanjaro</a></li>
+            <li><a href="safari.html"><i class="fa-solid fa-angle-right"></i> Tanzania Safari Packages</a></li>
+            <li><a href="day trips.html#materuni-section"><i class="fa-solid fa-angle-right"></i> Coffee & Hot Springs</a></li>
+            <li><a href="day trips.html#magoroto-section"><i class="fa-solid fa-angle-right"></i> Magoroto Forest Estate</a></li>
+            <li><a href="beach-safari.html"><i class="fa-solid fa-angle-right"></i> Zanzibar Beach Safari</a></li>
+            <li><a href="volunteers.html"><i class="fa-solid fa-angle-right"></i> Volunteer in Tanzania</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Kili Routes</h4>
+          <ul class="footer-links">
+            <li><a href="kilimanjaro.html#marangu"><i class="fa-solid fa-angle-right"></i> Marangu Route (6 Days)</a></li>
+            <li><a href="kilimanjaro.html#rongai"><i class="fa-solid fa-angle-right"></i> Rongai Route (6 Days)</a></li>
+            <li><a href="kilimanjaro.html#machame"><i class="fa-solid fa-angle-right"></i> Machame Route (7 Days VIP)</a></li>
+            <li><a href="kilimanjaro.html#lemosho"><i class="fa-solid fa-angle-right"></i> Lemosho Route (7 Days VIP)</a></li>
+            <li><a href="kilimanjaro.html#pricing"><i class="fa-solid fa-angle-right"></i> Route Pricing Matrix</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Contact Us</h4>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>Head Office: Arusha & Moshi, Tanzania (Near Seven Skies Hotel)</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <a href="tel:+255744779970" style="color: inherit;">+255 744 779 970</a>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-envelope"></i>
+            <a href="mailto:info@okiedokiesafaris.co.tz" style="color: inherit;">info@okiedokiesafaris.co.tz</a>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-globe"></i>
+            <span>www.okiedokiesafaris.com</span>
+          </div>
+          <div style="margin-top: 1.2rem;">
+            <button class="btn btn-whatsapp btn-sm" onclick="openBookingWhatsApp('Instant Chat', 'Quick Help', '', 'Hello! I need quick assistance regarding your safari and trekking packages.')">
+              <i class="fa-brands fa-whatsapp"></i> Instant WhatsApp Chat
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; <span id="currentYear">2026</span> Okie Dokie Safaris. All Rights Reserved. "We take the world to the nature."
+        </div>
+        <div>
+          Designed for Excellence • Global Tourism Platform
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===================================================================
+       FLOATING WHATSAPP BUTTON WITH PULSE
+       =================================================================== -->
+  <a href="https://wa.me/255744779970?text=Hello%20Okie%20Dokie%20Safaris!%20I%20would%20like%20to%20inquire%20about%20your%20tours." target="_blank" class="floating-whatsapp" aria-label="Chat on WhatsApp">
+    <div class="whatsapp-pulse"></div>
+    <i class="fa-brands fa-whatsapp" style="font-size: 1.4rem;"></i>
+    <span>Chat on WhatsApp</span>
+  </a>
+
+  <!-- ===================================================================
+       RESPONSIVE VIDEO MODAL
+       =================================================================== -->
+  <div class="modal" id="videoModal">
+    <div class="modal-content">
+      <button class="modal-close" id="videoModalClose" aria-label="Close modal">&times;</button>
+      <div class="modal-video-wrapper">
+        <iframe id="videoModalFrame" src="" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- Google Translate Element Script -->
+  
+  
+
+  <!-- Main JavaScript -->
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

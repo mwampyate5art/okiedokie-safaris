@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Volunteer Projects in Tanzania | Community Impact & Cultural Immersion | Okie Dokie Safaris</title>
+  <meta name="description" content="Make a lasting difference in Tanzania with Okie Dokie Safaris. Certified community volunteer programs: Healthcare, Education & Teaching, Elderly Care, Orphanage & Child Support, Disability Care, and Conservation in Arusha, Moshi & Rombo. Transparent pricing and WhatsApp application.">
+  
+  <link rel="icon" type="image/png" href="assets/img/logo.png">
+
+  <!-- Google Fonts: Includes Logo Fonts Michroma & Quicksand, plus Cinzel & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Michroma&family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <style>
+    .vol-hero {
+      position: relative;
+      background: linear-gradient(180deg, rgba(28, 22, 11, 0.75) 0%, rgba(28, 22, 11, 0.92) 100%), url('assets/img/volunteer-card-1.jpg') center/cover no-repeat;
+      padding: 6.5rem 0 5rem 0;
+      color: #FFF;
+      text-align: center;
+    }
+    .vol-gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+      margin: 2.5rem 0;
+    }
+    .vol-gallery-item {
+      height: 220px;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      position: relative;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--light-border);
+      transition: var(--transition);
+    }
+    .vol-gallery-item:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--primary);
+    }
+    .vol-gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    .vol-gallery-item:hover img {
+      transform: scale(1.06);
+    }
+    .vol-gallery-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(0deg, rgba(28, 22, 11, 0.9) 0%, transparent 100%);
+      padding: 1.2rem 1rem 0.6rem 1rem;
+      color: #FFF;
+      font-size: 0.84rem;
+      font-weight: 600;
+    }
+    .vol-video-box {
+      position: relative;
+      height: 380px;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      margin: 2.5rem 0;
+      box-shadow: var(--shadow-md);
+      border: 2px solid var(--primary);
+      cursor: pointer;
+    }
+    .vol-video-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .vol-video-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(28, 22, 11, 0.45);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #FFF;
+      text-align: center;
+      padding: 2rem;
+      transition: var(--transition);
+    }
+    .vol-video-box:hover .vol-video-overlay {
+      background: rgba(28, 22, 11, 0.3);
+    }
+    .vol-play-circle {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: var(--dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      box-shadow: 0 0 0 10px rgba(199, 158, 68, 0.35);
+      margin-bottom: 1.2rem;
+      transition: var(--transition);
+    }
+    .vol-video-box:hover .vol-play-circle {
+      transform: scale(1.1);
+      box-shadow: 0 0 0 16px rgba(199, 158, 68, 0.5);
+    }
+    .dest-map-card {
+      background: #FFF;
+      border-radius: var(--radius-md);
+      padding: 2rem;
+      border: 1px solid var(--light-border);
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: var(--transition);
+    }
+    .dest-map-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--primary);
+    }
+    .workflow-steps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin: 3rem 0;
+    }
+    .workflow-step {
+      background: #FFF;
+      border-radius: var(--radius-md);
+      padding: 2rem 1.5rem;
+      text-align: center;
+      border: 1px solid var(--light-border);
+      box-shadow: var(--shadow-sm);
+      position: relative;
+    }
+    .workflow-step-num {
+      width: 45px;
+      height: 45px;
+      background: var(--primary);
+      color: var(--dark);
+      font-weight: 800;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1rem auto;
+      font-size: 1.2rem;
+      font-family: var(--font-brand);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Bar with Luxury Global Language Selector -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="top-contact">
+        <span><i class="fa-solid fa-location-dot"></i> Arusha & Moshi, Tanzania</span>
+        <a href="mailto:info@okiedokiesafaris.co.tz"><i class="fa-solid fa-envelope"></i> info@okiedokiesafaris.co.tz</a>
+        <a href="https://wa.me/255744779970" target="_blank"><i class="fa-brands fa-whatsapp"></i> +255 744 779 970</a>
+      </div>
+
+      <div class="top-actions">
+        <!-- Luxury Language Selector -->
+        <div class="lang-selector-wrapper">
+          <button class="lang-btn" id="langToggleBtn">
+            <i class="fa-solid fa-globe"></i> <span>English</span> <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="lang-dropdown" id="langDropdown">
+            <a href="javascript:void(0)" onclick="switchLanguage('en', 'English')"><span class="lang-flag">🇺🇸</span> <span class="lang-name">English</span></a>
+            <a href="javascript:void(0)" onclick="switchLanguage('sw', 'Kiswahili')"><span class="lang-flag">🇹🇿</span> <span class="lang-name">Kiswahili</span></a>
+            <a href="javascript:void(0)" onclick="switchLanguage('fr', 'Français')"><span class="lang-flag">🇫🇷</span> <span class="lang-name">Français</span></a>
+            <a href="javascript:void(0)" onclick="switchLanguage('de', 'Deutsch')"><span class="lang-flag">🇩🇪</span> <span class="lang-name">Deutsch</span></a>
+            <a href="javascript:void(0)" onclick="switchLanguage('es', 'Español')"><span class="lang-flag">🇪🇸</span> <span class="lang-name">Español</span></a>
+            <a href="javascript:void(0)" onclick="switchLanguage('it', 'Italiano')"><span class="lang-flag">🇮🇹</span> <span class="lang-name">Italiano</span></a>
+            <a href="javascript:void(0)" onclick="switchLanguage('zh-CN', '中文')"><span class="lang-flag">🇨🇳</span> <span class="lang-name">中文</span></a>
+          </div>
+        </div>
+        <div id="google_translate_element"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" class="brand-logo">
+        <img src="assets/img/logo.png" alt="Okie Dokie Safaris Logo">
+      </a>
+
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        
+        <div class="nav-item-dropdown">
+          <a href="kilimanjaro.html" class="nav-link">
+            Kilimanjaro <i class="fa-solid fa-chevron-down" style="font-size: 0.7rem; margin-left: 2px;"></i>
+          </a>
+          <div class="nav-sub-menu">
+            <a href="kilimanjaro.html" class="nav-sub-link"><i class="fa-solid fa-mountain"></i> Overview & Pricing Matrix</a>
+            <a href="kilimanjaro-marangu.html" class="nav-sub-link"><i class="fa-solid fa-hotel"></i> Marangu Route (6 Days)</a>
+            <a href="kilimanjaro-rongai.html" class="nav-sub-link"><i class="fa-solid fa-compass"></i> Rongai Route (6 Days)</a>
+            <a href="kilimanjaro-machame.html" class="nav-sub-link"><i class="fa-solid fa-fire"></i> Machame Route (7 Days VIP)</a>
+            <a href="kilimanjaro-lemosho.html" class="nav-sub-link"><i class="fa-solid fa-eye"></i> Lemosho Route (7 Days VIP)</a>
+          </div>
+        </div>
+
+        <a href="safari.html" class="nav-link">Safari Packages</a>
+        <a href="day trips.html" class="nav-link">Day Trips</a>
+        <a href="beach-safari.html" class="nav-link">Beach Safari</a>
+        <a href="volunteers.html" class="nav-link active">Volunteers</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="btn btn-primary" onclick="openBookingWhatsApp('Volunteer Application', 'Community Placement', '', 'Hello Okie Dokie Safaris! I want to apply for a volunteer program in Tanzania.')">
+          <i class="fa-solid fa-hand-holding-heart"></i> Apply to Volunteer
+        </button>
+        <button class="mobile-nav-toggle" aria-label="Toggle navigation">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Volunteer Hero Banner -->
+  <section class="vol-hero">
+    <div class="container">
+      <span class="section-subtitle"><i class="fa-solid fa-handshake-angle"></i> Meaningful Travel • Community Impact</span>
+      <h1 class="hero-title" style="font-size: clamp(2.3rem, 5vw, 4rem);">
+        Volunteer Projects <span>in Tanzania</span>
+      </h1>
+      <p class="brand-slogan" style="font-size: 1.25rem; color: #DFB254; margin-bottom: 1.2rem;">"we take the world to the nature"</p>
+      
+      <p class="hero-desc" style="max-width: 820px; margin: 0 auto 2rem auto;">
+        Volunteer in Tanzania and become an integral part of grassroots, community-led programs. Experience authentic Tanzanian culture, warmth, and everyday village life while contributing your skills in healthcare, primary education, elderly care, children's homes, disability support, and environmental conservation across Arusha, Moshi, and Rombo.
+      </p>
+
+      <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+        <a href="#projects" class="btn btn-primary btn-lg">
+          <i class="fa-solid fa-hands-holding-child"></i> View 7 Volunteer Projects
+        </a>
+        <a href="#pricing" class="btn btn-outline btn-lg">
+          <i class="fa-solid fa-tags"></i> Program Fees & Homestay
+        </a>
+        <button class="btn btn-whatsapp btn-lg" onclick="openBookingWhatsApp('Volunteer General Inquiry', 'Community Project', 'Flexible', 'Hello Okie Dokie Safaris! I want to apply for volunteering in Tanzania.\n• Name: _____\n• Nationality: _____\n• Preferred Project: _____\nPlease send me the placement guide.')">
+          <i class="fa-brands fa-whatsapp"></i> Apply on WhatsApp
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       SECTION 1: VOLUNTEER IMPACT (OVERVIEW, PHOTO SHOWCASE & VIDEO)
+       =================================================================== -->
+  <section style="padding: 5.5rem 0; background: #FFF;">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle"><i class="fa-solid fa-heart"></i> Meaningful Impact</span>
+        <h2 class="section-title">Ethical, Community-Led Volunteering</h2>
+        <div class="logo-arc-divider"></div>
+        <p class="section-desc">
+          We work directly with verified local schools, medical centers, and grassroots non-profits. 100% of our programs are driven by local Tanzanian community leaders.
+        </p>
+      </div>
+
+      <!-- Overview Content Grid -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2.5rem; align-items: center; margin-bottom: 3rem;">
+        <div>
+          <h3 style="font-family: var(--font-heading); font-size: 1.6rem; color: var(--dark); margin-bottom: 1rem;">
+            Live with a Local Family, Make a Real Difference
+          </h3>
+          <p style="font-size: 0.98rem; line-height: 1.8; color: var(--text-main); margin-bottom: 1.2rem;">
+            Volunteering with Okie Dokie Safaris is an authentic cultural immersion. You live with a welcoming Tanzanian host family in safe residential neighborhoods in Arusha or Moshi, enjoy three freshly cooked home meals daily, and receive continuous support from our 24/7 dedicated in-country coordinators.
+          </p>
+          <ul style="display: flex; flex-direction: column; gap: 0.6rem; font-size: 0.95rem;">
+            <li><i class="fa-solid fa-circle-check" style="color: var(--primary);"></i> <strong>Verified Local Partners:</strong> Safe placements in government and community initiatives.</li>
+            <li><i class="fa-solid fa-circle-check" style="color: var(--primary);"></i> <strong>Authentic Homestay:</strong> Private or shared bedroom with warm, vetted host families.</li>
+            <li><i class="fa-solid fa-circle-check" style="color: var(--primary);"></i> <strong>Swahili Orientation:</strong> Comprehensive cultural, safety, and language induction upon arrival.</li>
+            <li><i class="fa-solid fa-circle-check" style="color: var(--primary);"></i> <strong>Weekend Adventures:</strong> Easy weekend safaris to Serengeti, Kilimanjaro, and Chemka Springs.</li>
+          </ul>
+        </div>
+
+        <!-- Video Player Box -->
+        <div>
+          <div class="vol-video-box" onclick="openVideoModal('kilimanjaro')">
+            <img src="assets/img/volunteer-card-1.jpg" alt="Volunteering in Tanzania Video Preview">
+            <div class="vol-video-overlay">
+              <div class="vol-play-circle">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <h4 style="font-family: var(--font-heading); font-size: 1.5rem; margin-bottom: 0.3rem;">Experience Tanzania Volunteering</h4>
+              <p style="font-size: 0.9rem; color: #DFB254;">Click to play inspirational community impact video</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Photo Showcase -->
+      <div style="margin-top: 2rem;">
+        <h3 style="font-family: var(--font-heading); font-size: 1.4rem; color: var(--dark); text-align: center; margin-bottom: 0.5rem;">
+          Community Impact Photo Showcase
+        </h3>
+        <p style="text-align: center; font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.5rem;">
+          Moments captured across teaching, healthcare clinics, childcare, and environmental programs
+        </p>
+
+        <div class="vol-gallery-grid">
+          <div class="vol-gallery-item">
+            <img src="assets/img/vol-school.jpg" alt="Teaching English and Math" loading="lazy" decoding="async">
+            <div class="vol-gallery-caption">Primary Education & English Literacy Workshops</div>
+          </div>
+          <div class="vol-gallery-item">
+            <img src="assets/img/vol-health.jpg" alt="Community Healthcare Outreach" loading="lazy" decoding="async">
+            <div class="vol-gallery-caption">Healthcare Outreach & Rural Clinic Support</div>
+          </div>
+          <div class="vol-gallery-item">
+            <img src="assets/img/vol-children.jpg" alt="Childcare and Mentoring" loading="lazy" decoding="async">
+            <div class="vol-gallery-caption">Early Childhood Development & Play Therapy</div>
+          </div>
+          <div class="vol-gallery-item">
+            <img src="assets/img/vol-conservation.jpg" alt="Tree Planting and Reforestation" loading="lazy" decoding="async">
+            <div class="vol-gallery-caption">Kilimanjaro Reforestation & Seedling Nursery</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       SECTION 2: THE 7 VOLUNTEER PROJECTS
+       =================================================================== -->
+  <section id="projects" style="padding: 5.5rem 0; background: var(--light-surface); border-top: 1px solid var(--light-border);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle"><i class="fa-solid fa-hands-holding"></i> Meaningful Programs</span>
+        <h2 class="section-title">The 7 Community Volunteer Projects</h2>
+        <div class="logo-arc-divider"></div>
+        <p class="section-desc">
+          Choose the project that aligns with your passions, education, and career aspirations.
+        </p>
+      </div>
+
+      <div class="volunteer-grid">
+
+        <!-- 1. HEALTHCARE VOLUNTEER PROJECT -->
+        <div class="vol-card">
+          <div class="vol-icon" style="background: rgba(45, 106, 79, 0.12); color: #2D6A4F;">
+            <i class="fa-solid fa-hospital-user"></i>
+          </div>
+          <img src="assets/img/beach-card-1.jpg" alt="Healthcare Volunteer Project" style="width: 100%; height: auto;">
+          <h3 class="vol-title">1. Health & Medical projects</h3>
+          <p class="vol-tagline">"​Teaser: Bring care where it is needed most."</p>
+          <p style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.6;">
+           Join dedicated local doctors and healthcare workers in regional hospitals and rural community clinics. From maternal care and public health outreach to general medicine, your expertise and passion will help improve community well-being directly.
+​Key Areas: Rural Hospitals • Community Health Centers • Preventive Care Outreach</p>
+
+          <h4 class="vol-activities-title"> Mobile Senior Care & Home-Based Healing:</h4>
+          <p>​Bringing dignity, compassionate care, and medical healing straight to the doorsteps of those who need it most.</p>
+          
+           <p>​Join a dedicated team of retired, highly experienced senior medical doctors who have devoted their lives to serving the vulnerable. Together, we step outside hospital walls to reach elderly citizens and low-income families who cannot afford or access regular clinical care.</p>
+           <br>
+           <button class="btn " style="width: 100%;" > <i class=""></i> WHAT YOU WILL DO & EXPERIENCE
+            </button>
+<ul class="vol-activities-list">
+<li>​Door-to-Door Medical Outreach: Visit elderly and homebound patients directly in their homes to conduct vital health screenings and check-ups.</li>
+<li>​Treatment & Free Medication: Assist senior doctors in diagnosing conditions, dispensing essential medicines, and providing health education on chronic illness management.</li>
+<li>​Emergency & Specialized Referral: Help facilitate hospital transfers and advanced care for patients needing urgent critical intervention.</li>
+<li>​Intergenerational Connection: Share warm, life-affirming moments with community elders while gaining priceless hands-on clinical mentorship from veteran physicians.</li>
+</ul>
+          </ul>
+<p>​Impact Note: Your presence brings more than just medicine—it brings hope, comfort, and the gift of health to those left behind.</p>
+          <div style="margin-top: auto;">
+            <button class="btn btn-whatsapp" style="width: 100%;" onclick="openBookingWhatsApp('Healthcare Volunteer Project', 'Medical Placement', 'Custom', 'Hello! I am interested in the Healthcare Volunteer Project in Tanzania.\nName: ______\nNationality: ______\nPreferred dates: ______\nPlease send me requirements and application form.')">
+              <i class="fa-brands fa-whatsapp"></i> Apply for Healthcare
+            </button>
+          </div>
+        </div>
+
+        <!-- 2. SCHOOL & TEACHING PROJECT -->
+        <div class="vol-card">
+          <div class="vol-icon" style="background: rgba(37, 99, 235, 0.12); color: #2563EB;">
+            <i class="fa-solid fa-graduation-cap"></i>
+          </div>
+          <h3 class="vol-title">2. School & Primary Education</h3>
+           <img src="assets/img/vol-school.jpg" alt="School & Education Project" style="width: 100%; height: auto;">
+          
+          <p class="vol-tagline">"Teach. Inspire. Empower."</p>
+          <p style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.6;">
+            Assist local Tanzanian teachers in under-resourced schools. Volunteers conduct conversational English, basic mathematics, science, sports coaching, and arts to empower future generations.
+          </p>
+
+          <h4 class="vol-activities-title">Core Activities:</h4>
+          <ul class="vol-activities-list">
+            <li>Conversational English teaching & pronunciation practice</li>
+            <li>Mathematics, geography, and basic science tutoring</li>
+            <li>Organizing sports, soccer matches, and physical education</li>
+            <li>Creative arts, drama, drawing, and storytelling</li>
+          </ul>
+
+          <div style="margin-top: auto;">
+            <button class="btn btn-whatsapp" style="width: 100%;" onclick="openBookingWhatsApp('School & Education Project', 'Teaching Placement', 'Custom', 'Hello! I am interested in the Teaching & Education Project in Tanzania.\nName: ______\nNationality: ______\nPreferred dates: ______\nPlease send me details.')">
+              <i class="fa-brands fa-whatsapp"></i> Join Teaching Project
+            </button>
+          </div>
+        </div>
+
+        <!-- 3. CHILDREN & CHILDCARE SUPPORT -->
+        <div class="vol-card">
+          <div class="vol-icon" style="background: rgba(220, 38, 38, 0.12); color: #DC2626;">
+            <i class="fa-solid fa-child-reaching"></i>
+          </div>
+          <h3 class="vol-title">3. Childcare & Orphanage Support</h3>
+          <p class="vol-tagline">"Give Time. Give Care. Give Hope."</p>
+          <p style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.6;">
+            Work with vulnerable children in verified community day-care centers and children's homes. Provide homework assistance, love, healthy nutrition support, and playful recreational games.
+          </p>
+
+          <h4 class="vol-activities-title">Core Activities:</h4>
+          <ul class="vol-activities-list">
+            <li>Early childhood developmental play and basic literacy</li>
+            <li>Homework guidance and reading circles</li>
+            <li>Assisting with lunchtime nutritious meal preparation</li>
+            <li>Organizing outdoor games, singing, and group dance</li>
+          </ul>
+
+          <div style="margin-top: auto;">
+            <button class="btn btn-whatsapp" style="width: 100%;" onclick="openBookingWhatsApp('Childcare Support Project', 'Child Placement', 'Custom', 'Hello! I am interested in the Childcare & Children Support Project in Tanzania.\nName: ______\nNationality: ______\nPreferred dates: ______\nPlease send me details.')">
+              <i class="fa-brands fa-whatsapp"></i> Support Children
+            </button>
+          </div>
+        </div>
+
+        <!-- 4. ELDERLY CARE PROJECT -->
+        <div class="vol-card">
+          <div class="vol-icon" style="background: rgba(212, 163, 89, 0.18); color: #B8860B;">
+            <i class="fa-solid fa-hands-holding-circle"></i>
+          </div>
+          <h3 class="vol-title">4. Elderly Care & Companionship</h3>
+          <p class="vol-tagline">"Care, Connect & Bring Hope"</p>
+          <p style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.6;">
+            Spend quality time with elderly citizens in community day centers and rural households. Foster dignity, share heartwarming stories, assist with mobility, and deliver groceries.
+          </p>
+
+          <h4 class="vol-activities-title">Core Activities:</h4>
+          <ul class="vol-activities-list">
+            <li>Companionship, listening to folklore, and storytelling</li>
+            <li>Recreational board games, music, and gentle exercise</li>
+            <li>Assisting with home vegetable gardens and light tasks</li>
+            <li>Conducting home-visit community welfare checks</li>
+          </ul>
+
+          <div style="margin-top: auto;">
+            <button class="btn btn-whatsapp" style="width: 100%;" onclick="openBookingWhatsApp('Elderly Care Project', 'Community Placement', 'Custom', 'Hello! I want to volunteer with the Elderly Care Project in Tanzania.\nName: ______\nDates: ______\nPlease send me details.')">
+              <i class="fa-brands fa-whatsapp"></i> Volunteer With Elderly
+            </button>
+          </div>
+        </div>
+
+        <!-- 5. DISABILITY SUPPORT PROJECT -->
+        <div class="vol-card">
+          <div class="vol-icon" style="background: rgba(147, 51, 234, 0.12); color: #9333EA;">
+            <i class="fa-solid fa-wheelchair"></i>
+          </div>
+          <h3 class="vol-title">5. Special Needs & Disability Support</h3>
+          <p class="vol-tagline">"Inclusion. Dignity. Opportunity."</p>
+          <p style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.6;">
+            Assist specialized educators and physical therapists working with children and adults living with physical, sensory, or developmental disabilities in inclusive learning centers.
+          </p>
+
+          <h4 class="vol-activities-title">Core Activities:</h4>
+          <ul class="vol-activities-list">
+            <li>Assisting in special education classrooms</li>
+            <li>Sensory play, music, and physical mobility games</li>
+            <li>Vocational skill training (beadwork, tailoring, crafts)</li>
+            <li>Community advocacy combating stigma around disability</li>
+          </ul>
+
+          <div style="margin-top: auto;">
+            <button class="btn btn-whatsapp" style="width: 100%;" onclick="openBookingWhatsApp('Disability Support Project', 'Special Needs Placement', 'Custom', 'Hello! I am interested in the Disability Support Project in Tanzania.\nName: ______\nDates: ______\nPlease share placement guide.')">
+              <i class="fa-brands fa-whatsapp"></i> Support Disability Project
+            </button>
+          </div>
+        </div>
+
+        <!-- 6. ENVIRONMENTAL CONSERVATION -->
+        <div class="vol-card">
+          <div class="vol-icon" style="background: rgba(34, 197, 94, 0.12); color: #16A34A;">
+            <i class="fa-solid fa-tree"></i>
+          </div>
+          <h3 class="vol-title">6. Conservation & Tree Planting</h3>
+          <p class="vol-tagline">"Preserve Nature. Plant for Tomorrow."</p>
+          <p style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.6;">
+            Participate in community reforestation along the slopes of Mount Kilimanjaro, manage indigenous tree nurseries, conduct waste cleanups, and lead conservation workshops in schools.
+          </p>
+
+          <h4 class="vol-activities-title">Core Activities:</h4>
+          <ul class="vol-activities-list">
+            <li>Planting indigenous seedlings in Kilimanjaro water catchment zones</li>
+            <li>Operating organic tree nurseries and seedling distribution</li>
+            <li>Community environmental awareness in village councils</li>
+            <li>Eco-agriculture and permaculture farming support</li>
+          </ul>
+
+          <div style="margin-top: auto;">
+            <button class="btn btn-whatsapp" style="width: 100%;" onclick="openBookingWhatsApp('Conservation Volunteer Project', 'Eco Placement', 'Custom', 'Hello! I want to join the Conservation & Tree Planting Project in Tanzania.\nName: ______\nDates: ______\nPlease send details.')">
+              <i class="fa-brands fa-whatsapp"></i> Join Conservation
+            </button>
+          </div>
+        </div>
+
+        <!-- 7. WOMEN EMPOWERMENT & COMMUNITY DEVELOPMENT -->
+        <div class="vol-card">
+          <div class="vol-icon" style="background: rgba(236, 72, 153, 0.12); color: #DB2777;">
+            <i class="fa-solid fa-hands-holding-circle"></i>
+          </div>
+          <h3 class="vol-title">7. Women Empowerment & Microfinance</h3>
+          <p class="vol-tagline">"Empower Women. Transform Societies."</p>
+          <p style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.6;">
+            Support rural Tanzanian women's cooperatives in small business literacy, craft making, micro-loans management, computer skills, and vocational tailoring to foster financial independence.
+          </p>
+
+          <h4 class="vol-activities-title">Core Activities:</h4>
+          <ul class="vol-activities-list">
+            <li>Basic bookkeeping and financial management tutoring</li>
+            <li>Computer literacy and smartphone digital marketing</li>
+            <li>English language skills for cooperative artisan sales</li>
+            <li>Workshops on leadership, rights, and health wellness</li>
+          </ul>
+
+          <div style="margin-top: auto;">
+            <button class="btn btn-whatsapp" style="width: 100%;" onclick="openBookingWhatsApp('Women Empowerment Project', 'Community Placement', 'Custom', 'Hello! I am interested in the Women Empowerment Volunteer Project in Tanzania.\nName: ______\nDates: ______\nPlease send me details.')">
+              <i class="fa-brands fa-whatsapp"></i> Support Women Empowerment
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       SECTION 3: OFFICIAL VOLUNTEER PROGRAM PRICING MATRIX TABLE
+       =================================================================== -->
+  <section id="pricing" style="padding: 5.5rem 0; background: #FFF;">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle"><i class="fa-solid fa-tags"></i> Transparent Contributions</span>
+        <h2 class="section-title">Volunteer Program Fee Schedule</h2>
+        <div class="logo-arc-divider"></div>
+        <p class="section-desc">
+          We maintain complete transparency. Your program fee directly covers your local host family accommodation, 3 home-cooked meals daily, airport pickup, 24/7 coordinator support, and a direct donation to your project.
+        </p>
+      </div>
+
+      <div class="table-mobile-hint">
+        <i class="fa-solid fa-arrows-left-right"></i> Scroll sideways on mobile to compare duration fees and inclusions
+      </div>
+
+      <div class="pricing-table-container">
+        <table class="pricing-table">
+          <thead>
+            <tr>
+              <th>Duration</th>
+              <th>Full Homestay Fee</th>
+              <th>What's Included</th>
+              <th>Apply Now</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>1 Week (7 Days)</strong></td>
+              <td class="price-val">$290</td>
+              <td>Homestay + 3 meals/day + JRO pickup + Swahili orientation + 24/7 staff + Certificate</td>
+              <td>
+                <button class="btn btn-whatsapp btn-sm" onclick="openBookingWhatsApp('1 Week Volunteer Placement', 'Homestay Included', '1 Week', 'Hello Okie Dokie Safaris! I want to apply for 1 Week Volunteer Placement ($290).')">
+                  <i class="fa-brands fa-whatsapp"></i> Apply
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>2 Weeks (14 Days)</strong> <span class="vip-badge">Most Popular</span></td>
+              <td class="price-val">$480</td>
+              <td>Homestay + 3 meals/day + JRO pickup + Swahili orientation + 24/7 staff + Certificate</td>
+              <td>
+                <button class="btn btn-whatsapp btn-sm" onclick="openBookingWhatsApp('2 Weeks Volunteer Placement', 'Homestay Included', '2 Weeks', 'Hello Okie Dokie Safaris! I want to apply for 2 Weeks Volunteer Placement ($480).')">
+                  <i class="fa-brands fa-whatsapp"></i> Apply
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>3 Weeks (21 Days)</strong></td>
+              <td class="price-val">$680</td>
+              <td>Homestay + 3 meals/day + JRO pickup + Swahili orientation + 24/7 staff + Certificate</td>
+              <td>
+                <button class="btn btn-whatsapp btn-sm" onclick="openBookingWhatsApp('3 Weeks Volunteer Placement', 'Homestay Included', '3 Weeks', 'Hello Okie Dokie Safaris! I want to apply for 3 Weeks Volunteer Placement ($680).')">
+                  <i class="fa-brands fa-whatsapp"></i> Apply
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>4 Weeks (1 Month)</strong> <span class="vip-badge">Deep Immersion</span></td>
+              <td class="price-val">$850</td>
+              <td>Homestay + 3 meals/day + JRO pickup + Swahili orientation + 24/7 staff + Certificate</td>
+              <td>
+                <button class="btn btn-whatsapp btn-sm" onclick="openBookingWhatsApp('4 Weeks Volunteer Placement', 'Homestay Included', '4 Weeks', 'Hello Okie Dokie Safaris! I want to apply for 4 Weeks Volunteer Placement ($850).')">
+                  <i class="fa-brands fa-whatsapp"></i> Apply
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Each Additional Week</strong></td>
+              <td class="price-val">$180 / week</td>
+              <td>Full ongoing homestay accommodation, 3 meals daily, and coordinator field support</td>
+              <td>
+                <button class="btn btn-whatsapp btn-sm" onclick="openBookingWhatsApp('Long-Term Volunteer Extension', 'Homestay Included', 'Extended', 'Hello Okie Dokie Safaris! I want to inquire about a long-term volunteer extension in Tanzania.')">
+                  <i class="fa-brands fa-whatsapp"></i> Inquire
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Two Distinct Booking Packages: Full Homestay vs Independent Placement -->
+      <div class="section-header" style="text-align: center; margin: 4.5rem 0 1rem 0;">
+        <span class="section-subtitle"><i class="fa-brands fa-whatsapp"></i> Direct Application</span>
+        <h3 class="section-title" style="font-size: 1.9rem;">Choose Your Volunteer Package</h3>
+        <p class="section-desc" style="max-width: 680px; margin: 0 auto;">
+          Whether you want an authentic family homestay or independent lodging, we provide official project placement and full safety supervision.
+        </p>
+      </div>
+
+      <div class="route-booking-packages-grid">
+        <!-- 1. FULL-IMMERSION HOMESTAY PACKAGE -->
+        <div class="package-booking-card vip-tier">
+          <div class="pkg-header">
+            <span class="pkg-badge"><i class="fa-solid fa-crown"></i> Full Homestay Immersion</span>
+            <h3 class="pkg-title">Homestay Volunteer Package</h3>
+            <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 0.5rem;">Authentic host family stay with all meals and airport pickup</p>
+            <div class="pkg-price">
+              <span class="price-val">$480</span>
+              <span class="price-sub">/ 2 Weeks (All-Inclusive)</span>
+            </div>
+            <div class="pkg-tier-info">
+              1 Wk: <strong>$290</strong> | 2 Wks: <strong>$480</strong> | 4 Wks: <strong>$850</strong>
+            </div>
+          </div>
+          <ul class="pkg-features">
+            <li><i class="fa-solid fa-circle-check"></i> <strong>Vetted Host Family Homestay:</strong> Private or twin room in a warm, welcoming Tanzanian family home.</li>
+            <li><i class="fa-solid fa-circle-check"></i> <strong>3 Meals Daily:</strong> Freshly cooked home breakfast, packed lunch, and wholesome traditional Tanzanian dinner.</li>
+            <li><i class="fa-solid fa-circle-check"></i> <strong>Kilimanjaro Airport (JRO) Pickup:</strong> Personal greeting by our coordinator and private transfer to homestay.</li>
+            <li><i class="fa-solid fa-circle-check"></i> <strong>Comprehensive Swahili Induction:</strong> Cultural guidelines, basic Swahili lessons, and project walk-through.</li>
+            <li><i class="fa-solid fa-circle-check"></i> <strong>24/7 Dedicated In-Country Support:</strong> Emergency assistance and field guidance throughout your stay.</li>
+            <li><i class="fa-solid fa-circle-check"></i> <strong>Official TANAPA Volunteer Certificate:</strong> Certified documentation for university credits or career resumes.</li>
+          </ul>
+          <button class="btn btn-whatsapp btn-block" onclick="openBookingWhatsApp('Full Homestay Volunteer Package', 'Homestay Package', '2-4 Weeks', 'Hello Okie Dokie Safaris! I want to apply for the FULL HOMESTAY Volunteer Package in Tanzania.\n• Project: _____\n• Duration: _____\n• Preferred start date: _____\nPlease send me the application packet.')">
+            <i class="fa-brands fa-whatsapp"></i> Apply for Homestay on WhatsApp
+          </button>
+        </div>
+
+        <!-- 2. INDEPENDENT PLACEMENT PACKAGE -->
+        <div class="package-booking-card">
+          <div class="pkg-header">
+            <span class="pkg-badge budget"><i class="fa-solid fa-compass"></i> Independent Placement</span>
+            <h3 class="pkg-title">Placement-Only Package</h3>
+            <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 0.5rem;">For volunteers who arrange their own Airbnb or hotel lodging</p>
+            <div class="pkg-price">
+              <span class="price-val" style="color: var(--dark);">$320</span>
+              <span class="price-sub">/ 2 Weeks</span>
+            </div>
+            <div class="pkg-tier-info">
+              1 Wk: <strong>$190</strong> | 2 Wks: <strong>$320</strong> | 4 Wks: <strong>$550</strong>
+            </div>
+          </div>
+          <ul class="pkg-features">
+            <li><i class="fa-solid fa-circle-check" style="color: var(--logo-brown);"></i> <strong>Official Project Placement:</strong> Registered assignment in partner schools, hospitals, or NGOs.</li>
+            <li><i class="fa-solid fa-circle-check" style="color: var(--logo-brown);"></i> <strong>Volunteer Permit Guidance:</strong> Full documentation support for Tanzanian volunteer/CTA visas.</li>
+            <li><i class="fa-solid fa-circle-check" style="color: var(--logo-brown);"></i> <strong>First-Day Project Introduction:</strong> Coordinator accompanies you on Day 1 to introduce you to supervisors.</li>
+            <li><i class="fa-solid fa-circle-check" style="color: var(--logo-brown);"></i> <strong>In-Country Emergency Support:</strong> Dedicated phone support throughout your working hours.</li>
+            <li><i class="fa-solid fa-circle-check" style="color: var(--logo-brown);"></i> <strong>Direct Project Donation:</strong> Portion of fee directly funds classroom materials or medical supplies.</li>
+            <li><i class="fa-solid fa-circle-check" style="color: var(--logo-brown);"></i> <strong>Official Certificate of Service:</strong> Formal recommendation letter upon completion.</li>
+          </ul>
+          <button class="btn btn-primary btn-block" style="background: var(--dark-surface); color: #FFF; border-color: var(--primary);" onclick="openBookingWhatsApp('Independent Placement Volunteer Package', 'Placement Only', '2-4 Weeks', 'Hello Okie Dokie Safaris! I want to apply for the INDEPENDENT PLACEMENT Volunteer Package in Tanzania.\n• Project: _____\n• Duration: _____\n• Start date: _____\nPlease share requirements.')">
+            <i class="fa-brands fa-whatsapp"></i> Apply for Placement on WhatsApp
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Modern Luxury Footer -->
+  <footer class="footer" id="contact">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="assets/img/logo.png" alt="Okie Dokie Safaris">
+          <p class="footer-desc">
+            <strong>Okie Dokie Safaris</strong> — "We take the world to the nature." Registered Tanzanian tour operator promoting community empowerment, ethical volunteering, and sustainable conservation.
+          </p>
+          <div class="footer-accreditations">
+            <span class="footer-badge"><i class="fa-solid fa-check"></i> TANAPA Licensed</span>
+            <span class="footer-badge"><i class="fa-solid fa-check"></i> Community Partner</span>
+            <span class="footer-badge"><i class="fa-solid fa-check"></i> Safe Travel</span>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Volunteer Programs</h4>
+          <ul class="footer-links">
+            <li><a href="#projects"><i class="fa-solid fa-angle-right"></i> Healthcare Volunteering</a></li>
+            <li><a href="#projects"><i class="fa-solid fa-angle-right"></i> Primary School Teaching</a></li>
+            <li><a href="#projects"><i class="fa-solid fa-angle-right"></i> Children & Childcare</a></li>
+            <li><a href="#projects"><i class="fa-solid fa-angle-right"></i> Elderly Care & Support</a></li>
+            <li><a href="#projects"><i class="fa-solid fa-angle-right"></i> Special Needs & Disability</a></li>
+            <li><a href="#projects"><i class="fa-solid fa-angle-right"></i> Tree Planting & Conservation</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">All Destinations</h4>
+          <ul class="footer-links">
+            <li><a href="kilimanjaro.html"><i class="fa-solid fa-angle-right"></i> Mount Kilimanjaro</a></li>
+            <li><a href="safari.html"><i class="fa-solid fa-angle-right"></i> Tanzania Safari Packages</a></li>
+            <li><a href="day trips.html#materuni-section"><i class="fa-solid fa-angle-right"></i> Coffee & Hot Springs</a></li>
+            <li><a href="day trips.html#magoroto-section"><i class="fa-solid fa-angle-right"></i> Magoroto Forest Estate</a></li>
+            <li><a href="beach-safari.html"><i class="fa-solid fa-angle-right"></i> Zanzibar Beach Safari</a></li>
+            <li><a href="volunteers.html"><i class="fa-solid fa-angle-right"></i> Volunteer in Tanzania</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Volunteer Desk</h4>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>Arusha & Moshi, Tanzania</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <a href="tel:+255744779970" style="color: inherit;">+255 744 779 970</a>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-envelope"></i>
+            <a href="mailto:info@okiedokiesafaris.co.tz" style="color: inherit;">info@okiedokiesafaris.co.tz</a>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-globe"></i>
+            <span>www.okiedokiesafaris.com</span>
+          </div>
+          <div style="margin-top: 1.2rem;">
+            <button class="btn btn-whatsapp btn-sm" onclick="openBookingWhatsApp('Volunteer Coordinator', 'General Inquiry', '', 'Hello! I need quick assistance regarding volunteer placements in Tanzania.')">
+              <i class="fa-brands fa-whatsapp"></i> Chat With Volunteer Coordinator
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; <span id="currentYear">2026</span> Okie Dokie Safaris. All Rights Reserved. "We take the world to the nature."
+        </div>
+        <div>
+          Designed for Excellence • Global Tourism Platform
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/255744779970?text=Hello%20Okie%20Dokie%20Safaris!%20I%20want%20to%20apply%20for%20a%20volunteer%20program." target="_blank" class="floating-whatsapp" aria-label="Chat on WhatsApp">
+    <div class="whatsapp-pulse"></div>
+    <i class="fa-brands fa-whatsapp" style="font-size: 1.4rem;"></i>
+    <span>Chat on WhatsApp</span>
+  </a>
+
+  <!-- Video Modal -->
+  <div class="modal" id="videoModal">
+    <div class="modal-content">
+      <button class="modal-close" id="videoModalClose" aria-label="Close modal">&times;</button>
+      <div class="modal-video-wrapper">
+        <iframe id="videoModalFrame" src="" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

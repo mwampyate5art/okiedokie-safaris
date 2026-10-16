@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marangu Route (6 Days VIP & Standard) | Mount Kilimanjaro | Okie Dokie Safaris</title>
+  <meta name="description" content="6-Day Kilimanjaro Marangu Route with Okie Dokie Safaris. The classic Coca-Cola route with solar-powered sleeping huts, day-by-day itinerary, VIP vs Standard options.">
+  
+  <link rel="icon" type="image/png" href="assets/img/logo.png">
+
+  <!-- Google Fonts: Includes Logo Fonts Michroma & Quicksand, plus Cinzel & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Michroma&family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <style>
+    .route-page-hero {
+      position: relative;
+      background: linear-gradient(180deg, rgba(28, 22, 11, 0.72) 0%, rgba(28, 22, 11, 0.92) 100%), url('assets/img/marangu.jpg') center/cover no-repeat;
+      padding: 6.5rem 0 4.5rem 0;
+      color: #FFF;
+      text-align: center;
+    }
+    .route-breadcrumb {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.88rem;
+      color: var(--text-light-muted);
+      margin-bottom: 1.2rem;
+      flex-wrap: wrap;
+    }
+    .route-breadcrumb a {
+      color: var(--primary);
+    }
+    .route-breadcrumb a:hover {
+      text-decoration: underline;
+    }
+    .route-quick-stats-bar {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 1rem;
+      background: rgba(38, 30, 16, 0.75);
+      border: 1px solid rgba(199, 158, 68, 0.35);
+      border-radius: var(--radius-md);
+      padding: 1.2rem 1.8rem;
+      max-width: 860px;
+      margin: 2rem auto 0 auto;
+      backdrop-filter: blur(10px);
+    }
+    .quick-stat-box {
+      text-align: center;
+    }
+    .quick-stat-box strong {
+      display: block;
+      color: var(--primary);
+      font-size: 1.2rem;
+      font-family: var(--font-heading);
+    }
+    .quick-stat-box span {
+      font-size: 0.8rem;
+      color: var(--text-light-muted);
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="top-contact">
+        <span><i class="fa-solid fa-location-dot"></i> Arusha & Moshi, Tanzania</span>
+        <a href="mailto:info@okiedokiesafaris.co.tz"><i class="fa-solid fa-envelope"></i> info@okiedokiesafaris.co.tz</a>
+        <a href="https://wa.me/255744779970" target="_blank"><i class="fa-brands fa-whatsapp"></i> +255 744 779 970</a>
+      </div>
+
+      <div class="top-actions">
+        <div class="lang-selector-wrapper">
+          <button class="lang-btn" id="langToggleBtn">
+            <i class="fa-solid fa-globe"></i> English <i class="fa-solid fa-chevron-down" style="font-size: 0.75rem;"></i>
+          </button>
+          <div class="lang-dropdown" id="langDropdown">
+            <a href="javascript:void(0)" onclick="switchLanguage('en', 'English')"><span>🇺🇸</span> English</a>
+            <a href="javascript:void(0)" onclick="switchLanguage('sw', 'Kiswahili')"><span>🇹🇿</span> Kiswahili</a>
+            <a href="javascript:void(0)" onclick="switchLanguage('fr', 'Français')"><span>🇫🇷</span> Français</a>
+            <a href="javascript:void(0)" onclick="switchLanguage('de', 'Deutsch')"><span>🇩🇪</span> Deutsch</a>
+            <a href="javascript:void(0)" onclick="switchLanguage('es', 'Español')"><span>🇪🇸</span> Español</a>
+            <a href="javascript:void(0)" onclick="switchLanguage('it', 'Italiano')"><span>🇮🇹</span> Italiano</a>
+          </div>
+        </div>
+        <div id="google_translate_element"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" class="brand-logo">
+        <img src="assets/img/logo.png" alt="Okie Dokie Safaris Logo">
+      </a>
+
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        
+        <div class="nav-item-dropdown">
+          <a href="kilimanjaro.html" class="nav-link active">
+            Kilimanjaro <i class="fa-solid fa-chevron-down" style="font-size: 0.7rem; margin-left: 2px;"></i>
+          </a>
+          <div class="nav-sub-menu">
+            <a href="kilimanjaro.html" class="nav-sub-link"><i class="fa-solid fa-mountain"></i> Overview & Pricing Matrix</a>
+            <a href="kilimanjaro-marangu.html" class="nav-sub-link"><i class="fa-solid fa-hotel"></i> Marangu Route (6 Days)</a>
+            <a href="kilimanjaro-rongai.html" class="nav-sub-link"><i class="fa-solid fa-compass"></i> Rongai Route (6 Days)</a>
+            <a href="kilimanjaro-machame.html" class="nav-sub-link"><i class="fa-solid fa-fire"></i> Machame Route (7 Days VIP)</a>
+            <a href="kilimanjaro-lemosho.html" class="nav-sub-link"><i class="fa-solid fa-eye"></i> Lemosho Route (7 Days VIP)</a>
+          </div>
+        </div>
+
+        <a href="safari.html" class="nav-link">Safari Packages</a>
+        <a href="day trips.html#materuni-section" class="nav-link">Coffee & Hotspring</a>
+        <a href="day trips.html#magoroto-section" class="nav-link">Magoroto Trips</a>
+        <a href="beach-safari.html" class="nav-link">Beach Safari</a>
+        <a href="volunteers.html" class="nav-link">Volunteers</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="btn btn-primary" onclick="openBookingWhatsApp('Marangu Route (6 Days)', 'VIP / Budget', '6 Days', 'Hello Okie Dokie Safaris! I want to book the 6-Day Marangu Route.')">
+          <i class="fa-solid fa-mountain"></i> Book Marangu
+        </button>
+        <button class="mobile-nav-toggle" aria-label="Toggle navigation">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Route Hero -->
+  <section class="route-page-hero">
+    <div class="container">
+      <div class="route-breadcrumb">
+        <a href="index.html">Home</a> <i class="fa-solid fa-angle-right" style="font-size: 0.75rem;"></i>
+        <a href="kilimanjaro.html">Kilimanjaro Routes</a> <i class="fa-solid fa-angle-right" style="font-size: 0.75rem;"></i>
+        <span>Marangu Route (6 Days)</span>
+      </div>
+
+      <span class="section-subtitle"><i class="fa-solid fa-hotel"></i> The "Coca-Cola Route" • Sleeping Huts</span>
+      <h1 class="hero-title" style="font-size: clamp(2.3rem, 5vw, 3.8rem);">
+        6-Day Kilimanjaro Trekking: <span>Marangu Route</span>
+      </h1>
+      <p class="brand-slogan" style="font-size: 1.15rem; color: #DFB254; margin-bottom: 1.2rem;">"we take the world to the nature"</p>
+      
+      <div class="route-quick-stats-bar">
+        <div class="quick-stat-box">
+          <strong>6 Days / 5 Nights</strong>
+          <span>Duration</span>
+        </div>
+        <div class="quick-stat-box">
+          <strong>5,895m (Uhuru)</strong>
+          <span>Summit Peak</span>
+        </div>
+        <div class="quick-stat-box">
+          <strong>Mandara / Horombo / Kibo</strong>
+          <span>Hut Lodging</span>
+        </div>
+        <div class="quick-stat-box">
+          <strong>Moderate</strong>
+          <span>Trail Difficulty</span>
+        </div>
+        <div class="quick-stat-box">
+          <strong>$3,100 / Pax</strong>
+          <span>VIP 1-3 Pax Rate</span>
+        </div>
+      </div>
+
+      <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-top: 2rem;">
+        <button class="btn btn-primary" onclick="openVideoModal('marangu')">
+          <i class="fa-solid fa-circle-play"></i> Watch Marangu Video
+        </button>
+        <button class="btn btn-whatsapp" onclick="openBookingWhatsApp('Marangu Route (6 Days)', 'VIP Package', '6 Days', 'Hello Okie Dokie Safaris! I want to book the 6-Day Marangu Route VIP Package ($3,100 / Pax rate).')">
+          <i class="fa-brands fa-whatsapp"></i> Book VIP on WhatsApp
+        </button>
+        <button class="btn btn-outline" onclick="openBookingWhatsApp('Marangu Route (6 Days)', 'Standard/Budget Package', '6 Days', 'Hello Okie Dokie Safaris! I want to book the 6-Day Marangu Route Standard/Budget Package.')">
+          <i class="fa-solid fa-tag"></i> Book Budget on WhatsApp
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Route Content -->
+  <section style="padding: 5rem 0; background: #FFF;">
+    <div class="container container-narrow">
+      
+      <!-- Video Preview Box -->
+      <div class="video-preview-box">
+        <img src="assets/img/marangu.jpg" alt="Marangu Route Trail">
+        <div class="play-button" onclick="openVideoModal('marangu')">
+          <i class="fa-solid fa-play"></i>
+        </div>
+        <div style="position: absolute; bottom: 1.5rem; left: 1.5rem; color: #FFF; z-index: 5;">
+          <h4 style="font-family: var(--font-heading); font-size: 1.3rem;">Marangu Route Video Preview</h4>
+          <span style="font-size: 0.88rem; color: var(--text-light-muted);">Click to experience the huts and trail</span>
+        </div>
+      </div>
+
+      <!-- Overview -->
+      <div style="background: #FAF6ED; border-left: 5px solid var(--primary); padding: 2rem; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; margin: 2.5rem 0; box-shadow: var(--shadow-sm);">
+        <h3 style="font-family: var(--font-heading); font-size: 1.3rem; margin-bottom: 0.8rem; color: var(--dark);">
+          Route Overview:
+        </h3>
+        <p style="font-size: 1rem; line-height: 1.8; color: var(--text-main);">
+          The Marangu Route (famously known as the "Coca-Cola Route") is the oldest and one of the most classic trails on Mount Kilimanjaro. It is the only route that offers comfortable sleeping huts with solar-powered lights and beds, making it ideal for trekkers who prefer not to camp in tents.
+        </p>
+      </div>
+
+      <!-- Day-by-Day Timeline -->
+      <div class="section-header" style="text-align: left; margin: 3rem 0 2rem 0;">
+        <span class="section-subtitle"><i class="fa-solid fa-calendar-days"></i> Complete Itinerary</span>
+        <h2 class="section-title">Day-by-Day Expedition Schedule</h2>
+      </div>
+
+      <div class="itinerary-timeline">
+
+        <div class="itinerary-day">
+          <div class="day-header">
+            <span class="day-badge">DAY 1</span>
+            <h4 class="day-title">(Arusha / Moshi) Hotel to Marangu Gate to Mandara Hut</h4>
+          </div>
+          <p>
+            In the morning, your Okie Dokie Safaris driver will pick you up from Seven Skies Hotel in Arusha and drive to Marangu Gate for park registration. We begin our trek through thick, tropical rainforest, listening to native bird calls and spotting Colobus monkeys. We arrive at Mandara Hut in the late afternoon. An optional short walk to Maundi Crater offers great initial views of Northern Tanzania.
+          </p>
+          <div class="day-meta-grid">
+            <div class="day-meta-item"><i class="fa-solid fa-arrows-up-down"></i> <strong>Elevation:</strong> 1,870m / 6,135ft to 2,700m / 8,858ft</div>
+            <div class="day-meta-item"><i class="fa-solid fa-route"></i> <strong>Distance:</strong> 8 km / 5 miles</div>
+            <div class="day-meta-item"><i class="fa-solid fa-clock"></i> <strong>Hiking Time:</strong> 4–5 hours</div>
+            <div class="day-meta-item"><i class="fa-solid fa-tree"></i> <strong>Habitat:</strong> Rainforest</div>
+            <div class="day-meta-item"><i class="fa-solid fa-bed"></i> <strong>Accommodation:</strong> Mandara Wooden Huts</div>
+          </div>
+        </div>
+
+        <div class="itinerary-day">
+          <div class="day-header">
+            <span class="day-badge">DAY 2</span>
+            <h4 class="day-title">Mandara Hut to Horombo Hut</h4>
+          </div>
+          <p>
+            We leave the rainforest behind and ascend through the moorland zone, surrounded by giant lobelias and groundsels. The path offers stunning panoramic views of Mawenzi and Kibo Peaks. We reach Horombo Hut by mid-afternoon, where you can rest and enjoy the mountain sunset.
+          </p>
+          <div class="day-meta-grid">
+            <div class="day-meta-item"><i class="fa-solid fa-arrows-up-down"></i> <strong>Elevation:</strong> 2,700m / 8,858ft to 3,720m / 12,205ft</div>
+            <div class="day-meta-item"><i class="fa-solid fa-route"></i> <strong>Distance:</strong> 12 km / 7.5 miles</div>
+            <div class="day-meta-item"><i class="fa-solid fa-clock"></i> <strong>Hiking Time:</strong> 6–8 hours</div>
+            <div class="day-meta-item"><i class="fa-solid fa-cloud-sun"></i> <strong>Habitat:</strong> Moorland / Heath</div>
+            <div class="day-meta-item"><i class="fa-solid fa-bed"></i> <strong>Accommodation:</strong> Horombo Wooden Huts</div>
+          </div>
+        </div>
+
+        <div class="itinerary-day">
+          <div class="day-header">
+            <span class="day-badge">DAY 3 - ACCLIMATIZATION</span>
+            <h4 class="day-title">Horombo Hut (Acclimatization Day)</h4>
+          </div>
+          <p>
+            A crucial rest day to allow your body to adapt to the rising altitude! We take an acclimatization hike up to Zebra Rocks (4,020m), named for their unique black-and-white striped volcanic formations. After taking photos and enjoying lunch, we descend back to Horombo Hut for rest and dinner.
+          </p>
+          <div class="day-meta-grid">
+            <div class="day-meta-item"><i class="fa-solid fa-arrows-up-down"></i> <strong>Elevation:</strong> 3,720m to Zebra Rocks (4,020m / 13,188ft) back to 3,720m</div>
+            <div class="day-meta-item"><i class="fa-solid fa-route"></i> <strong>Distance:</strong> 5 km / 3 miles</div>
+            <div class="day-meta-item"><i class="fa-solid fa-clock"></i> <strong>Hiking Time:</strong> 3–4 hours</div>
+            <div class="day-meta-item"><i class="fa-solid fa-cloud-sun"></i> <strong>Habitat:</strong> Moorland</div>
+            <div class="day-meta-item"><i class="fa-solid fa-bed"></i> <strong>Accommodation:</strong> Horombo Wooden Huts</div>
+          </div>
+        </div>
+
+        <div class="itinerary-day">
+          <div class="day-header">
+            <span class="day-badge">DAY 4</span>
+            <h4 class="day-title">Horombo Hut to Kibo Hut (Base Camp)</h4>
+          </div>
+          <p>
+            We trek gradually across the barren alpine desert known as "The Saddle," which connects the two peaks of Mawenzi and Kibo. The landscape feels like walking on the moon! We arrive at Kibo Hut early in the afternoon, enjoy an early dinner, and go to sleep early to prepare for the midnight summit push.
+          </p>
+          <div class="day-meta-grid">
+            <div class="day-meta-item"><i class="fa-solid fa-arrows-up-down"></i> <strong>Elevation:</strong> 3,720m / 12,205ft to 4,700m / 15,419ft</div>
+            <div class="day-meta-item"><i class="fa-solid fa-route"></i> <strong>Distance:</strong> 10 km / 6 miles</div>
+            <div class="day-meta-item"><i class="fa-solid fa-clock"></i> <strong>Hiking Time:</strong> 5–6 hours</div>
+            <div class="day-meta-item"><i class="fa-solid fa-mountain"></i> <strong>Habitat:</strong> Alpine Desert</div>
+            <div class="day-meta-item"><i class="fa-solid fa-bed"></i> <strong>Accommodation:</strong> Kibo Wooden Huts</div>
+          </div>
+        </div>
+
+        <div class="itinerary-day">
+          <div class="day-header">
+            <span class="day-badge" style="background: var(--logo-brown); color: #FFF;">DAY 5 - SUMMIT DAY!</span>
+            <h4 class="day-title">Kibo Hut to Uhuru Peak to Horombo Hut</h4>
+          </div>
+          <p>
+            At midnight, we begin our climb to the summit by headlamp light! Moving steadily up steep volcanic scree, we reach Gillman’s Point (5,685m) on the crater rim just as dawn breaks. Continuing along the snow-draped rim, we reach <strong>Uhuru Peak (5,895m) — The Roof of Africa!</strong> After celebrating at the summit, we descend back to Kibo Hut for a short rest and warm soup, then continue down to Horombo Hut for the night.
+          </p>
+          <div class="day-meta-grid">
+            <div class="day-meta-item"><i class="fa-solid fa-arrows-up-down"></i> <strong>Elevation:</strong> 4,700m to Uhuru Peak (5,895m / 19,341ft) down to Horombo (3,720m)</div>
+            <div class="day-meta-item"><i class="fa-solid fa-route"></i> <strong>Distance:</strong> 6 km ascent / 16 km descent (22 km total)</div>
+            <div class="day-meta-item"><i class="fa-solid fa-clock"></i> <strong>Hiking Time:</strong> 6–8 hrs ascent / 6–7 hrs descent</div>
+            <div class="day-meta-item"><i class="fa-solid fa-snowflake"></i> <strong>Habitat:</strong> Arctic Summit / Alpine Desert</div>
+            <div class="day-meta-item"><i class="fa-solid fa-bed"></i> <strong>Accommodation:</strong> Horombo Wooden Huts</div>
+          </div>
+        </div>
+
+        <div class="itinerary-day">
+          <div class="day-header">
+            <span class="day-badge">DAY 6</span>
+            <h4 class="day-title">Horombo Hut to Marangu Gate to Arusha / Moshi</h4>
+          </div>
+          <p>
+            Our final descent takes us through the moorland and back down into the lush rainforest to Marangu Gate. Here, you will be awarded your official Kilimanjaro Summit Certificates (Green for Gillman's Point, Gold for Uhuru Peak)! Our vehicle will be waiting to transfer you back to Seven Skies Hotel in Arusha for a long-awaited hot shower and celebration.
+          </p>
+          <div class="day-meta-grid">
+            <div class="day-meta-item"><i class="fa-solid fa-arrows-up-down"></i> <strong>Elevation:</strong> 3,720m / 12,205ft to 1,870m / 6,135ft</div>
+            <div class="day-meta-item"><i class="fa-solid fa-route"></i> <strong>Distance:</strong> 20 km / 12.5 miles</div>
+            <div class="day-meta-item"><i class="fa-solid fa-clock"></i> <strong>Hiking Time:</strong> 5–7 hours</div>
+            <div class="day-meta-item"><i class="fa-solid fa-tree"></i> <strong>Habitat:</strong> Rainforest</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Departure & Safari Extension -->
+      <div style="background: #F4EEDF; border-radius: var(--radius-sm); padding: 1.5rem; margin: 2rem 0; border: 1px solid var(--light-border);">
+        <h4 style="color: var(--logo-brown); font-family: var(--font-heading); margin-bottom: 0.5rem;"><i class="fa-solid fa-plane-departure"></i> Departure or Onward Safari:</h4>
+        <p style="font-size: 0.95rem; color: var(--text-main);">
+          After breakfast at Seven Skies Hotel, check out and transfer to Kilimanjaro International Airport (JRO) for your flight back home, or continue your adventure with an Okie Dokie Safaris wildlife safari into Serengeti and Ngorongoro Crater!
+        </p>
+      </div>
+
+      <!-- Inclusions & Exclusions -->
+      <div class="inc-exc-grid">
+        <div class="inc-card">
+          <h4 class="inc-title"><i class="fa-solid fa-circle-check"></i> What is Included:</h4>
+          <ul class="inc-list">
+            <li>Round-trip ground transport (Arusha to Marangu Gate and back).</li>
+            <li>2 Nights hotel accommodation in Arusha / Moshi (Seven Skies Hotel) before and after the trek.</li>
+            <li>All TANAPA Park fees, hut fees, and mountain rescue fees.</li>
+            <li>Full mountain crew (Professional English-speaking Wilderness First Responder Guides, Chef, and Porters).</li>
+            <li>3 Freshly cooked meals daily on the mountain + safe purified drinking water.</li>
+            <li>Wooden hut accommodations, mess equipment, tables, and chairs.</li>
+            <li>Complete safety kit (Pulse oximeter, emergency medical oxygen cylinder, and first aid kit).</li>
+            <li>Official Summit Certificate from TANAPA.</li>
+          </ul>
+        </div>
+
+        <div class="exc-card">
+          <h4 class="exc-title"><i class="fa-solid fa-circle-xmark"></i> What is Excluded:</h4>
+          <ul class="exc-list">
+            <li>Private round-trip airport transfers (JRO / Arusha Airport) to the hotel in Arusha/Moshi.</li>
+            <li>International flight tickets and Tanzania Visa fees.</li>
+            <li>High-altitude medical/travel insurance.</li>
+            <li>Personal Mountain gear (sleeping bag, warm clothing, and hiking boots).</li>
+            <li>Tips for the mountain guides, chefs, and porters.</li>
+            <li>Alcoholic drinks and personal laundry at the hotel.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Comparison Table: Luxury VIP vs Standard/Budget -->
+      <div class="section-header" style="text-align: left; margin: 3rem 0 1.5rem 0;">
+        <span class="section-subtitle"><i class="fa-solid fa-scale-balanced"></i> Package Comparison</span>
+        <h3 class="section-title" style="font-size: 1.8rem;">Marangu Route: Luxury VIP vs Standard/Budget</h3>
+      </div>
+
+      <div class="table-mobile-hint">
+        <i class="fa-solid fa-arrows-left-right"></i> Scroll sideways on mobile to compare Luxury VIP vs Standard/Budget
+      </div>
+
+      <div class="comparison-container">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th class="col-feature">Feature / Service</th>
+              <th class="col-vip"><i class="fa-solid fa-crown"></i> Luxury VIP Package</th>
+              <th class="col-budget"><i class="fa-solid fa-compass"></i> Standard / Budget Package</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="feature-name">Accommodation</td>
+              <td class="vip-cell">Walk-in spacious tents, camp cots, thick foam mattresses (or VIP hut allocations).</td>
+              <td>Standard mountain tents, foam sleeping pads / standard shared wooden hut bunks.</td>
+            </tr>
+            <tr>
+              <td class="feature-name">Toilet facilities</td>
+              <td class="vip-cell">Private portable toilet with dedicated tent.</td>
+              <td>Public park pit latrines.</td>
+            </tr>
+            <tr>
+              <td class="feature-name">Dining service</td>
+              <td class="vip-cell">Executive Mountain Chef, 3-course hot meals, fresh fruits.</td>
+              <td>Standard nutritious hot meals.</td>
+            </tr>
+            <tr>
+              <td class="feature-name">Safety Gear</td>
+              <td class="vip-cell">Pulse Oximeter checks, emergency oxygen cylinder, full first aid kit.</td>
+              <td>Daily pulse oximeter checks, standard first aid.</td>
+            </tr>
+            <tr>
+              <td class="feature-name">Crew Ratio</td>
+              <td class="vip-cell">4–5 crew members per client.</td>
+              <td>2–3 crew members per client.</td>
+            </tr>
+            <tr>
+              <td class="feature-name">Extras</td>
+              <td class="vip-cell">Warm washing water daily, hot beverages on demand.</td>
+              <td>Warm washing water, morning and evening.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Two Distinct Booking Packages: Luxury VIP vs Standard/Budget -->
+      <div class="section-header" style="text-align: center; margin: 3.5rem 0 1rem 0;">
+        <span class="section-subtitle"><i class="fa-brands fa-whatsapp"></i> Direct Booking</span>
+        <h3 class="section-title" style="font-size: 1.9rem;">Choose Your Marangu Experience</h3>
+        <p class="section-desc" style="max-width: 680px; margin: 0 auto;">
+          Select your preferred package tier below. Clicking either button opens an instant WhatsApp chat with our head expedition coordinator to lock in your dates and quote.
+        </p>
+      </div>
+
+      <div class="route-booking-packages-grid">
+        <!-- 1. LUXURY VIP PACKAGE CARD -->
+        <div class="package-booking-card vip-tier">
+          <div class="pkg-header">
+            <span class="pkg-badge"><i class="fa-solid fa-crown"></i> Luxury VIP Package</span>
+            <h3 class="pkg-title">Marangu 6-Day VIP</h3>
+            <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 0.5rem;">Maximum comfort & personalized expedition crew</p>
+            <div class="pkg-price">
+              <span class="price-val">$2,600 – $3,100</span>
+              <span class="price-sub">/ person</span>
+            </div>
+            <div class="pkg-tier-info">
+              1–3 Pax: <strong>$3,100</strong> | 4–6 Pax: <strong>$2,850</strong> | 7–10+ Pax: <strong>$2,600</strong>
+            </div>
+          </div>
+          <ul class="pkg-features">
+            <li><i class="fa-solid fa-circle-check"></i> <strong>VIP Hut & Camp Comfort:</strong> Walk-in spacious tent setup / upgraded hut allocations with thick foam mattresses & warm camp cots.</li>
+            <li><i class="fa-solid fa-circle-check"></i> <strong>Private Portable Toilet:</strong> Dedicated private chemical toilet tent exclusively for your private party.</li>
+            <li><i class="fa-solid fa-circle-check"></i> <strong>Gourmet Executive Dining:</strong> 3 freshly prepared hot meals daily by an Executive Mountain Chef, including fresh tropical fruits & soups.</li>
+            <li><i class="fa-solid fa-circle-check"></i> <strong>High-Altitude Safety Suite:</strong> Daily pulse oximeter monitoring, emergency medical oxygen cylinder, and Wilderness First Responder guides.</li>
+            <li><i class="fa-solid fa-circle-check"></i> <strong>4–5 Crew Members Per Client:</strong> Exceptional porter-to-climber ratio ensures effortless summit support.</li>
+            <li><i class="fa-solid fa-circle-check"></i> <strong>VIP Field Extras:</strong> Warm washing water daily, hot beverages on demand (tea, coffee, cocoa), summit celebration sparkling cider.</li>
+            <li><i class="fa-solid fa-circle-check"></i> <strong>2 Hotel Nights:</strong> Seven Skies Hotel in Arusha / Moshi before & after trek.</li>
+          </ul>
+          <button class="btn btn-whatsapp btn-block" onclick="openBookingWhatsApp('Marangu Route (6 Days VIP)', 'Luxury VIP Package', '6 Days ($3,100 1-3pax / $2,850 4-6pax / $2,600 7-10+pax)', 'Hello Okie Dokie Safaris! I want to book the 6-Day Marangu Route LUXURY VIP Package.\n• Party size: ___\n• Dates preferred: ___\nPlease confirm availability and details.')">
+            <i class="fa-brands fa-whatsapp"></i> Book Luxury VIP on WhatsApp
+          </button>
+        </div>
+
+        <!-- 2. STANDARD / BUDGET PACKAGE CARD -->
+        <div class="package-booking-card">
+          <div class="pkg-header">
+            <span class="pkg-badge budget"><i class="fa-solid fa-compass"></i> Standard / Budget Package</span>
+            <h3 class="pkg-title">Marangu 6-Day Standard</h3>
+            <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 0.5rem;">Authentic mountain adventure with full safety & certified crew</p>
+            <div class="pkg-price">
+              <span class="price-val" style="color: var(--dark);">$2,400 – $2,850</span>
+              <span class="price-sub">/ person</span>
+            </div>
+            <div class="pkg-tier-info">
+              1–3 Pax: <strong>$2,850</strong> | 4–6 Pax: <strong>$2,600</strong> | 7–10+ Pax: <strong>$2,400</strong>
+            </div>
+          </div>
+          <ul class="pkg-features">
+            <li><i class="fa-solid fa-circle-check" style="color: var(--logo-brown);"></i> <strong>Standard Hut Accommodations:</strong> Shared wooden hut bunk lodging at Mandara and Horombo Huts.</li>
+            <li><i class="fa-solid fa-circle-check" style="color: var(--logo-brown);"></i> <strong>Park Toilet Facilities:</strong> Clean public TANAPA national park latrines & hut ablution blocks.</li>
+            <li><i class="fa-solid fa-circle-check" style="color: var(--logo-brown);"></i> <strong>Nutritious Mountain Meals:</strong> 3 wholesome, energizing hot cooked meals daily prepared by licensed mountain cooks.</li>
+            <li><i class="fa-solid fa-circle-check" style="color: var(--logo-brown);"></i> <strong>Mountain Safety:</strong> Daily pulse oximeter checks, complete first aid kit, and emergency rescue protocols.</li>
+            <li><i class="fa-solid fa-circle-check" style="color: var(--logo-brown);"></i> <strong>2–3 Crew Members Per Client:</strong> Experienced, ethical porters and licensed mountain guide.</li>
+            <li><i class="fa-solid fa-circle-check" style="color: var(--logo-brown);"></i> <strong>Standard Field Care:</strong> Warm washing basin water morning and evening, clean boiled drinking water.</li>
+            <li><i class="fa-solid fa-circle-check" style="color: var(--logo-brown);"></i> <strong>2 Hotel Nights:</strong> Seven Skies Hotel in Arusha / Moshi before & after trek.</li>
+          </ul>
+          <button class="btn btn-primary btn-block" style="background: var(--dark-surface); color: #FFF; border-color: var(--primary);" onclick="openBookingWhatsApp('Marangu Route (6 Days Standard)', 'Standard/Budget Package', '6 Days ($2,850 1-3pax / $2,600 4-6pax / $2,400 7-10+pax)', 'Hello Okie Dokie Safaris! I want to book the 6-Day Marangu Route STANDARD / BUDGET Package.\n• Party size: ___\n• Dates preferred: ___\nPlease share pricing and availability.')">
+            <i class="fa-brands fa-whatsapp"></i> Book Standard/Budget on WhatsApp
+          </button>
+        </div>
+      </div>
+
+      <!-- Back to Routes Link -->
+      <div style="text-align: center; margin-top: 2rem;">
+        <a href="kilimanjaro.html" class="btn btn-outline" style="color: var(--dark); border-color: var(--primary);">
+          <i class="fa-solid fa-arrow-left"></i> Back to All Kilimanjaro Routes & Prices
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Modern Luxury Footer -->
+  <footer class="footer" id="contact">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="assets/img/logo.png" alt="Okie Dokie Safaris">
+          <p class="footer-desc">
+            <strong>Okie Dokie Safaris</strong> — "We take the world to the nature." Registered Kilimanjaro expedition operator based in Arusha and Moshi.
+          </p>
+        </div>
+        <div>
+          <h4 class="footer-title">All Climbing Routes</h4>
+          <ul class="footer-links">
+            <li><a href="kilimanjaro-marangu.html"><i class="fa-solid fa-angle-right"></i> Marangu Route (6 Days)</a></li>
+            <li><a href="kilimanjaro-rongai.html"><i class="fa-solid fa-angle-right"></i> Rongai Route (6 Days)</a></li>
+            <li><a href="kilimanjaro-machame.html"><i class="fa-solid fa-angle-right"></i> Machame Route (7 Days VIP)</a></li>
+            <li><a href="kilimanjaro-lemosho.html"><i class="fa-solid fa-angle-right"></i> Lemosho Route (7 Days VIP)</a></li>
+            <li><a href="kilimanjaro.html#pricing"><i class="fa-solid fa-angle-right"></i> Official Pricing Table</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Destinations</h4>
+          <ul class="footer-links">
+            <li><a href="kilimanjaro.html"><i class="fa-solid fa-angle-right"></i> Mount Kilimanjaro</a></li>
+            <li><a href="safari.html"><i class="fa-solid fa-angle-right"></i> Tanzania Safari Packages</a></li>
+            <li><a href="day trips.html#materuni-section"><i class="fa-solid fa-angle-right"></i> Coffee & Hot Springs</a></li>
+            <li><a href="day trips.html#magoroto-section"><i class="fa-solid fa-angle-right"></i> Magoroto Forest Estate</a></li>
+            <li><a href="beach-safari.html"><i class="fa-solid fa-angle-right"></i> Zanzibar Beach Safari</a></li>
+            <li><a href="volunteers.html"><i class="fa-solid fa-angle-right"></i> Volunteer in Tanzania</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Contact Us</h4>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>Head Office: Arusha & Moshi, Tanzania</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-brands fa-whatsapp"></i>
+            <a href="https://wa.me/255744779970" style="color: inherit;">+255 744 779 970</a>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-envelope"></i>
+            <a href="mailto:info@okiedokiesafaris.co.tz" style="color: inherit;">info@okiedokiesafaris.co.tz</a>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-globe"></i>
+            <span>www.okiedokiesafaris.com</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 Okie Dokie Safaris. All Rights Reserved. "We take the world to the nature."</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/255744779970?text=Hello%20Okie%20Dokie%20Safaris!%20I%20want%20to%20book%20the%20Marangu%20Route." target="_blank" class="floating-whatsapp" aria-label="Chat on WhatsApp">
+    <div class="whatsapp-pulse"></div>
+    <i class="fa-brands fa-whatsapp" style="font-size: 1.4rem;"></i>
+    <span>Chat on WhatsApp</span>
+  </a>
+
+  <!-- Video Modal -->
+  <div class="modal" id="videoModal">
+    <div class="modal-content">
+      <button class="modal-close" id="videoModalClose" aria-label="Close modal">&times;</button>
+      <div class="modal-video-wrapper">
+        <iframe id="videoModalFrame" src="" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

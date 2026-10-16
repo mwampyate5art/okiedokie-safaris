@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mount Kilimanjaro Climbing Routes & Official Pricing Matrix | Okie Dokie Safaris</title>
+  <meta name="description" content="Mount Kilimanjaro expeditions with Okie Dokie Safaris. Overview, photo gallery, short video, 4 climbing routes (Marangu, Rongai, Machame, Lemosho), official pricing matrix, and WhatsApp booking.">
+  
+  <link rel="icon" type="image/png" href="assets/img/logo.png">
+
+  <!-- Google Fonts: Includes Logo Fonts Michroma & Quicksand, plus Cinzel & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Michroma&family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  
+  <style>
+    .kili-hero {
+      position: relative;
+      background: linear-gradient(180deg, rgba(28, 22, 11, 0.72) 0%, rgba(28, 22, 11, 0.92) 100%), url('assets/img/kili-card-1.jpg') center/cover no-repeat;
+      padding: 6.5rem 0 4.5rem 0;
+      color: #FFF;
+      text-align: center;
+    }
+    .kili-gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+      margin: 2.5rem 0;
+    }
+    .kili-gallery-item {
+      height: 220px;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      position: relative;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--light-border);
+      transition: var(--transition);
+    }
+    .kili-gallery-item:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--primary);
+    }
+    .kili-gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    .kili-gallery-item:hover img {
+      transform: scale(1.06);
+    }
+    .kili-gallery-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(0deg, rgba(28, 22, 11, 0.9) 0%, transparent 100%);
+      padding: 1.2rem 1rem 0.6rem 1rem;
+      color: #FFF;
+      font-size: 0.84rem;
+      font-weight: 600;
+    }
+    .kili-video-box {
+      position: relative;
+      height: 380px;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      margin: 2.5rem 0;
+      box-shadow: var(--shadow-md);
+      border: 2px solid var(--primary);
+      cursor: pointer;
+    }
+    .kili-video-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .kili-video-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(28, 22, 11, 0.45);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #FFF;
+      text-align: center;
+      padding: 2rem;
+      transition: var(--transition);
+    }
+    .kili-video-box:hover .kili-video-overlay {
+      background: rgba(28, 22, 11, 0.3);
+    }
+    .kili-play-circle {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: var(--dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      box-shadow: 0 0 0 10px rgba(199, 158, 68, 0.35);
+      margin-bottom: 1.2rem;
+      transition: var(--transition);
+    }
+    .kili-video-box:hover .kili-play-circle {
+      transform: scale(1.1);
+      box-shadow: 0 0 0 16px rgba(199, 158, 68, 0.5);
+    }
+    .route-card-clickable {
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="top-contact">
+        <span><i class="fa-solid fa-location-dot"></i> Arusha & Moshi, Tanzania</span>
+        <a href="mailto:info@okiedokiesafaris.co.tz"><i class="fa-solid fa-envelope"></i> info@okiedokiesafaris.co.tz</a>
+        <a href="https://wa.me/255744779970" target="_blank"><i class="fa-brands fa-whatsapp"></i> +255 744 779 970</a>
+      </div>
+
+      <div class="top-actions">
+        <div class="lang-selector-wrapper">
+          <button class="lang-btn" id="langToggleBtn">
+            <i class="fa-solid fa-globe"></i> English <i class="fa-solid fa-chevron-down" style="font-size: 0.75rem;"></i>
+          </button>
+          <div class="lang-dropdown" id="langDropdown">
+            <a href="javascript:void(0)" onclick="switchLanguage('en', 'English')"><span>🇺🇸</span> English</a>
+            <a href="javascript:void(0)" onclick="switchLanguage('sw', 'Kiswahili')"><span>🇹🇿</span> Kiswahili</a>
+            <a href="javascript:void(0)" onclick="switchLanguage('fr', 'Français')"><span>🇫🇷</span> Français</a>
+            <a href="javascript:void(0)" onclick="switchLanguage('de', 'Deutsch')"><span>🇩🇪</span> Deutsch</a>
+            <a href="javascript:void(0)" onclick="switchLanguage('es', 'Español')"><span>🇪🇸</span> Español</a>
+            <a href="javascript:void(0)" onclick="switchLanguage('it', 'Italiano')"><span>🇮🇹</span> Italiano</a>
+          </div>
+        </div>
+        <div id="google_translate_element"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar with Route Dropdown -->
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" class="brand-logo">
+        <img src="assets/img/logo.png" alt="Okie Dokie Safaris Logo">
+      </a>
+
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        
+        <div class="nav-item-dropdown">
+          <a href="kilimanjaro.html" class="nav-link active">
+            Kilimanjaro <i class="fa-solid fa-chevron-down" style="font-size: 0.7rem; margin-left: 2px;"></i>
+          </a>
+          <div class="nav-sub-menu">
+            <a href="kilimanjaro.html" class="nav-sub-link"><i class="fa-solid fa-mountain"></i> Overview & Pricing Matrix</a>
+            <a href="kilimanjaro-marangu.html" class="nav-sub-link"><i class="fa-solid fa-hotel"></i> Marangu Route (6 Days)</a>
+            <a href="kilimanjaro-rongai.html" class="nav-sub-link"><i class="fa-solid fa-compass"></i> Rongai Route (6 Days)</a>
+            <a href="kilimanjaro-machame.html" class="nav-sub-link"><i class="fa-solid fa-fire"></i> Machame Route (7 Days VIP)</a>
+            <a href="kilimanjaro-lemosho.html" class="nav-sub-link"><i class="fa-solid fa-eye"></i> Lemosho Route (7 Days VIP)</a>
+          </div>
+        </div>
+
+        <a href="safari.html" class="nav-link">Safari Packages</a>
+       <a href="day trips.html" class="nav-link">Day Trips</a>
+       <a href="beach-safari.html" class="nav-link">Beach Safari</a>
+        <a href="volunteers.html" class="nav-link">Volunteers</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="btn btn-primary" onclick="openBookingWhatsApp('Kilimanjaro Trek', 'VIP Package', '6-7 Days', 'Hello Okie Dokie Safaris! I want to climb Mount Kilimanjaro. Please assist me with dates and route planning.')">
+          <i class="fa-solid fa-mountain"></i> Book Climb
+        </button>
+        <button class="mobile-nav-toggle" aria-label="Toggle navigation">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+<!-- Kilimanjaro Hero Banner -->
+<section class="kili-hero" style="background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.7)), url('assets/img/kilimanjaro.jpeg');">
+  <div class="container">
+    <span class="section-subtitle"><i class="fa-solid fa-mountain"></i> The Roof of Africa • 5,895m / 19,341ft</span>
+    <h1 class="hero-title" style="font-size: clamp(2.4rem, 5vw, 4rem);">
+      Mount Kilimanjaro <span>Expeditions</span>
+    </h1>
+    <p class="brand-slogan" style="font-size: 1.25rem; color: #DFB254; margin-bottom: 1.2rem;">"we take the world to the nature"</p>
+    
+    <p class="hero-desc" style="max-width: 820px; margin: 0 auto 2rem auto;">
+      Mount Kilimanjaro is the world's tallest free-standing mountain and Africa's highest summit. Journey through five distinct ecological climate zones — from dense tropical rainforests and heather moorlands to alpine deserts and glaciated arctic crater rims. With Okie Dokie Safaris, you hike alongside certified Wilderness First Responders, indulge in gourmet high-altitude dining, and rest in top-tier expedition shelters.
+    </p>
+
+    <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+      <a href="#routes" class="btn btn-primary btn-lg">
+        <i class="fa-solid fa-route"></i> View 4 Climbing Routes
+      </a>
+      <a href="#pricing" class="btn btn-outline btn-lg">
+        <i class="fa-solid fa-tags"></i> Route Pricing Table
+      </a>
+      <button class="btn btn-whatsapp btn-lg" onclick="openVideoModal('kilimanjaro')">
+        <i class="fa-solid fa-circle-play"></i> Watch Mountain Video
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- Corresponding CSS Styles (Add this to your stylesheet) -->
+<style>
+.kili-hero {
+  position: relative;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  color: #ffffff;
+  padding: 120px 0;
+  text-align: center;
+}
+
+.kili-hero .hero-title,
+.kili-hero .section-subtitle {
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+.kili-hero .hero-title span {
+  color: #DFB254; /* Matches your brand slogan accent */
+}
+</style>
+
+  <!-- ===================================================================
+       SECTION 1: MAELEZO YA KILIMANJARO + PICHA ZAKE + SHORT VIDEO
+       (Everything About Mount Kilimanjaro, Photo Gallery & Video)
+       =================================================================== -->
+  <section style="padding: 5.5rem 0; background: #FFF;">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle"><i class="fa-solid fa-mountain"></i> Discover Kilimanjaro</span>
+        <h2 class="section-title">Everything About Mount Kilimanjaro</h2>
+        <div class="logo-arc-divider"></div>
+        <p class="section-desc">
+          Mount Kilimanjaro rises majestically above the East African plains to 5,895 meters (19,341 feet). Composed of three distinct volcanic cones — Kibo, Mawenzi, and Shira — it is recognized as a UNESCO World Heritage Site.
+        </p>
+      </div>
+
+      <!-- Overview Content Grid -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2.5rem; align-items: center; margin-bottom: 3rem;">
+        <div>
+          <h3 style="font-family: var(--font-heading); font-size: 1.6rem; color: var(--dark); margin-bottom: 1rem;">
+            A Journey Through Earth's Biomes
+          </h3>
+          <p style="font-size: 0.98rem; line-height: 1.8; color: var(--text-main); margin-bottom: 1.2rem;">
+            Every expedition begins in the warm agricultural foothills and tropical rainforest, home to blue monkeys and black-and-white Colobus monkeys. As you ascend, you cross the surreal moorland dotted with giant Groundsels and Lobelias, traverse the moon-like alpine desert of The Saddle, and finally stand upon the arctic glaciers of Uhuru Peak as the African sun rises above the sea of clouds.
+          </p>
+          <ul style="display: flex; flex-direction: column; gap: 0.6rem; font-size: 0.95rem;">
+            <li><i class="fa-solid fa-circle-check" style="color: var(--primary);"></i> <strong>Peak Elevation:</strong> 5,895m (19,341 ft) at Uhuru Peak.</li>
+            <li><i class="fa-solid fa-circle-check" style="color: var(--primary);"></i> <strong>Location:</strong> Kilimanjaro National Park, Northern Tanzania.</li>
+            <li><i class="fa-solid fa-circle-check" style="color: var(--primary);"></i> <strong>Climbing Style:</strong> Non-technical trekking suitable for determined adventurers.</li>
+            <li><i class="fa-solid fa-circle-check" style="color: var(--primary);"></i> <strong>Safety Standard:</strong> Daily pulse oximeter monitoring & emergency oxygen on every climb.</li>
+          </ul>
+        </div>
+
+        <!-- Video Player Box -->
+        <div>
+          <div class="kili-video-box" onclick="openVideoModal('kilimanjaro')">
+            <img src="assets/img/kili-card-1.jpeg" alt="Mount Kilimanjaro Video Preview">
+            <div class="kili-video-overlay">
+              <div class="kili-play-circle">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <h4 style="font-family: var(--font-heading); font-size: 1.5rem; margin-bottom: 0.3rem;">Experience Mount Kilimanjaro</h4>
+              <p style="font-size: 0.9rem; color: #DFB254;">Click to play short cinematic expedition video</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kilimanjaro Photo Gallery -->
+      <div style="margin-top: 2rem;">
+        <h3 style="font-family: var(--font-heading); font-size: 1.4rem; color: var(--dark); text-align: center; margin-bottom: 0.5rem;">
+          Mount Kilimanjaro Photo Showcase
+        </h3>
+        <p style="text-align: center; font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.5rem;">
+          Real moments captured on our expeditions across the five ecological zones
+        </p>
+
+        <div class="kili-gallery-grid">
+          <div class="kili-gallery-item"> 
+            <img src="assets/img/kilimanjaro1.jpeg" alt="Uhuru Peak Summit Sign" loading="lazy" decoding="async">
+            <div class="kili-gallery-caption">Uhuru Peak 5,895m Summit Celebration</div>
+          </div>
+          <div class="kili-gallery-item">
+            <img src="assets/img/kilimanjaro5.jpeg" alt="Mount Kilimanjaro Peak Above Clouds" loading="lazy" decoding="async">
+            <div class="kili-gallery-caption">Majestic Kibo Peak Rising Above Clouds</div>
+          </div>
+          <div class="kili-gallery-item">
+            <img src="assets/img/kilimanjaro3.jpeg" alt="High Altitude Trekking Trail" loading="lazy" decoding="async">
+            <div class="kili-gallery-caption">Expedition Trail Across Moorland</div>
+          </div>
+          <div class="kili-gallery-item">
+            <img src="assets/img/kilimanjaro4.jpeg" alt="Kilimanjaro Volcanic Slopes" loading="lazy" decoding="async">
+            <div class="kili-gallery-caption">Glaciated Crater Rim and Sunrise Horizon</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       SECTION 2: NJIA ZA KUPANDIA MLIMA KILIMANJARO (4 CLIMBING ROUTES)
+       (4 Picture Cards with Names: Clicking Opens Dedicated Route Page!)
+       =================================================================== -->
+  <section id="routes" style="padding: 5.5rem 0; background: var(--light-surface); border-top: 1px solid var(--light-border);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle"><i class="fa-solid fa-route"></i> Climbing Routes</span>
+        <h2 class="section-title">The Four Main Climbing Routes</h2>
+        <div class="logo-arc-divider"></div>
+        <p class="section-desc">
+          Click any route picture or button below to view that specific route's complete day-by-day itinerary, video preview, inclusions, VIP vs Budget pricing, and direct WhatsApp booking.
+        </p>
+      </div>
+
+      <div class="kili-routes-grid">
+        
+        <!-- Route 1: Marangu Route -->
+        <div class="kili-route-card">
+          <a href="kilimanjaro-marangu.html" class="route-card-clickable" title="Open Marangu Route Page">
+            <div class="kili-route-media">
+              <img src="assets/img/marangu.jpeg" alt="Marangu Route Trail & Huts" loading="lazy" decoding="async">
+              <span class="kili-route-badge"><i class="fa-solid fa-hotel"></i> Sleeping Huts</span>
+            </div>
+          </a>
+          <div class="kili-route-body">
+            <a href="kilimanjaro-marangu.html" style="text-decoration: none; color: inherit;">
+              <h3 class="kili-route-title">1. Marangu Route</h3>
+            </a>
+            <p class="kili-route-subtitle">6 Days / 5 Nights • The "Coca-Cola" Route</p>
+            <p class="kili-route-desc">
+              The oldest and classic trail on Kilimanjaro. It is the only route offering comfortable sleeping huts with solar-powered lights and beds, making it ideal for trekkers who prefer not to camp in tents.
+            </p>
+            <div class="kili-route-specs">
+              <div class="kili-spec-item"><i class="fa-solid fa-clock"></i> <strong>Duration:</strong> 6 Days</div>
+              <div class="kili-spec-item"><i class="fa-solid fa-bed"></i> <strong>Lodging:</strong> Mandara & Horombo Huts</div>
+              <div class="kili-spec-item"><i class="fa-solid fa-gauge"></i> <strong>Difficulty:</strong> Moderate</div>
+              <div class="kili-spec-item"><i class="fa-solid fa-tag"></i> <strong>VIP Rate:</strong> From $2,600 / Pax</div>
+            </div>
+            <div class="kili-route-actions">
+              <a href="kilimanjaro-marangu.html" class="btn btn-primary">
+                <i class="fa-solid fa-circle-arrow-right"></i> Explore Marangu Route
+              </a>
+              <button class="btn btn-outline" style="color: var(--dark); border-color: var(--primary);" onclick="openVideoModal('marangu')">
+                <i class="fa-solid fa-circle-play"></i> Video
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Route 2: Rongai Route -->
+        <div class="kili-route-card">
+          <a href="kilimanjaro-rongai.html" class="route-card-clickable" title="Open Rongai Route Page">
+            <div class="kili-route-media">
+              <img src="assets/img/rongai.jpg" alt="Rongai Route Northern Trail" loading="lazy" decoding="async">
+              <span class="kili-route-badge"><i class="fa-solid fa-compass"></i> Northern Approach</span>
+            </div>
+          </a>
+          <div class="kili-route-body">
+            <a href="kilimanjaro-rongai.html" style="text-decoration: none; color: inherit;">
+              <h3 class="kili-route-title">2. Rongai Route</h3>
+            </a>
+            <p class="kili-route-subtitle">6 Days / 5 Nights • Remote Wilderness</p>
+            <p class="kili-route-desc">
+              The only trail that approaches Mount Kilimanjaro from the northern side near the Kenyan border. Uncrowded wilderness, pine forests, drier micro-climate, and stunning views beneath Mawenzi Peak.
+            </p>
+            <div class="kili-route-specs">
+              <div class="kili-spec-item"><i class="fa-solid fa-clock"></i> <strong>Duration:</strong> 6 Days</div>
+              <div class="kili-spec-item"><i class="fa-solid fa-campground"></i> <strong>Lodging:</strong> Mountain Camps</div>
+              <div class="kili-spec-item"><i class="fa-solid fa-gauge"></i> <strong>Difficulty:</strong> Moderate</div>
+              <div class="kili-spec-item"><i class="fa-solid fa-tag"></i> <strong>VIP Rate:</strong> From $2,850 / Pax</div>
+            </div>
+            <div class="kili-route-actions">
+              <a href="kilimanjaro-rongai.html" class="btn btn-primary">
+                <i class="fa-solid fa-circle-arrow-right"></i> Explore Rongai Route
+              </a>
+              <button class="btn btn-outline" style="color: var(--dark); border-color: var(--primary);" onclick="openVideoModal('rongai')">
+                <i class="fa-solid fa-circle-play"></i> Video
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Route 3: Machame Route -->
+        <div class="kili-route-card">
+          <a href="kilimanjaro-machame.html" class="route-card-clickable" title="Open Machame Route Page">
+            <div class="kili-route-media">
+              <img src="assets/img/machame.jpg" alt="Machame Route Barranco Wall" loading="lazy" decoding="async">
+              <span class="kili-route-badge"><i class="fa-solid fa-fire"></i> High Success Rate</span>
+            </div>
+          </a>
+          <div class="kili-route-body">
+            <a href="kilimanjaro-machame.html" style="text-decoration: none; color: inherit;">
+              <h3 class="kili-route-title">3. Machame Route</h3>
+            </a>
+            <p class="kili-route-subtitle">7 Days / 6 Nights • The "Whiskey" Route</p>
+            <p class="kili-route-desc">
+              The iconic trail renowned for scenic variety, excellent "climb high, sleep low" acclimatization via Lava Tower, and the thrilling Barranco Wall scramble. Offers top summit success rates.
+            </p>
+            <div class="kili-route-specs">
+              <div class="kili-spec-item"><i class="fa-solid fa-clock"></i> <strong>Duration:</strong> 7 Days VIP</div>
+              <div class="kili-spec-item"><i class="fa-solid fa-campground"></i> <strong>Lodging:</strong> Mountain Camps</div>
+              <div class="kili-spec-item"><i class="fa-solid fa-gauge-high"></i> <strong>Difficulty:</strong> Strenuous</div>
+              <div class="kili-spec-item"><i class="fa-solid fa-tag"></i> <strong>VIP Rate:</strong> From $2,950 / Pax</div>
+            </div>
+            <div class="kili-route-actions">
+              <a href="kilimanjaro-machame.html" class="btn btn-primary">
+                <i class="fa-solid fa-circle-arrow-right"></i> Explore Machame Route
+              </a>
+              <button class="btn btn-outline" style="color: var(--dark); border-color: var(--primary);" onclick="openVideoModal('machame')">
+                <i class="fa-solid fa-circle-play"></i> Video
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Route 4: Lemosho Route -->
+        <div class="kili-route-card">
+          <a href="kilimanjaro-lemosho.html" class="route-card-clickable" title="Open Lemosho Route Page">
+            <div class="kili-route-media">
+              <img src="assets/img/lemosho.jpg" alt="Lemosho Route Shira Plateau" loading="lazy" decoding="async">
+              <span class="kili-route-badge"><i class="fa-solid fa-eye"></i> Most Scenic Route</span>
+            </div>
+          </a>
+          <div class="kili-route-body">
+            <a href="kilimanjaro-lemosho.html" style="text-decoration: none; color: inherit;">
+              <h3 class="kili-route-title">4. Lemosho Route</h3>
+            </a>
+            <p class="kili-route-subtitle">7 Days / 6 Nights • Untouched Western Slopes</p>
+            <p class="kili-route-desc">
+              Widely regarded as the most picturesque route on Kilimanjaro. Starts in pristine western rainforests, crosses the vast Shira Plateau, and provides gradual altitude adaptation with stunning vistas.
+            </p>
+            <div class="kili-route-specs">
+              <div class="kili-spec-item"><i class="fa-solid fa-clock"></i> <strong>Duration:</strong> 7 Days VIP</div>
+              <div class="kili-spec-item"><i class="fa-solid fa-campground"></i> <strong>Lodging:</strong> Mountain Camps</div>
+              <div class="kili-spec-item"><i class="fa-solid fa-gauge-high"></i> <strong>Difficulty:</strong> Moderate-Strenuous</div>
+              <div class="kili-spec-item"><i class="fa-solid fa-tag"></i> <strong>VIP Rate:</strong> From $3,050 / Pax</div>
+            </div>
+            <div class="kili-route-actions">
+              <a href="kilimanjaro-lemosho.html" class="btn btn-primary">
+                <i class="fa-solid fa-circle-arrow-right"></i> Explore Lemosho Route
+              </a>
+              <button class="btn btn-outline" style="color: var(--dark); border-color: var(--primary);" onclick="openVideoModal('lemosho')">
+                <i class="fa-solid fa-circle-play"></i> Video
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       SECTION 3: BEI ZA KILIMANJARO (OFFICIAL ROUTE PRICING TABLE)
+       (Exact Document Pricing Matrix: 1-3 Pax, 4-6 Pax, 7-10+ Pax)
+       =================================================================== -->
+  <section id="pricing" style="padding: 5.5rem 0; background: #FFF;">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle"><i class="fa-solid fa-tags"></i> Official Tariffs</span>
+        <h2 class="section-title">Mount Kilimanjaro Route Pricing</h2>
+        <div class="logo-arc-divider"></div>
+        <p class="section-desc">
+          Official Okie Dokie Safaris expedition tariffs based on party size. All packages include park conservation fees, mountain rescue fees, qualified crew wages, executive chef service, and 2 nights hotel accommodation in Arusha / Moshi before & after your climb.
+        </p>
+      </div>
+
+      <div class="table-mobile-hint">
+        <i class="fa-solid fa-arrows-left-right"></i> Scroll sideways on mobile to compare all prices & party sizes (1–3 Pax, 4–6 Pax, 7–10+ Pax)
+      </div>
+
+      <div class="pricing-table-container">
+        <table class="pricing-table">
+          <thead>
+            <tr>
+              <th>Route & Duration</th>
+              <th>1 – 3 Pax</th>
+              <th>4 – 6 Pax</th>
+              <th>7 – 10+ Pax</th>
+              <th>Inquire / Book</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <span class="route-title">Northern Circuit (9 Days / 8 Nights)</span>
+              </td>
+              <td class="price-val">$3,150</td>
+              <td class="price-val">$2,850</td>
+              <td class="price-val">$2,600</td>
+              <td>
+                <button class="btn btn-whatsapp btn-sm" onclick="openBookingWhatsApp('Northern Circuit (9 Days / 8 Nights)', 'Standard/VIP', '9 Days', 'Hello Okie Dokie Safaris! I would like to book Northern Circuit 9 Days.')">
+                  <i class="fa-brands fa-whatsapp"></i> Book
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <span class="route-title">Machame Route (7 Days VIP)</span>
+                <span class="vip-badge">VIP Top Pick</span>
+              </td>
+              <td class="price-val">$3,550</td>
+              <td class="price-val">$3,250</td>
+              <td class="price-val">$2,950</td>
+              <td>
+                <button class="btn btn-whatsapp btn-sm" onclick="openBookingWhatsApp('Machame Route (7 Days VIP)', 'Luxury VIP', '7 Days', 'Hello Okie Dokie Safaris! I want to book Machame Route 7 Days VIP.')">
+                  <i class="fa-brands fa-whatsapp"></i> Book
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <span class="route-title">Lemosho Route (7 Days VIP)</span>
+                <span class="vip-badge">VIP Highly Scenic</span>
+              </td>
+              <td class="price-val">$3,650</td>
+              <td class="price-val">$3,350</td>
+              <td class="price-val">$3,050</td>
+              <td>
+                <button class="btn btn-whatsapp btn-sm" onclick="openBookingWhatsApp('Lemosho Route (7 Days VIP)', 'Luxury VIP', '7 Days', 'Hello Okie Dokie Safaris! I want to book Lemosho Route 7 Days VIP.')">
+                  <i class="fa-brands fa-whatsapp"></i> Book
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <span class="route-title">Marangu Route (6 Days VIP)</span>
+                <span class="vip-badge">Huts Included</span>
+              </td>
+              <td class="price-val">$3,100</td>
+              <td class="price-val">$2,850</td>
+              <td class="price-val">$2,600</td>
+              <td>
+                <button class="btn btn-whatsapp btn-sm" onclick="openBookingWhatsApp('Marangu Route (6 Days VIP)', 'VIP / Budget', '6 Days', 'Hello Okie Dokie Safaris! I want to book Marangu Route 6 Days VIP.')">
+                  <i class="fa-brands fa-whatsapp"></i> Book
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <span class="route-title">Rongai Route (6 Days VIP)</span>
+                <span class="vip-badge">Northern Trail</span>
+              </td>
+              <td class="price-val">$3,450</td>
+              <td class="price-val">$3,150</td>
+              <td class="price-val">$2,850</td>
+              <td>
+                <button class="btn btn-whatsapp btn-sm" onclick="openBookingWhatsApp('Rongai Route (6 Days VIP)', 'VIP / Budget', '6 Days', 'Hello Okie Dokie Safaris! I want to book Rongai Route 6 Days VIP.')">
+                  <i class="fa-brands fa-whatsapp"></i> Book
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <span class="route-title">Umbwe Route (6 Days VIP)</span>
+                <span class="vip-badge">Steep & Direct</span>
+              </td>
+              <td class="price-val">$3,350</td>
+              <td class="price-val">$3,050</td>
+              <td class="price-val">$2,750</td>
+              <td>
+                <button class="btn btn-whatsapp btn-sm" onclick="openBookingWhatsApp('Umbwe Route (6 Days VIP)', 'VIP / Budget', '6 Days', 'Hello Okie Dokie Safaris! I want to book Umbwe Route 6 Days VIP.')">
+                  <i class="fa-brands fa-whatsapp"></i> Book
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <span class="route-title">Northern Circuit (9 Days VIP)</span>
+                <span class="vip-badge">Max Acclimatization</span>
+              </td>
+              <td class="price-val">$4,350</td>
+              <td class="price-val">$3,950</td>
+              <td class="price-val">$3,600</td>
+              <td>
+                <button class="btn btn-whatsapp btn-sm" onclick="openBookingWhatsApp('Northern Circuit (9 Days VIP)', 'Luxury VIP', '9 Days', 'Hello Okie Dokie Safaris! I want to book Northern Circuit 9 Days VIP.')">
+                  <i class="fa-brands fa-whatsapp"></i> Book
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div style="text-align: center; color: var(--text-muted); font-size: 0.92rem; margin-top: 1.8rem;">
+        Official Website: <a href="http://www.okiedokiesafaris.com" target="_blank" style="color: var(--primary); font-weight: 700;">www.okiedokiesafaris.com</a> • Inquiries: <a href="mailto:info@okiedokiesafaris.co.tz" style="color: var(--primary); font-weight: 700;">info@okiedokiesafaris.co.tz</a>
+      </div>
+
+      <!-- VIP WhatsApp Consultation Banner -->
+      <div style="background: linear-gradient(135deg, var(--dark) 0%, var(--logo-brown-dark) 100%); border: 2px solid var(--primary); border-radius: var(--radius-lg); padding: 3rem 2rem; text-align: center; color: #FFF; margin-top: 3.5rem; box-shadow: var(--shadow-lg);">
+        <span class="section-subtitle" style="background: rgba(199, 158, 68, 0.25); color: #DFB254; border-color: #DFB254;">
+          <i class="fa-brands fa-whatsapp"></i> Direct WhatsApp Booking
+        </span>
+        <h3 style="font-family: var(--font-heading); font-size: clamp(1.8rem, 3.5vw, 2.4rem); margin: 1rem 0; color: #FFF;">
+          Ready to Plan Your Kilimanjaro Climb?
+        </h3>
+        <p class="brand-slogan" style="font-size: 1.15rem; color: #DFB254; margin-bottom: 1.5rem;">"we take the world to the nature"</p>
+        <p style="font-size: 1rem; color: var(--text-light-muted); max-width: 650px; margin: 0 auto 2rem auto; line-height: 1.7;">
+          Chat directly with our Chief Mountain Guide and safari directors to choose the ideal route, verify seasonal weather conditions, and receive a customized expedition itinerary for your group.
+        </p>
+        <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+          <button class="btn btn-whatsapp btn-lg" onclick="openBookingWhatsApp('Kilimanjaro Expedition', 'VIP Package', '6-7 Days', 'Hello Okie Dokie Safaris! I want to plan my Mount Kilimanjaro climb. Please advise on best routes and availability.')">
+            <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp Now
+          </button>
+          <a href="mailto:info@okiedokiesafaris.co.tz" class="btn btn-outline btn-lg">
+            <i class="fa-solid fa-envelope"></i> Email Us
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       FOOTER
+       =================================================================== -->
+  <footer class="footer" id="contact">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <img src="assets/img/logo.png" alt="Okie Dokie Safaris Logo">
+          </a>
+          <p class="brand-slogan" style="margin-top: 0.8rem; font-size: 1.05rem; color: #DFB254;">
+            "we take the world to the nature"
+          </p>
+          <p class="footer-desc">
+            Okie Dokie Safaris delivers elite expeditions across Mount Kilimanjaro, Serengeti wildlife migrations, Ngorongoro Crater, Materuni waterfalls, Chemka hotsprings, Magoroto forest lakes, and Zanzibar beaches.
+          </p>
+          <div class="footer-socials">
+            <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://wa.me/255744779970" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="mailto:info@okiedokiesafaris.co.tz" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-title">Kilimanjaro Routes</h4>
+          <ul class="footer-links">
+            <li><a href="kilimanjaro.html"><i class="fa-solid fa-chevron-right"></i> Overview & Pricing</a></li>
+            <li><a href="kilimanjaro-marangu.html"><i class="fa-solid fa-chevron-right"></i> Marangu Route (6 Days)</a></li>
+            <li><a href="kilimanjaro-rongai.html"><i class="fa-solid fa-chevron-right"></i> Rongai Route (6 Days)</a></li>
+            <li><a href="kilimanjaro-machame.html"><i class="fa-solid fa-chevron-right"></i> Machame Route (7 Days VIP)</a></li>
+            <li><a href="kilimanjaro-lemosho.html"><i class="fa-solid fa-chevron-right"></i> Lemosho Route (7 Days VIP)</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-title">Top Destinations</h4>
+          <ul class="footer-links">
+            <li><a href="safari.html"><i class="fa-solid fa-chevron-right"></i> Wildlife Safaris (8 Pkgs)</a></li>
+            <li><a href="day trips.html#materuni-section"><i class="fa-solid fa-chevron-right"></i> Coffee Tour & Hotspring</a></li>
+            <li><a href="day trips.html#magoroto-section"><i class="fa-solid fa-chevron-right"></i> Magoroto Forest Lake</a></li>
+            <li><a href="beach-safari.html"><i class="fa-solid fa-chevron-right"></i> Zanzibar Beach Safaris</a></li>
+            <li><a href="volunteers.html"><i class="fa-solid fa-chevron-right"></i> Volunteer Programs</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-title">Headquarters</h4>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <div>
+              <strong>Arusha & Moshi</strong>
+              <p>Tanzania, East Africa</p>
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-envelope"></i>
+            <div>
+              <strong>Email Inquiries</strong>
+              <p><a href="mailto:info@okiedokiesafaris.co.tz">info@okiedokiesafaris.co.tz</a></p>
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-brands fa-whatsapp"></i>
+            <div>
+              <strong>Direct WhatsApp</strong>
+              <p><a href="https://wa.me/255744779970" target="_blank">+255 744 779 970</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="currentYear">2026</span> Okie Dokie Safaris. All Rights Reserved. "we take the world to the nature"</p>
+        <div class="footer-legal">
+          <a href="http://www.okiedokiesafaris.com" target="_blank">www.okiedokiesafaris.com</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Action -->
+  <a href="https://wa.me/255744779970?text=Hello%20Okie%20Dokie%20Safaris!%20I%20want%20to%20inquire%20about%20climbing%20Mount%20Kilimanjaro." target="_blank" class="floating-whatsapp" aria-label="Chat on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+    <span>Chat With Us</span>
+  </a>
+
+  <!-- Video Modal -->
+  <div class="modal" id="videoModal">
+    <div class="modal-content">
+      <button class="modal-close" id="videoModalClose" aria-label="Close">&times;</button>
+      <div class="modal-video-wrapper">
+        <iframe id="videoModalFrame" src="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main JavaScript -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

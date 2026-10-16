@@ -1,0 +1,2106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tanzania Safari Expeditions & Complete National Parks Portal | Okie Dokie Safaris</title>
+  <meta name="description" content="Official Tanzania Safari portal by Okie Dokie Safaris. Discover all 15+ National Parks & Game Reserves (Serengeti, Ngorongoro, Tarangire, Manyara, Nyerere, Ruaha, Gombe, Kitulo), safari circuit pricing matrix, curated itineraries, and WhatsApp booking.">
+  
+  <link rel="icon" type="image/png" href="assets/img/logo.png">
+
+  <!-- Google Fonts: Includes Logo Fonts Michroma & Quicksand, plus Cinzel & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Michroma&family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <style>
+    .safari-hero {
+      position: relative;
+      background: linear-gradient(180deg, rgba(28, 22, 11, 0.75) 0%, rgba(28, 22, 11, 0.92) 100%), url('assets/img/serengeti.jpg') center/cover no-repeat;
+      padding: 6.5rem 0 5rem 0;
+      color: #FFF;
+      text-align: center;
+    }
+    .safari-gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+      margin: 2.5rem 0;
+    }
+    .safari-gallery-item {
+      height: 220px;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      position: relative;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--light-border);
+      transition: var(--transition);
+    }
+    .safari-gallery-item:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--primary);
+    }
+    .safari-gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    .safari-gallery-item:hover img {
+      transform: scale(1.06);
+    }
+    .safari-gallery-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(0deg, rgba(28, 22, 11, 0.9) 0%, transparent 100%);
+      padding: 1.2rem 1rem 0.6rem 1rem;
+      color: #FFF;
+      font-size: 0.84rem;
+      font-weight: 600;
+    }
+    .safari-video-box {
+      position: relative;
+      height: 380px;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      margin: 2.5rem 0;
+      box-shadow: var(--shadow-md);
+      border: 2px solid var(--primary);
+      cursor: pointer;
+    }
+    .safari-video-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .safari-video-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(28, 22, 11, 0.45);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #FFF;
+      text-align: center;
+      padding: 2rem;
+      transition: var(--transition);
+    }
+    .safari-video-box:hover .safari-video-overlay {
+      background: rgba(28, 22, 11, 0.3);
+    }
+    .safari-play-circle {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: var(--dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      box-shadow: 0 0 0 10px rgba(199, 158, 68, 0.35);
+      margin-bottom: 1.2rem;
+      transition: var(--transition);
+    }
+    .safari-video-box:hover .safari-play-circle {
+      transform: scale(1.1);
+      box-shadow: 0 0 0 16px rgba(199, 158, 68, 0.5);
+    }
+    .filter-tabs-nav {
+      display: flex;
+      justify-content: center;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+      margin: 2.5rem 0;
+    }
+    .filter-tab-btn {
+      background: #FFF;
+      border: 1px solid var(--light-border);
+      color: var(--dark);
+      padding: 0.65rem 1.4rem;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 0.88rem;
+      transition: var(--transition);
+      cursor: pointer;
+    }
+    .filter-tab-btn:hover, .filter-tab-btn.active {
+      background: var(--primary);
+      color: var(--dark);
+      border-color: var(--primary);
+      box-shadow: var(--shadow-sm);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Bar with Luxury Global Language Selector -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="top-contact">
+        <span><i class="fa-solid fa-location-dot"></i> Arusha & Moshi, Tanzania</span>
+        <a href="mailto:info@okiedokiesafaris.co.tz"><i class="fa-solid fa-envelope"></i> info@okiedokiesafaris.co.tz</a>
+        <a href="https://wa.me/255744779970" target="_blank"><i class="fa-brands fa-whatsapp"></i> +255 744 779 970</a>
+      </div>
+
+      <div class="top-actions">
+        <!-- Luxury Language Selector -->
+        <div class="lang-selector-wrapper">
+          <button class="lang-btn" id="langToggleBtn">
+            <i class="fa-solid fa-globe"></i> <span>English</span> <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="lang-dropdown" id="langDropdown">
+            <a href="javascript:void(0)" onclick="switchLanguage('en', 'English')"><span class="lang-flag">🇺🇸</span> <span class="lang-name">English</span></a>
+            <a href="javascript:void(0)" onclick="switchLanguage('sw', 'Kiswahili')"><span class="lang-flag">🇹🇿</span> <span class="lang-name">Kiswahili</span></a>
+            <a href="javascript:void(0)" onclick="switchLanguage('fr', 'Français')"><span class="lang-flag">🇫🇷</span> <span class="lang-name">Français</span></a>
+            <a href="javascript:void(0)" onclick="switchLanguage('de', 'Deutsch')"><span class="lang-flag">🇩🇪</span> <span class="lang-name">Deutsch</span></a>
+            <a href="javascript:void(0)" onclick="switchLanguage('es', 'Español')"><span class="lang-flag">🇪🇸</span> <span class="lang-name">Español</span></a>
+            <a href="javascript:void(0)" onclick="switchLanguage('it', 'Italiano')"><span class="lang-flag">🇮🇹</span> <span class="lang-name">Italiano</span></a>
+            <a href="javascript:void(0)" onclick="switchLanguage('zh-CN', '中文')"><span class="lang-flag">🇨🇳</span> <span class="lang-name">中文</span></a>
+          </div>
+        </div>
+        <div id="google_translate_element"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar with Kilimanjaro Dropdown -->
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" class="brand-logo">
+        <img src="assets/img/logo.png" alt="Okie Dokie Safaris Logo">
+      </a>
+
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        
+        <div class="nav-item-dropdown">
+          <a href="kilimanjaro.html" class="nav-link">
+            Kilimanjaro <i class="fa-solid fa-chevron-down" style="font-size: 0.7rem; margin-left: 2px;"></i>
+          </a>
+          <div class="nav-sub-menu">
+            <a href="kilimanjaro.html" class="nav-sub-link"><i class="fa-solid fa-mountain"></i> Overview & Pricing Matrix</a>
+            <a href="kilimanjaro-marangu.html" class="nav-sub-link"><i class="fa-solid fa-hotel"></i> Marangu Route (6 Days)</a>
+            <a href="kilimanjaro-rongai.html" class="nav-sub-link"><i class="fa-solid fa-compass"></i> Rongai Route (6 Days)</a>
+            <a href="kilimanjaro-machame.html" class="nav-sub-link"><i class="fa-solid fa-fire"></i> Machame Route (7 Days VIP)</a>
+            <a href="kilimanjaro-lemosho.html" class="nav-sub-link"><i class="fa-solid fa-eye"></i> Lemosho Route (7 Days VIP)</a>
+          </div>
+        </div>
+
+        <a href="safari.html" class="nav-link active">Safari Packages</a>
+       <a href="day trips.html" class="nav-link">Day Trips</a>
+       <a href="beach-safari.html" class="nav-link">Beach Safari</a>
+        <a href="volunteers.html" class="nav-link">Volunteers</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="btn btn-primary" onclick="openBookingWhatsApp('Tanzania Wildlife Safari Inquiry', 'VIP/Standard', 'Custom', 'Hello Okie Dokie Safaris! I want to plan a custom wildlife safari in Tanzania. Please send me recommendations and prices.')">
+          <i class="fa-solid fa-paw"></i> Book Safari
+        </button>
+        <button class="mobile-nav-toggle" aria-label="Toggle navigation">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Safari Hero Banner -->
+  <section class="safari-hero">
+    <div class="container">
+      <span class="section-subtitle"><i class="fa-solid fa-paw"></i> The Wildlife Capital of the World • 22 National Parks</span>
+      <h1 class="hero-title" style="font-size: clamp(2.4rem, 5vw, 4.2rem);">
+        Tanzania Safari <span>Expeditions</span>
+      </h1>
+      <p class="brand-slogan" style="font-size: 1.25rem; color: #DFB254; margin-bottom: 1.2rem;">"we take the world to the nature"</p>
+      
+      <p class="hero-desc" style="max-width: 840px; margin: 0 auto 2rem auto;">
+        Tanzania is Africa's premier wildlife destination, dedicating more than 25% of its total landmass to national parks and conservation sanctuaries. From the thunderous Great Wildebeest Migration across the endless Serengeti plains and the ancient volcanic cauldron of Ngorongoro to the wild elephant herds of Tarangire, the boat safaris of Nyerere, and Jane Goodall's chimpanzees in Gombe.
+      </p>
+
+      <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+        <a href="#itineraries" class="btn btn-primary btn-lg">
+          <i class="fa-solid fa-route"></i> Master Safari Itineraries (7-Day & 6-Day)
+        </a>
+        <a href="#parks" class="btn btn-outline btn-lg" style="color: #FFF; border-color: rgba(255, 255, 255, 0.4);">
+          <i class="fa-solid fa-compass"></i> Explore All National Parks
+        </a>
+        <a href="#pricing" class="btn btn-outline btn-lg" style="color: #FFF; border-color: rgba(255, 255, 255, 0.4);">
+          <i class="fa-solid fa-tags"></i> Circuit Pricing Matrix
+        </a>
+        <button class="btn btn-whatsapp btn-lg" onclick="openVideoModal('safari')">
+          <i class="fa-solid fa-circle-play"></i> Watch Wildlife Safari Video
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       SECTION 1: DISCOVER TANZANIA WILDLIFE (OVERVIEW, PHOTO SHOWCASE & VIDEO)
+       =================================================================== -->
+  <section style="padding: 5.5rem 0; background: #FFF;">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle"><i class="fa-solid fa-paw"></i> Ultimate Wilderness</span>
+        <h2 class="section-title">The Wonders of Tanzania Wildlife</h2>
+        <div class="logo-arc-divider"></div>
+        <p class="section-desc">
+          Nowhere else on Earth will you witness the sheer concentration, biodiversity, and primal drama of wildlife that thrives across Tanzania's protected national parks and game reserves.
+        </p>
+      </div>
+
+      <!-- Overview Content Grid -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2.5rem; align-items: center; margin-bottom: 3rem;">
+        <div>
+          <h3 style="font-family: var(--font-heading); font-size: 1.6rem; color: var(--dark); margin-bottom: 1rem;">
+            Pioneering Ethical & Luxury Safaris
+          </h3>
+          <p style="font-size: 0.98rem; line-height: 1.8; color: var(--text-main); margin-bottom: 1.2rem;">
+            At Okie Dokie Safaris, our customized 4x4 safari Land Cruisers feature full pop-up photographic roofs, onboard inverter charging stations, private refrigerators for chilled beverages, and high-powered binoculars. Led by certified naturalist driver-guides with decades of tracking experience, you witness the Big Five in their natural habitats while enjoying five-star bush hospitality.
+          </p>
+          <ul style="display: flex; flex-direction: column; gap: 0.6rem; font-size: 0.95rem;">
+            <li><i class="fa-solid fa-circle-check" style="color: var(--primary);"></i> <strong>The Great Migration:</strong> Over 1.5 million wildebeests and 300,000 zebras in continuous motion.</li>
+            <li><i class="fa-solid fa-circle-check" style="color: var(--primary);"></i> <strong>The Big Five:</strong> Lion, African Leopard, African Bush Elephant, Eastern Black Rhino, and Cape Buffalo.</li>
+            <li><i class="fa-solid fa-circle-check" style="color: var(--primary);"></i> <strong>Custom 4x4 Fleet:</strong> Guaranteed window seats, pop-up roof for 360° unobstructed photography.</li>
+            <li><i class="fa-solid fa-circle-check" style="color: var(--primary);"></i> <strong>All-Inclusive Ease:</strong> Park conservation fees, crater permits, fine dining, and expert guiding included.</li>
+          </ul>
+        </div>
+
+        <!-- Video Player Box -->
+        <div>
+          <div class="safari-video-box" onclick="openVideoModal('safari')">
+            <img src="assets/img/serengeti.jpg" alt="Tanzania Wildlife Safari Preview">
+            <div class="safari-video-overlay">
+              <div class="safari-play-circle">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <h4 style="font-family: var(--font-heading); font-size: 1.5rem; margin-bottom: 0.3rem;">Experience Tanzania Safari</h4>
+              <p style="font-size: 0.9rem; color: #DFB254;">Click to play short cinematic wildlife safari video</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Safari Photo Showcase -->
+      <div style="margin-top: 2rem;">
+        <h3 style="font-family: var(--font-heading); font-size: 1.4rem; color: var(--dark); text-align: center; margin-bottom: 0.5rem;">
+          Tanzania Wildlife Photo Showcase
+        </h3>
+        <p style="text-align: center; font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.5rem;">
+          Unfiltered moments captured across Northern, Southern, and Western Tanzania sanctuaries
+        </p>
+
+        <div class="safari-gallery-grid">
+          <div class="safari-gallery-item">
+            <img src="assets/img/serengeti.jpg" alt="Serengeti Great Migration" loading="lazy" decoding="async">
+            <div class="safari-gallery-caption">Serengeti: The Great Migration Plains</div>
+          </div>
+          <div class="safari-gallery-item">
+            <img src="assets/img/ngorongoro.jpg" alt="Ngorongoro Crater Caldera" loading="lazy" decoding="async">
+            <div class="safari-gallery-caption">Ngorongoro: World's Largest Intact Volcanic Caldera</div>
+          </div>
+          <div class="safari-gallery-item">
+            <img src="assets/img/tarangire.jpg" alt="Tarangire Baobab Elephants" loading="lazy" decoding="async">
+            <div class="safari-gallery-caption">Tarangire: Giant Baobabs & Elephant Herds</div>
+          </div>
+          <div class="safari-gallery-item">
+            <img src="assets/img/manyara.jpg" alt="Lake Manyara Flamingos and Lions" loading="lazy" decoding="async">
+            <div class="safari-gallery-caption">Lake Manyara: Soda Lake Flamingos & Tree Lions</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       SECTION 1.5: FEATURED MASTER EXPEDITIONS & DETAILED DAY-BY-DAY ITINERARIES
+       =================================================================== -->
+  <section id="itineraries" style="padding: 5.5rem 0; background: #FAF7F0; border-top: 1px solid var(--light-border);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle"><i class="fa-solid fa-route"></i> Official Tanzania Itineraries</span>
+        <h2 class="section-title">Master Safari Expeditions & Day-by-Day Itineraries</h2>
+        <div class="logo-arc-divider"></div>
+        <p class="section-desc">
+          Experience Tanzania's premier wildlife ecosystems through our meticulously planned expeditions. Every day is engineered for maximum wildlife encounters, luxurious bush rest, and authentic cultural heritage.
+        </p>
+      </div>
+
+      <!-- Quick Itinerary Switcher Tabs / Anchor Pills -->
+      <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-bottom: 3.5rem;">
+        <a href="#expedition-7days" class="btn btn-primary" style="font-size: 0.92rem; padding: 0.7rem 1.6rem;">
+          <i class="fa-solid fa-crown"></i> 7 Days / 6 Nights Flagship Migration & Cultural Safari
+        </a>
+        <a href="#expedition-6days" class="btn btn-outline" style="font-size: 0.92rem; padding: 0.7rem 1.6rem; color: var(--dark); border-color: var(--primary);">
+          <i class="fa-solid fa-compass"></i> 6 Days / 5 Nights North Serengeti & Cultural Safari
+        </a>
+      </div>
+
+      <!-- =================================================================
+           EXPEDITION 1: 7-DAY / 6-NIGHT GREAT MIGRATION & CULTURAL WILD SAFARI
+           (Official Expedition From Document)
+           ================================================================= -->
+      <div id="expedition-7days" style="margin-bottom: 5.5rem; background: #FFF; border-radius: var(--radius-lg); border: 2px solid var(--primary); padding: 3rem 2.5rem; box-shadow: var(--shadow-md);">
+        
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem;">
+          <div>
+            <span class="vip-badge" style="background: var(--primary); color: var(--dark); font-size: 0.82rem; padding: 0.35rem 0.9rem; font-weight: 800; border-radius: 50px; text-transform: uppercase;">
+              <i class="fa-solid fa-award"></i> Official Flagship Expedition • Document Verified
+            </span>
+            <h3 style="font-family: var(--font-heading); font-size: clamp(1.8rem, 3.5vw, 2.5rem); color: var(--dark); margin: 0.8rem 0 0.4rem 0;">
+              7 Days / 6 Nights Great Migration & Cultural Wild Safari
+            </h3>
+            <p style="font-size: 1.05rem; color: var(--logo-brown); font-weight: 700; margin: 0;">
+              <i class="fa-solid fa-map-pin"></i> Tarangire • Central Serengeti • North Serengeti (Mara River) • Hot Air Balloon • Ngorongoro Crater • Lake Eyasi (Hadzabe & Datoga) • Lake Natron
+            </p>
+          </div>
+          <div style="text-align: right;">
+            <span style="font-size: 0.85rem; color: var(--text-muted); display: block;">Per Person From</span>
+            <span style="font-family: var(--font-brand); font-size: 2.2rem; font-weight: 800; color: var(--primary);">$3,650</span>
+            <span style="font-size: 0.82rem; color: var(--text-muted); display: block;">Includes $570 Balloon Safari + AMREF Cover</span>
+          </div>
+        </div>
+
+        <p style="font-size: 1rem; line-height: 1.8; color: var(--text-main); margin-bottom: 2rem;">
+          This 7-day master expedition is Okie Dokie Safaris' highest-rated northern circuit adventure. Designed for wildlife enthusiasts, photographers, and discerning travelers, it combines the iconic elephant haven of Tarangire, predator-rich Central Serengeti, world-famous Mara River crossings in North Serengeti with a luxury Hot Air Balloon bush breakfast, the prehistoric caldera of Ngorongoro Crater, the ancient click-speaking Hadzabe bushmen of Lake Eyasi, and the pink flamingo flats of Lake Natron beneath Ol Doinyo Lengai.
+        </p>
+
+        <!-- SAFETY & HEALTH GUARANTEE BOX -->
+        <div class="safety-guarantee-card">
+          <div class="safety-card-header">
+            <i class="fa-solid fa-shield-heart"></i> Comprehensive Safety, Health & Quality Guarantee
+          </div>
+          <h4 class="safety-card-title">Travel with Complete Peace of Mind Across Tanzania</h4>
+          <p style="font-size: 0.95rem; color: var(--text-light-muted); line-height: 1.7; margin-bottom: 1.5rem;">
+            At Okie Dokie Safaris, client safety, rapid medical evacuation readiness, and supreme hospitality standards are our highest commitments. Every traveler on this 7-day expedition receives full comprehensive emergency cover and vetted 5-star lodging.
+          </p>
+
+          <div class="safety-features-grid">
+            <div class="safety-feature-item">
+              <div class="safety-feature-icon">
+                <i class="fa-solid fa-plane-circle-check"></i>
+              </div>
+              <div class="safety-feature-text">
+                <h5>AMREF Flying Doctors Emergency Cover</h5>
+                <p>24/7 unlimited emergency air ambulance evacuation cover included. In the rare event of severe medical need, dedicated emergency aircraft fly directly to bush airstrips for rapid evacuation to top-tier international hospitals in Nairobi or Dar es Salaam.</p>
+              </div>
+            </div>
+
+            <div class="safety-feature-item">
+              <div class="safety-feature-icon">
+                <i class="fa-solid fa-hotel"></i>
+              </div>
+              <div class="safety-feature-text">
+                <h5>Premium Quality Lodges & Luxury Camps</h5>
+                <p>Stay exclusively in vetted high-comfort safari lodges and luxury tented bush suites (Tarangire Sopa, Into Wild Serengeti, Mara Mara, Serena Lodges) offering private hot-water showers, flush toilets, gourmet dining, and panoramic wilderness vistas.</p>
+              </div>
+            </div>
+
+            <div class="safety-feature-item">
+              <div class="safety-feature-icon">
+                <i class="fa-solid fa-user-doctor"></i>
+              </div>
+              <div class="safety-feature-text">
+                <h5>WFR-Certified Naturalist Guides</h5>
+                <p>Every safari vehicle is piloted by a Senior Licensed Naturalist Guide certified in Wilderness First Responder (WFR) emergency protocol, advanced vehicle mechanics, ethical wildlife tracking, and English fluency.</p>
+              </div>
+            </div>
+
+            <div class="safety-feature-item">
+              <div class="safety-feature-icon">
+                <i class="fa-solid fa-truck-monster"></i>
+              </div>
+              <div class="safety-feature-text">
+                <h5>Heavy-Duty Custom 4x4 Land Cruisers</h5>
+                <p>Custom-built 4WD cruisers equipped with high-lift pop-up roofs for 360° unobstructed photography, onboard mini-refrigerators for cold drinks, high-wattage charging inverters, satellite GPS tracking, and comprehensive first-aid medical trauma kits.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 7-DAY ITINERARY TIMELINE (DAY 1 TO DAY 7) -->
+        <h4 style="font-family: var(--font-heading); font-size: 1.5rem; color: var(--dark); margin: 3rem 0 1.5rem 0;">
+          <i class="fa-solid fa-list-check" style="color: var(--primary);"></i> 7-Day Detailed Day-by-Day Expedition Itinerary
+        </h4>
+
+        <!-- Day 1 -->
+        <div class="itinerary-day-card">
+          <div class="itinerary-day-top">
+            <div class="itinerary-day-num">
+              <span>DAY 1</span> Arusha to Tarangire National Park – Karatu Highlands
+            </div>
+            <span class="itinerary-activity-badge"><i class="fa-solid fa-elephant"></i> Baobabs & Massive Elephant Herds</span>
+          </div>
+          <div class="itinerary-day-content">
+            <h5 class="itinerary-day-headline">Kingdom of Elephants, Colossal Baobabs & Rift Escarpment</h5>
+            <p class="itinerary-day-desc">
+              Your Okie Dokie Safaris adventure begins with morning pickup from your hotel in Arusha or Kilimanjaro International Airport. Following an expedition briefing, drive directly to Tarangire National Park, celebrated worldwide for its ancient thousand-year-old colossal baobab trees and Africa's densest concentration of elephants. Embark on a full-day thrilling game drive along the Tarangire River basin where hundreds of elephants dig for underground water alongside lions, leopards, buffalos, giraffes, and over 550 bird species. Enjoy an exquisite bush picnic lunch inside the park. In late afternoon, journey up through the scenic Great Rift Valley escarpment into the cooler green highlands of Karatu for a relaxing dinner and overnight, significantly shortening tomorrow’s drive into the Serengeti.
+            </p>
+            <div class="itinerary-day-meta">
+              <div class="itinerary-day-meta-item">
+                <i class="fa-solid fa-bed"></i> <strong>Accommodation:</strong> Tarangire Sopa Lodge / Maramboi Tented Camp (or Marera Valley Lodge / Farm of Dreams)
+              </div>
+              <div class="itinerary-day-meta-item">
+                <i class="fa-solid fa-utensils"></i> <strong>Meals:</strong> Lunch (Picnic Bush Box), Gourmet Dinner
+              </div>
+              <div class="itinerary-day-meta-item">
+                <i class="fa-solid fa-clock"></i> <strong>Drive Time:</strong> ~2.5 hrs to Tarangire, ~2 hrs to Karatu
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Day 2 -->
+        <div class="itinerary-day-card">
+          <div class="itinerary-day-top">
+            <div class="itinerary-day-num">
+              <span>DAY 2</span> Karatu – Central Serengeti (Seronera Valley Heartland)
+            </div>
+            <span class="itinerary-activity-badge"><i class="fa-solid fa-paw"></i> Africa's Big Cat Predator Capital</span>
+          </div>
+          <div class="itinerary-day-content">
+            <h5 class="itinerary-day-headline">Ngorongoro Highlands Transit & The Endless Golden Savannah</h5>
+            <p class="itinerary-day-desc">
+              Following an early hearty breakfast, depart Karatu and ascend through the breathtaking misty cloud forests of the Ngorongoro Conservation Area rim, stopping at the crater viewpoint for jaw-dropping panoramic vistas. Descend onto the vast golden savannah of Central Serengeti (Seronera Valley) — derived from the Maasai word <em>"Siringet"</em> meaning "the land that runs on forever." The Seronera River network provides year-round water, making this region Africa’s premier big cat territory. Enjoy an action-packed en-route game drive tracking prides of black-maned lions lounging on granite kopjes, elusive leopards draped gracefully across acacia boughs, and cheetahs sprinting after gazelles. Arrive at your luxury tented lodge in the late afternoon for sundowners by the campfire.
+            </p>
+            <div class="itinerary-day-meta">
+              <div class="itinerary-day-meta-item">
+                <i class="fa-solid fa-bed"></i> <strong>Accommodation:</strong> Into Wild Serengeti Tented Camp / Kubu Kubu Tented Lodge (or similar luxury camp)
+              </div>
+              <div class="itinerary-day-meta-item">
+                <i class="fa-solid fa-utensils"></i> <strong>Meals:</strong> Full Board (Breakfast, Gourmet Bush Picnic Lunch, Multi-Course Dinner)
+              </div>
+              <div class="itinerary-day-meta-item">
+                <i class="fa-solid fa-binoculars"></i> <strong>Wildlife Focus:</strong> Lions on Kopjes, Tree Leopards, Cheetahs, Hyenas, Topis
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Day 3 -->
+        <div class="itinerary-day-card">
+          <div class="itinerary-day-top">
+            <div class="itinerary-day-num">
+              <span>DAY 3</span> Central Serengeti to North Serengeti (Kogatende & Mara River)
+            </div>
+            <span class="itinerary-activity-badge"><i class="fa-solid fa-water"></i> Dramatic Great Migration River Crossings</span>
+          </div>
+          <div class="itinerary-day-content">
+            <h5 class="itinerary-day-headline">Heart of the Great Migration & Thrilling Mara River Crossings</h5>
+            <p class="itinerary-day-desc">
+              After breakfast, embark on a scenic game drive heading north through the Lobo wildlife corridor toward North Serengeti (Kogatende). You are now positioned at the absolute epicenter of the world-famous Great Wildebeest Migration! Spend the day tracking immense herds of over 1.5 million wildebeest and 300,000 zebras gathering on the banks of the mighty Mara River. Watch tension mount as thousands of nervous animals hesitate on steep riverbanks before plunging into surging waters fraught with colossal Nile crocodiles. Witness nature's raw survival instinct unfold before your cameras. Return to your premium wilderness tented camp as the sun sets over the Mara River basin for dinner and stories around the bushfire.
+            </p>
+            <div class="itinerary-day-meta">
+              <div class="itinerary-day-meta-item">
+                <i class="fa-solid fa-bed"></i> <strong>Accommodation:</strong> Premium Wilderness Serengeti Camp / Mara Mara Tented Lodge (or Koga Tented Camp)
+              </div>
+              <div class="itinerary-day-meta-item">
+                <i class="fa-solid fa-utensils"></i> <strong>Meals:</strong> Full Board (Breakfast, Picnic Lunch on Riverbank, Dinner Under Stars)
+              </div>
+              <div class="itinerary-day-meta-item">
+                <i class="fa-solid fa-camera"></i> <strong>Highlights:</strong> Mara River Crossings, Giant Nile Crocodiles, North Serengeti Plains
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Day 4 -->
+        <div class="itinerary-day-card">
+          <div class="itinerary-day-top">
+            <div class="itinerary-day-num">
+              <span>DAY 4</span> North Serengeti (Sunrise Balloon Safari) – Ngorongoro Crater Rim
+            </div>
+            <span class="itinerary-activity-badge"><i class="fa-solid fa-plane-up"></i> $570 Hot Air Balloon & Champagne Breakfast Included</span>
+          </div>
+          <div class="itinerary-day-content">
+            <h5 class="itinerary-day-headline">Floating Above the Wild Plains at Sunrise & Crater Rim Sunset</h5>
+            <p class="itinerary-day-desc">
+              An unforgettable highlight! Wake up before dawn (approx. 5:00 AM) for transfer to the launch site. Board your Serengeti Hot Air Balloon (a premium $570 experience fully included in your package tariff). Gently rise into the pink African dawn, silently floating above the boundless wilderness as herds of wildebeest, giraffes, and zebras awaken below. Upon touchdown, celebrate with a ceremonial bush champagne uncorking followed by a 5-star English breakfast cooked fresh beneath an acacia tree. Afterward, enjoy a final morning predator tracking drive before journeying southward across the Serengeti plains toward the high-altitude rim of Ngorongoro Crater. Check into your crater rim lodge with jaw-dropping sunset vistas over the caldera.
+            </p>
+            <div class="itinerary-day-meta">
+              <div class="itinerary-day-meta-item">
+                <i class="fa-solid fa-bed"></i> <strong>Accommodation:</strong> Rhino Lodge / Ngorongoro Serena Safari Lodge (or Marera Valley Lodge)
+              </div>
+              <div class="itinerary-day-meta-item">
+                <i class="fa-solid fa-utensils"></i> <strong>Meals:</strong> Full Board (Champagne Bush Breakfast, Picnic Lunch, Luxury Crater Dinner)
+              </div>
+              <div class="itinerary-day-meta-item">
+                <i class="fa-solid fa-certificate"></i> <strong>Special Inclusion:</strong> Serengeti Balloon Safari ($570 value) + Flight Certificate
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Day 5 -->
+        <div class="itinerary-day-card">
+          <div class="itinerary-day-top">
+            <div class="itinerary-day-num">
+              <span>DAY 5</span> Ngorongoro Crater Tour – Karatu / Lake Eyasi
+            </div>
+            <span class="itinerary-activity-badge"><i class="fa-solid fa-volcano"></i> 600m Floor Descent & Endangered Black Rhinos</span>
+          </div>
+          <div class="itinerary-day-content">
+            <h5 class="itinerary-day-headline">The 8th Wonder of the World & The Complete African Big Five</h5>
+            <p class="itinerary-day-desc">
+              Descend early in the morning through winding rainforest tracks 600 meters down onto the caldera floor of the world-famous Ngorongoro Crater. This ancient collapsed volcano covers 260 km² and supports an astonishing concentration of over 25,000 large mammals. This is your premier destination to encounter the highly elusive and critically endangered Eastern Black Rhino, alongside massive old tusker elephants, dense lion prides, cheetahs, jackals, hyenas, and wallowing hippos. Enjoy an idyllic picnic lunch on the shores of the Ngoitoktok Hippo Pool as hippos grumble in the water. In late afternoon, ascend the steep crater walls and drive down into the Lake Eyasi basin to check into your cultural tented lodge.
+            </p>
+            <div class="itinerary-day-meta">
+              <div class="itinerary-day-meta-item">
+                <i class="fa-solid fa-bed"></i> <strong>Accommodation:</strong> Lake Eyasi Premium Tented Lodge / Kisima Ngeda Camp (or Lake Karatu Safari Lodge)
+              </div>
+              <div class="itinerary-day-meta-item">
+                <i class="fa-solid fa-utensils"></i> <strong>Meals:</strong> Full Board (Breakfast, Crater Floor Picnic Lunch, Lodge Dinner)
+              </div>
+              <div class="itinerary-day-meta-item">
+                <i class="fa-solid fa-shield-cat"></i> <strong>Wildlife Focus:</strong> Black Rhino, Big Five, Lake Magadi Flamingos, Ngoitoktok Hippos
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Day 6 -->
+        <div class="itinerary-day-card">
+          <div class="itinerary-day-top">
+            <div class="itinerary-day-num">
+              <span>DAY 6</span> Lake Eyasi Cultural Experience – Hadzabe Bushmen & Datoga Tribe
+            </div>
+            <span class="itinerary-activity-badge"><i class="fa-solid fa-fire"></i> Authentic Bushmen Hunting & Ancient Metallurgy</span>
+          </div>
+          <div class="itinerary-day-content">
+            <h5 class="itinerary-day-headline">Ancient Hunter-Gatherer Bow Hunting & Datoga Blacksmith Craft</h5>
+            <p class="itinerary-day-desc">
+              Before the sun rises, venture into the rugged acacia bush of Lake Eyasi to join the Hadzabe tribe — one of the very last authentic hunter-gatherer societies remaining on the planet. For over 10,000 years, the Hadzabe have lived entirely off the land with zero modern agriculture. Communicate using their ancient click language, learn how to ignite fires using friction sticks in seconds, and accompany the hunters through the thornbush tracking wild game using handmade poison-tipped bows and arrows. Witness their incredible botanical wisdom and wild honey collection. Later, visit the neighboring Datoga pastoralists and skilled blacksmiths. Watch them smelt scrap metal over charcoal embers to forge hunting arrowheads, spear tips, and brass bracelets. A profound cultural journey through human history.
+            </p>
+            <div class="itinerary-day-meta">
+              <div class="itinerary-day-meta-item">
+                <i class="fa-solid fa-bed"></i> <strong>Accommodation:</strong> Lake Eyasi Tented Camp / Farm of Dreams Lodge (or Lake Karatu Safari Lodge)
+              </div>
+              <div class="itinerary-day-meta-item">
+                <i class="fa-solid fa-utensils"></i> <strong>Meals:</strong> Full Board (Bush Breakfast, Traditional Lunch, Lodge Dinner)
+              </div>
+              <div class="itinerary-day-meta-item">
+                <i class="fa-solid fa-hands-holding"></i> <strong>Cultural Immersion:</strong> Hadzabe Bow Hunt, Click Language, Datoga Blacksmith Metalcraft
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Day 7 -->
+        <div class="itinerary-day-card">
+          <div class="itinerary-day-top">
+            <div class="itinerary-day-num">
+              <span>DAY 7</span> Lake Natron Pink Flamingos & Ol Doinyo Lengai – Departure
+            </div>
+            <span class="itinerary-activity-badge"><i class="fa-solid fa-feather"></i> 2.5 Million Lesser Flamingos & Mountain of God</span>
+          </div>
+          <div class="itinerary-day-content">
+            <h5 class="itinerary-day-headline">Great Rift Valley Mineral Flats & Return to Arusha / Airport</h5>
+            <p class="itinerary-day-desc">
+              Depart early morning traversing the dramatic Great Rift Valley basin toward Lake Natron, an ethereal, highly alkaline soda lake glowing in deep crimson and pink hues. Lake Natron is the only regular breeding ground in East Africa for 2.5 million lesser flamingos! Stroll along the surreal mineral crust flats with your guide, taking breathtaking photographs of flamingo flocks against the looming conical silhouette of Ol Doinyo Lengai — the active "Mountain of God" revered by the Maasai people. Enjoy a scenic hot lunch before relaxing during the return drive back to Arusha or direct transfer to Kilimanjaro International Airport (JRO) for your evening departure flight, concluding your journey of a lifetime.
+            </p>
+            <div class="itinerary-day-meta">
+              <div class="itinerary-day-meta-item">
+                <i class="fa-solid fa-plane-departure"></i> <strong>Departure:</strong> Transfer to Arusha Hotel / Kilimanjaro Airport (JRO)
+              </div>
+              <div class="itinerary-day-meta-item">
+                <i class="fa-solid fa-utensils"></i> <strong>Meals:</strong> Breakfast, Scenic Lunch
+              </div>
+              <div class="itinerary-day-meta-item">
+                <i class="fa-solid fa-mountain-sun"></i> <strong>Highlights:</strong> 2.5M Flamingos, Ol Doinyo Lengai Volcano, Rift Valley Scenery
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- OFFICIAL DOCUMENT PRICING MATRIX TABLE (7-DAY EXPEDITION) -->
+        <div style="margin-top: 3.5rem;">
+          <div class="section-header" style="text-align: left; margin-bottom: 1.2rem;">
+            <span class="section-subtitle"><i class="fa-solid fa-tags"></i> Official Tariff Schedule</span>
+            <h4 style="font-family: var(--font-heading); font-size: 1.6rem; color: var(--dark); margin-bottom: 0.5rem;">
+              7-Day Great Migration Safari: Official Party Size Pricing Matrix
+            </h4>
+            <p style="font-size: 0.92rem; color: var(--text-muted);">
+              Tariffs from the official Okie Dokie Safaris expedition tariff sheet. Guaranteed private 4x4 cruiser for your private group.
+            </p>
+          </div>
+
+          <div class="doc-pricing-table-wrap">
+            <table class="doc-pricing-table">
+              <thead>
+                <tr>
+                  <th>Group Size / Category</th>
+                  <th>Per Person Tariff (USD)</th>
+                  <th>Vehicle & Room Arrangement</th>
+                  <th>Special Inclusions</th>
+                  <th>Direct Booking</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <span class="tier-group-name">1 Pax (Solo Traveler)</span>
+                    <span class="tier-sub">Exclusive private safari expedition</span>
+                  </td>
+                  <td>
+                    <span class="tier-price">$5,650</span>
+                    <span class="tier-sub">/ solo person</span>
+                  </td>
+                  <td>
+                    <strong>100% Private Land Cruiser</strong><br>
+                    <span style="font-size: 0.85rem; color: var(--text-muted);">Private Guide + Single Room at Luxury Lodges</span>
+                  </td>
+                  <td>
+                    <span style="font-size: 0.85rem; color: var(--logo-brown);"><i class="fa-solid fa-circle-check"></i> $570 Balloon Safari + AMREF Cover + All Fees</span>
+                  </td>
+                  <td>
+                    <button class="btn btn-whatsapp btn-sm" onclick="openBookingWhatsApp('7-Day Great Migration Safari (1 Pax Solo)', 'Solo Traveler', '$5,650', 'Hello Okie Dokie Safaris! I want to book the 7-Day Great Migration Safari as a Solo Traveler ($5,650). Please confirm dates and availability.')">
+                      <i class="fa-brands fa-whatsapp"></i> Book $5,650
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <span class="tier-group-name">2 Pax (Couple / Friends)</span>
+                    <span class="tier-sub">Most popular private luxury pair</span>
+                  </td>
+                  <td>
+                    <span class="tier-price">$3,950</span>
+                    <span class="tier-sub">/ person sharing</span>
+                  </td>
+                  <td>
+                    <strong>100% Private Land Cruiser</strong><br>
+                    <span style="font-size: 0.85rem; color: var(--text-muted);">Double / Twin Room at Luxury Lodges</span>
+                  </td>
+                  <td>
+                    <span style="font-size: 0.85rem; color: var(--logo-brown);"><i class="fa-solid fa-circle-check"></i> $570 Balloon Safari + AMREF Cover + All Fees</span>
+                  </td>
+                  <td>
+                    <button class="btn btn-whatsapp btn-sm" onclick="openBookingWhatsApp('7-Day Great Migration Safari (2 Pax Couple)', 'Couple / Friends', '$3,950 per person', 'Hello Okie Dokie Safaris! I want to book the 7-Day Great Migration Safari for 2 Pax ($3,950 per person). Please confirm availability.')">
+                      <i class="fa-brands fa-whatsapp"></i> Book $3,950
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <span class="tier-group-name">3 Pax (Small Group)</span>
+                    <span class="tier-sub">Families or close traveling companions</span>
+                  </td>
+                  <td>
+                    <span class="tier-price">$3,750</span>
+                    <span class="tier-sub">/ person sharing</span>
+                  </td>
+                  <td>
+                    <strong>100% Private Land Cruiser</strong><br>
+                    <span style="font-size: 0.85rem; color: var(--text-muted);">Triple Room / Double + Single at Luxury Lodges</span>
+                  </td>
+                  <td>
+                    <span style="font-size: 0.85rem; color: var(--logo-brown);"><i class="fa-solid fa-circle-check"></i> $570 Balloon Safari + AMREF Cover + All Fees</span>
+                  </td>
+                  <td>
+                    <button class="btn btn-whatsapp btn-sm" onclick="openBookingWhatsApp('7-Day Great Migration Safari (3 Pax Small Group)', 'Small Group', '$3,750 per person', 'Hello Okie Dokie Safaris! I want to book the 7-Day Great Migration Safari for 3 Pax ($3,750 per person). Please send details.')">
+                      <i class="fa-brands fa-whatsapp"></i> Book $3,750
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <span class="tier-group-name">4 Pax & Above (Standard Group)</span>
+                    <span class="tier-sub">Best value group expedition</span>
+                  </td>
+                  <td>
+                    <span class="tier-price">$3,650</span>
+                    <span class="tier-sub">/ person sharing</span>
+                  </td>
+                  <td>
+                    <strong>Shared Comfort Land Cruiser</strong><br>
+                    <span style="font-size: 0.85rem; color: var(--text-muted);">Guaranteed Window Seats for Every Guest</span>
+                  </td>
+                  <td>
+                    <span style="font-size: 0.85rem; color: var(--logo-brown);"><i class="fa-solid fa-circle-check"></i> $570 Balloon Safari + AMREF Cover + All Fees</span>
+                  </td>
+                  <td>
+                    <button class="btn btn-whatsapp btn-sm" onclick="openBookingWhatsApp('7-Day Great Migration Safari (4+ Pax Group)', 'Standard Group', '$3,650 per person', 'Hello Okie Dokie Safaris! I want to book the 7-Day Great Migration Safari for 4+ Pax ($3,650 per person). Please confirm group quote.')">
+                      <i class="fa-brands fa-whatsapp"></i> Book $3,650
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- PACKAGE INCLUSIONS & EXCLUSIONS -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2.5rem; background: #FAF7F0; padding: 2rem; border-radius: var(--radius-md); border: 1px solid var(--light-border);">
+          <div>
+            <h5 style="font-family: var(--font-heading); font-size: 1.15rem; color: var(--dark); margin-bottom: 1rem;">
+              <i class="fa-solid fa-circle-check" style="color: #2E7D32;"></i> Comprehensive Inclusions:
+            </h5>
+            <ul style="display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.92rem; color: var(--text-main);">
+              <li><i class="fa-solid fa-check" style="color: var(--primary);"></i> <strong>AMREF Flying Doctors Cover:</strong> 24/7 emergency air evacuation across all remote parks.</li>
+              <li><i class="fa-solid fa-check" style="color: var(--primary);"></i> <strong>Serengeti Balloon Safari:</strong> $570 value per person included + champagne bush breakfast.</li>
+              <li><i class="fa-solid fa-check" style="color: var(--primary);"></i> <strong>All TANAPA & Conservation Fees:</strong> Tarangire, Serengeti, Ngorongoro Crater descent fees.</li>
+              <li><i class="fa-solid fa-check" style="color: var(--primary);"></i> <strong>Cultural Village Fees:</strong> Hadzabe bushmen hunting permits and Datoga blacksmith community fees.</li>
+              <li><i class="fa-solid fa-check" style="color: var(--primary);"></i> <strong>Custom 4x4 Safari Cruiser:</strong> Unlimited game drives, pop-up roof, fridge, inverter charging.</li>
+              <li><i class="fa-solid fa-check" style="color: var(--primary);"></i> <strong>Senior Naturalist Guide:</strong> WFR certified, English fluent with 15+ years experience.</li>
+              <li><i class="fa-solid fa-check" style="color: var(--primary);"></i> <strong>Full-Board Accommodation:</strong> 6 Nights at luxury safari lodges and tented camps.</li>
+              <li><i class="fa-solid fa-check" style="color: var(--primary);"></i> <strong>Transfers & Water:</strong> Airport transfers (JRO/Arusha) + unlimited bottled water on game drives.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h5 style="font-family: var(--font-heading); font-size: 1.15rem; color: var(--dark); margin-bottom: 1rem;">
+              <i class="fa-solid fa-circle-xmark" style="color: #C62828;"></i> Clear Exclusions:
+            </h5>
+            <ul style="display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.92rem; color: var(--text-muted);">
+              <li><i class="fa-solid fa-xmark" style="color: #C62828;"></i> International flight tickets & Tanzania entry visa fees ($50-$100).</li>
+              <li><i class="fa-solid fa-xmark" style="color: #C62828;"></i> Personal comprehensive travel/medical insurance.</li>
+              <li><i class="fa-solid fa-xmark" style="color: #C62828;"></i> Alcoholic spirits and luxury champagne (unless specified at boutique lodges).</li>
+              <li><i class="fa-solid fa-xmark" style="color: #C62828;"></i> Discretionary tips and gratuities for safari driver-guide and lodge staff.</li>
+              <li><i class="fa-solid fa-xmark" style="color: #C62828;"></i> Laundry services, souvenirs, phone calls, and items of a personal nature.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 2.5rem;">
+          <button class="btn btn-whatsapp btn-lg" onclick="openBookingWhatsApp('7 Days Great Migration & Cultural Wild Safari', 'Document Package ($5,650 solo / $3,950 2pax / $3,750 3pax / $3,650 4+pax)', '7 Days / 6 Nights', 'Hello Okie Dokie Safaris! I want to book the official 7 Days / 6 Nights Great Migration & Cultural Wild Safari (Tarangire, Serengeti, Balloon Safari, Ngorongoro, Hadzabe & Lake Natron).\n• Party size: ___\n• Dates preferred: ___\nPlease confirm availability.')">
+            <i class="fa-brands fa-whatsapp"></i> Book 7-Day Flagship Expedition on WhatsApp
+          </button>
+        </div>
+
+      </div>
+
+      <!-- =================================================================
+           EXPEDITION 2: 6-DAY / 5-NIGHT NORTH SERENGETI MARA RIVER & CULTURAL SAFARI
+           (From Prompt Text)
+           ================================================================= -->
+      <div id="expedition-6days" style="background: #FFF; border-radius: var(--radius-lg); border: 1px solid var(--light-border); padding: 3rem 2.5rem; box-shadow: var(--shadow-md);">
+        
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem;">
+          <div>
+            <span class="vip-badge" style="background: var(--dark-surface); color: var(--primary); font-size: 0.82rem; padding: 0.35rem 0.9rem; font-weight: 800; border-radius: 50px; text-transform: uppercase;">
+              <i class="fa-solid fa-star"></i> North Serengeti & Cultural Immersion
+            </span>
+            <h3 style="font-family: var(--font-heading); font-size: clamp(1.8rem, 3.5vw, 2.4rem); color: var(--dark); margin: 0.8rem 0 0.4rem 0;">
+              6 Days / 5 Nights North Serengeti Mara River & Cultural Safari
+            </h3>
+            <p style="font-size: 1.05rem; color: var(--logo-brown); font-weight: 700; margin: 0;">
+              <i class="fa-solid fa-map-pin"></i> Arusha • Tarangire • Karatu Highlands • North Serengeti (Mara River) • Ngorongoro Crater • Hadzabe & Datoga Tribes
+            </p>
+          </div>
+          <div style="text-align: right;">
+            <span style="font-size: 0.85rem; color: var(--text-muted); display: block;">Per Person From</span>
+            <span style="font-family: var(--font-brand); font-size: 2.2rem; font-weight: 800; color: var(--logo-brown);">$2,850</span>
+            <span style="font-size: 0.82rem; color: var(--text-muted); display: block;">4+ Pax Rate (Full Board + 4x4 Cruiser)</span>
+          </div>
+        </div>
+
+        <p style="font-size: 1rem; line-height: 1.8; color: var(--text-main); margin-bottom: 2rem;">
+          A perfectly paced 6-day northern circuit safari tailored for travelers seeking the drama of the Great Migration river crossings along the Mara River, the Big Five inside Ngorongoro Crater, and an authentic hunter-gatherer encounter with the Hadzabe and Datoga tribes at Lake Eyasi.
+        </p>
+
+        <!-- 6-DAY ITINERARY TIMELINE (DAY 1 TO DAY 6) -->
+        <h4 style="font-family: var(--font-heading); font-size: 1.45rem; color: var(--dark); margin-bottom: 1.5rem;">
+          <i class="fa-solid fa-calendar-check" style="color: var(--primary);"></i> 6-Day Detailed Day-by-Day Itinerary
+        </h4>
+
+        <!-- Day 1 -->
+        <div class="itinerary-day-card">
+          <div class="itinerary-day-top">
+            <div class="itinerary-day-num">
+              <span>DAY 1</span> Arusha – Tarangire National Park – Karatu Highlands
+            </div>
+            <span class="itinerary-activity-badge"><i class="fa-solid fa-elephant"></i> Baobabs & Giant Elephant Herds</span>
+          </div>
+          <div class="itinerary-day-content">
+            <h5 class="itinerary-day-headline">Arusha Pickup, Tarangire Game Drive & Karatu Highlands Transit</h5>
+            <p class="itinerary-day-desc">
+              Pickup from your Arusha hotel after breakfast. Drive directly to Tarangire National Park, world-famous for its giant Baobab trees and massive elephant herds. Enjoy a full-day game drive with a picnic lunch inside the park. In the evening, drive up to the cooler highlands of Karatu to check in for dinner and overnight, significantly shortening tomorrow’s drive to the Serengeti.
+            </p>
+            <div class="itinerary-day-meta">
+              <div class="itinerary-day-meta-item">
+                <i class="fa-solid fa-bed"></i> <strong>Accommodation:</strong> Marera Valley Lodge / Farm of Dreams Lodge (or similar)
+              </div>
+              <div class="itinerary-day-meta-item">
+                <i class="fa-solid fa-utensils"></i> <strong>Meals:</strong> Lunch (Picnic Box), Dinner
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Day 2 -->
+        <div class="itinerary-day-card">
+          <div class="itinerary-day-top">
+            <div class="itinerary-day-num">
+              <span>DAY 2</span> Karatu – Central Serengeti (En-route Drive) – North Serengeti (Mara River)
+            </div>
+            <span class="itinerary-activity-badge"><i class="fa-solid fa-compass"></i> Ngorongoro Transit to Heart of Migration</span>
+          </div>
+          <div class="itinerary-day-content">
+            <h5 class="itinerary-day-headline">Ngorongoro Highlands Transit & Journey to North Serengeti</h5>
+            <p class="itinerary-day-desc">
+              Following an early breakfast, depart Karatu and journey through the stunning Ngorongoro Conservation Area. Cross the endless plains of Central Serengeti with a game drive and picnic lunch en route, heading straight to North Serengeti (Kogatende) to position yourselves in the heart of the Great Migration.
+            </p>
+            <div class="itinerary-day-meta">
+              <div class="itinerary-day-meta-item">
+                <i class="fa-solid fa-bed"></i> <strong>Accommodation:</strong> Mara Mara Tented Lodge / Koga Tented Camp (or similar)
+              </div>
+              <div class="itinerary-day-meta-item">
+                <i class="fa-solid fa-utensils"></i> <strong>Meals:</strong> Full Board (Breakfast, Bush Picnic Lunch, Dinner)
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Day 3 -->
+        <div class="itinerary-day-card">
+          <div class="itinerary-day-top">
+            <div class="itinerary-day-num">
+              <span>DAY 3</span> North Serengeti (Optional Balloon & Full-Day River Crossing Tracking)
+            </div>
+            <span class="itinerary-activity-badge"><i class="fa-solid fa-water"></i> Mara River Wildebeest Crossings</span>
+          </div>
+          <div class="itinerary-day-content">
+            <h5 class="itinerary-day-headline">Full-Day Great Migration Tracking on the Mara River</h5>
+            <p class="itinerary-day-desc">
+              <strong>Optional Experience:</strong> At dawn, embark on a Serengeti Hot Air Balloon Safari, gliding over the plains at sunrise, followed by a luxury champagne bush breakfast.<br>
+              Spend the rest of the day tracking the dramatic Great Migration river crossings along the banks of the iconic Mara River. Return to the lodge in the evening for dinner.
+            </p>
+            <div class="itinerary-day-meta">
+              <div class="itinerary-day-meta-item">
+                <i class="fa-solid fa-bed"></i> <strong>Accommodation:</strong> Mara Mara Tented Lodge / Koga Tented Camp (or similar)
+              </div>
+              <div class="itinerary-day-meta-item">
+                <i class="fa-solid fa-utensils"></i> <strong>Meals:</strong> Full Board (Breakfast, Picnic Lunch on Riverbank, Dinner)
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Day 4 -->
+        <div class="itinerary-day-card">
+          <div class="itinerary-day-top">
+            <div class="itinerary-day-num">
+              <span>DAY 4</span> North Serengeti (Morning Drive) – Ngorongoro Conservation Area
+            </div>
+            <span class="itinerary-activity-badge"><i class="fa-solid fa-paw"></i> Morning Predator Tracking</span>
+          </div>
+          <div class="itinerary-day-content">
+            <h5 class="itinerary-day-headline">Morning Game Drive & Transit to Ngorongoro Crater Rim</h5>
+            <p class="itinerary-day-desc">
+              Enjoy a final morning game drive in North Serengeti tracking active predators. Afterward, drive southwards across the Serengeti plains toward the Ngorongoro Conservation Area, enjoying game viewing along the way.
+            </p>
+            <div class="itinerary-day-meta">
+              <div class="itinerary-day-meta-item">
+                <i class="fa-solid fa-bed"></i> <strong>Accommodation:</strong> Rhino Lodge / Marera Valley Lodge (or similar)
+              </div>
+              <div class="itinerary-day-meta-item">
+                <i class="fa-solid fa-utensils"></i> <strong>Meals:</strong> Full Board (Breakfast, Picnic Lunch, Dinner)
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Day 5 -->
+        <div class="itinerary-day-card">
+          <div class="itinerary-day-top">
+            <div class="itinerary-day-num">
+              <span>DAY 5</span> Ngorongoro Crater Tour – Karatu / Lake Eyasi
+            </div>
+            <span class="itinerary-activity-badge"><i class="fa-solid fa-volcano"></i> 600m Crater Floor & Rare Black Rhino</span>
+          </div>
+          <div class="itinerary-day-content">
+            <h5 class="itinerary-day-headline">600m Caldera Descent, Big Five & Hippo Pool Picnic</h5>
+            <p class="itinerary-day-desc">
+              Descend early in the morning into the majestic Ngorongoro Crater floor for an action-packed game drive seeking the rare Black Rhino and the African Big Five. Enjoy a scenic picnic lunch near the hippo pool. In the late afternoon, ascend the crater and drive toward Karatu or Lake Eyasi for dinner and overnight.
+            </p>
+            <div class="itinerary-day-meta">
+              <div class="itinerary-day-meta-item">
+                <i class="fa-solid fa-bed"></i> <strong>Accommodation:</strong> Lake Karatu Safari Lodge / Kisima Ngeda Camp (or similar)
+              </div>
+              <div class="itinerary-day-meta-item">
+                <i class="fa-solid fa-utensils"></i> <strong>Meals:</strong> Full Board (Breakfast, Crater Picnic Lunch, Dinner)
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Day 6 -->
+        <div class="itinerary-day-card">
+          <div class="itinerary-day-top">
+            <div class="itinerary-day-num">
+              <span>DAY 6</span> Karatu – Hadzabe & Datoga Cultural Experience – Return to Arusha
+            </div>
+            <span class="itinerary-activity-badge"><i class="fa-solid fa-hands-holding"></i> Ancient Bushmen Hunting & Metallurgy</span>
+          </div>
+          <div class="itinerary-day-content">
+            <h5 class="itinerary-day-headline">Hadzabe Bushmen Hunting, Datoga Blacksmiths & Arusha Return</h5>
+            <p class="itinerary-day-desc">
+              Depart early morning for Lake Eyasi to join the Hadzabe tribe for an authentic bushmen hunting experience and learn about their ancient survival skills. Later, visit the neighboring Datoga blacksmiths to observe traditional metalwork and craft skills. After a late lunch, embark on the drive back to Arusha to conclude your safari experience.
+            </p>
+            <div class="itinerary-day-meta">
+              <div class="itinerary-day-meta-item">
+                <i class="fa-solid fa-location-dot"></i> <strong>Concludes:</strong> Transfer back to Arusha hotel or Kilimanjaro Airport (JRO)
+              </div>
+              <div class="itinerary-day-meta-item">
+                <i class="fa-solid fa-utensils"></i> <strong>Meals:</strong> Breakfast, Cultural Lunch
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6-DAY PRICING & BOOKING ACTION -->
+        <div style="background: #FAF7F0; border-radius: var(--radius-md); padding: 1.8rem; border: 1px solid var(--light-border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem; margin-top: 2rem;">
+          <div>
+            <h5 style="font-family: var(--font-heading); font-size: 1.25rem; color: var(--dark); margin-bottom: 0.3rem;">
+              6-Day North Serengeti & Cultural Safari Pricing:
+            </h5>
+            <div style="font-size: 0.95rem; color: var(--text-main);">
+              1 Pax: <strong>$4,950</strong> &bull; 2 Pax: <strong>$3,450 / person</strong> &bull; 3 Pax: <strong>$3,150 / person</strong> &bull; 4+ Pax: <strong>$2,850 / person</strong>
+            </div>
+          </div>
+          <button class="btn btn-whatsapp btn-lg" onclick="openBookingWhatsApp('6 Days North Serengeti Mara River Safari', 'Standard/VIP Package', '6 Days / 5 Nights', 'Hello Okie Dokie Safaris! I want to book the 6 Days / 5 Nights North Serengeti Mara River & Cultural Safari (Tarangire, Kogatende, Ngorongoro & Hadzabe).\n• Party size: ___\n• Dates: ___\nPlease confirm details.')">
+            <i class="fa-brands fa-whatsapp"></i> Book 6-Day Safari on WhatsApp
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       SECTION 2: ALL NATIONAL PARKS & GAME RESERVES IN TANZANIA
+       (Northern Circuit, Southern Circuit, Western Circuit, Marine & Special)
+       =================================================================== -->
+  <section id="parks" style="padding: 5.5rem 0; background: var(--light-surface); border-top: 1px solid var(--light-border);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle"><i class="fa-solid fa-map-location-dot"></i> Complete Tanzania Sanctuary Guide</span>
+        <h2 class="section-title">All National Parks & Game Reserves in Tanzania</h2>
+        <div class="logo-arc-divider"></div>
+        <p class="section-desc">
+          Tanzania protects 22 National Parks, world heritage reserves, and marine sanctuaries. Explore each iconic ecosystem below and book direct custom safari routes with Okie Dokie Safaris.
+        </p>
+      </div>
+
+      <!-- Circuit Filter Navigation -->
+      <div class="filter-tabs-nav">
+        <button class="filter-tab-btn active" data-filter="all">All Sanctuaries (15+)</button>
+        <button class="filter-tab-btn" data-filter="north">Northern Circuit</button>
+        <button class="filter-tab-btn" data-filter="south">Southern Circuit</button>
+        <button class="filter-tab-btn" data-filter="west">Western Circuit</button>
+        <button class="filter-tab-btn" data-filter="east">Eastern & Special Reserves</button>
+      </div>
+
+      <!-- ==========================================
+           CIRCUIT 1: THE ICONIC NORTHERN CIRCUIT
+           ========================================== -->
+      <div class="circuit-heading-bar filterable-item" data-category="north">
+        <h3><i class="fa-solid fa-crown" style="color: var(--primary);"></i> Northern Safari Circuit</h3>
+        <span class="circuit-region-tag">Arusha • Serengeti • Ngorongoro • Manyara • Tarangire</span>
+      </div>
+
+      <div class="parks-grid">
+
+        <!-- 1. SERENGETI NATIONAL PARK -->
+        <div class="park-card filterable-item" data-category="north">
+          <div class="park-media">
+            <img src="assets/img/serengeti.jpg" alt="Serengeti National Park" loading="lazy" decoding="async">
+            <div class="park-overlay"></div>
+            <span class="park-size-badge">14,763 km²</span>
+            <span class="park-badge"><i class="fa-solid fa-trophy"></i> UNESCO Heritage</span>
+          </div>
+          <div class="park-body">
+            <h3 class="park-title">Serengeti National Park</h3>
+            <div class="park-known-for">
+              <i class="fa-solid fa-paw"></i> World-Famous Great Migration & Big Cats
+            </div>
+            <p class="park-desc">
+              Tanzania's most celebrated park and a designated UNESCO World Heritage Site. Renowned globally for the annual Great Migration where over 1.5 million wildebeest and 300,000 zebras brave predator-infested rivers. Home to Africa's highest concentration of lions, leopards, and cheetahs.
+            </p>
+            <div class="park-wildlife-tags">
+              <span class="wildlife-tag">🦁 3,000+ Lions</span>
+              <span class="wildlife-tag">🐆 Leopards & Cheetahs</span>
+              <span class="wildlife-tag">🦓 Great Migration</span>
+              <span class="wildlife-tag">🎈 Hot Air Balloon Safaris</span>
+            </div>
+            <div class="park-itinerary-box">
+              <span class="itinerary-day-tag"><i class="fa-solid fa-calendar-days"></i> Itinerary in Package: Day 2, 3 & 4 (6-Day & 7-Day Tours)</span>
+              <strong>Expedition Role:</strong> Central Seronera predator tracking, North Serengeti Kogatende, dramatic Mara River crossing tracking & sunrise hot air balloon.
+              <span class="itinerary-lodge-tag"><i class="fa-solid fa-hotel"></i> Lodges: Mara Mara Tented Lodge / Kubu Kubu / Into Wild Serengeti</span>
+            </div>
+            <div class="park-footer-action">
+              <span style="font-size: 0.85rem; font-weight: 700; color: var(--logo-brown);">Best Time: Year-Round</span>
+              <button class="btn btn-whatsapp btn-sm" onclick="openBookingWhatsApp('Serengeti Safari', 'VIP/Standard', '3-5 Days', 'Hello Okie Dokie Safaris! I want to book a safari to Serengeti National Park. Please share packages and availability.')">
+                <i class="fa-brands fa-whatsapp"></i> Inquire Serengeti
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. NGORONGORO CONSERVATION AREA & CRATER -->
+        <div class="park-card filterable-item" data-category="north">
+          <div class="park-media">
+            <img src="assets/img/ngorongoro.jpg" alt="Ngorongoro Conservation Area & Crater" loading="lazy" decoding="async">
+            <div class="park-overlay"></div>
+            <span class="park-size-badge">8,292 km²</span>
+            <span class="park-badge"><i class="fa-solid fa-gem"></i> 8th Wonder</span>
+          </div>
+          <div class="park-body">
+            <h3 class="park-title">Ngorongoro Conservation Area & Crater</h3>
+            <div class="park-known-for">
+              <i class="fa-solid fa-volcano"></i> World's Largest Intact Volcanic Caldera
+            </div>
+            <p class="park-desc">
+              Often hailed as the 8th Wonder of the World. The 600-meter-deep intact volcanic caldera forms a self-contained Eden sheltering over 25,000 large mammals, including the highly endangered Eastern Black Rhino, giant tusker elephants, flamingos on Lake Magadi, and the prehistoric Olduvai Gorge.
+            </p>
+            <div class="park-wildlife-tags">
+              <span class="wildlife-tag">🦏 Rare Black Rhinos</span>
+              <span class="wildlife-tag">🌋 600m Deep Crater Floor</span>
+              <span class="wildlife-tag">🦁 Dense Lion Prides</span>
+              <span class="wildlife-tag">🦴 Olduvai Gorge Cradle</span>
+            </div>
+            <div class="park-itinerary-box">
+              <span class="itinerary-day-tag"><i class="fa-solid fa-calendar-days"></i> Itinerary in Package: Day 4 & 5 (6-Day & 7-Day Tours)</span>
+              <strong>Expedition Role:</strong> Crater rim sunset view, early morning 600m floor descent, tracking endangered Black Rhino & Big Five, Ngoitoktok hippo pool picnic.
+              <span class="itinerary-lodge-tag"><i class="fa-solid fa-hotel"></i> Lodges: Rhino Lodge / Ngorongoro Serena / Marera Valley Lodge</span>
+            </div>
+            <div class="park-footer-action">
+              <span style="font-size: 0.85rem; font-weight: 700; color: var(--logo-brown);">Best Time: Year-Round</span>
+              <button class="btn btn-whatsapp btn-sm" onclick="openBookingWhatsApp('Ngorongoro Crater Safari', 'VIP/Standard', '2-3 Days', 'Hello Okie Dokie Safaris! I want to visit Ngorongoro Crater & Conservation Area. Please send itinerary details.')">
+                <i class="fa-brands fa-whatsapp"></i> Inquire Ngorongoro
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. TARANGIRE NATIONAL PARK -->
+        <div class="park-card filterable-item" data-category="north">
+          <div class="park-media">
+            <img src="assets/img/tarangire.jpg" alt="Tarangire National Park" loading="lazy" decoding="async">
+            <div class="park-overlay"></div>
+            <span class="park-size-badge">2,850 km²</span>
+            <span class="park-badge"><i class="fa-solid fa-tree"></i> Baobab Empire</span>
+          </div>
+          <div class="park-body">
+            <h3 class="park-title">Tarangire National Park</h3>
+            <div class="park-known-for">
+              <i class="fa-solid fa-elephant"></i> Kingdom of Elephants & Ancient Baobabs
+            </div>
+            <p class="park-desc">
+              Famous for iconic skyline vistas dominated by thousand-year-old colossal Baobab trees. The Tarangire River serves as the only permanent water source during the dry season, attracting massive elephant herds of up to 300 individuals alongside lions, leopards, oryx, and over 550 bird species.
+            </p>
+            <div class="park-wildlife-tags">
+              <span class="wildlife-tag">🐘 Giant Elephant Herds</span>
+              <span class="wildlife-tag">🌳 Millennium Baobabs</span>
+              <span class="wildlife-tag">🦜 550+ Bird Species</span>
+              <span class="wildlife-tag">🐆 Tree-Dwelling Pythons</span>
+            </div>
+            <div class="park-itinerary-box">
+              <span class="itinerary-day-tag"><i class="fa-solid fa-calendar-days"></i> Itinerary in Package: Day 1 (6-Day & 7-Day Tours)</span>
+              <strong>Expedition Role:</strong> Arusha pickup, full-day game drive along river basin, ancient baobab photography, evening transit to Karatu highlands.
+              <span class="itinerary-lodge-tag"><i class="fa-solid fa-hotel"></i> Lodges: Tarangire Sopa Lodge / Maramboi Tented Camp / Farm of Dreams</span>
+            </div>
+            <div class="park-footer-action">
+              <span style="font-size: 0.85rem; font-weight: 700; color: var(--logo-brown);">Best Time: June – Nov</span>
+              <button class="btn btn-whatsapp btn-sm" onclick="openBookingWhatsApp('Tarangire Safari', 'VIP/Standard', '1-2 Days', 'Hello Okie Dokie Safaris! I want to book a Tarangire National Park safari. Please quote price.')">
+                <i class="fa-brands fa-whatsapp"></i> Inquire Tarangire
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. LAKE MANYARA NATIONAL PARK -->
+        <div class="park-card filterable-item" data-category="north">
+          <div class="park-media">
+            <img src="assets/img/manyara.jpg" alt="Lake Manyara National Park" loading="lazy" decoding="async">
+            <div class="park-overlay"></div>
+            <span class="park-size-badge">330 km²</span>
+            <span class="park-badge"><i class="fa-solid fa-feather"></i> Soda Lake Eden</span>
+          </div>
+          <div class="park-body">
+            <h3 class="park-title">Lake Manyara National Park</h3>
+            <div class="park-known-for">
+              <i class="fa-solid fa-shield-cat"></i> Tree-Climbing Lions & Pink Flamingos
+            </div>
+            <p class="park-desc">
+              Nestled beneath the dramatic 600m Gregory Rift Valley escarpment. Renowned for its rare tree-climbing lions resting in acacia branches, million-strong pink flamingo flocks tinting the alkaline lake shores, lush groundwater forest fed by underground springs, and massive baboon troops.
+            </p>
+            <div class="park-wildlife-tags">
+              <span class="wildlife-tag">🦁 Tree-Climbing Lions</span>
+              <span class="wildlife-tag">🦩 Millions of Flamingos</span>
+              <span class="wildlife-tag">🐒 Dense Baboon Troops</span>
+              <span class="wildlife-tag">🌉 Treetop Canopy Walk</span>
+            </div>
+            <div class="park-itinerary-box">
+              <span class="itinerary-day-tag"><i class="fa-solid fa-calendar-days"></i> Itinerary in Package: Northern Circuit Classic Extension</span>
+              <strong>Expedition Role:</strong> Groundwater jungle drive, treetop canopy walk, tree-climbing lion spotting, pink flamingo shoreline photography.
+              <span class="itinerary-lodge-tag"><i class="fa-solid fa-hotel"></i> Lodges: Lake Manyara Serena Safari Lodge / Marera Valley Lodge</span>
+            </div>
+            <div class="park-footer-action">
+              <span style="font-size: 0.85rem; font-weight: 700; color: var(--logo-brown);">Best Time: Year-Round</span>
+              <button class="btn btn-whatsapp btn-sm" onclick="openBookingWhatsApp('Lake Manyara Safari', 'VIP/Standard', '1-2 Days', 'Hello Okie Dokie Safaris! I want to visit Lake Manyara National Park. Please send itinerary details.')">
+                <i class="fa-brands fa-whatsapp"></i> Inquire Manyara
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. LAKE EYASI CULTURAL SANCTUARY -->
+        <div class="park-card filterable-item" data-category="north">
+          <div class="park-media">
+            <img src="assets/img/lake-eyasi.jpg" alt="Lake Eyasi Hadzabe Bushmen" loading="lazy" decoding="async">
+            <div class="park-overlay"></div>
+            <span class="park-size-badge">1,050 km²</span>
+            <span class="park-badge"><i class="fa-solid fa-people-roof"></i> Ancient Cultures</span>
+          </div>
+          <div class="park-body">
+            <h3 class="park-title">Lake Eyasi (Hadzabe & Datoga Tribes)</h3>
+            <div class="park-known-for">
+              <i class="fa-solid fa-hands-holding"></i> Authentic Bushmen Bow Hunting & Blacksmiths
+            </div>
+            <p class="park-desc">
+              A wild, shallow soda lake in the southern Great Rift Valley, renowned as the homeland of the ancient Hadzabe bushmen — one of Africa's last true hunter-gatherer tribes who still hunt with handmade bows and communicate in click dialect — alongside the master Datoga pastoralist blacksmiths.
+            </p>
+            <div class="park-wildlife-tags">
+              <span class="wildlife-tag">🏹 Hadzabe Dawn Bow Hunt</span>
+              <span class="wildlife-tag">🗣️ Click-Language Heritage</span>
+              <span class="wildlife-tag">🔥 Friction Fire Making</span>
+              <span class="wildlife-tag">🔨 Datoga Metal Metallurgy</span>
+            </div>
+            <div class="park-itinerary-box">
+              <span class="itinerary-day-tag"><i class="fa-solid fa-calendar-days"></i> Itinerary in Package: Day 5 & 6 (6-Day & 7-Day Tours)</span>
+              <strong>Expedition Role:</strong> Dawn bush tracking with Hadzabe hunters, learning ancient fire & herbal survival skills, visiting Datoga smelters before returning to Arusha.
+              <span class="itinerary-lodge-tag"><i class="fa-solid fa-hotel"></i> Lodges: Kisima Ngeda Camp / Lake Eyasi Premium Tented Lodge</span>
+            </div>
+            <div class="park-footer-action">
+              <span style="font-size: 0.85rem; font-weight: 700; color: var(--logo-brown);">Best Time: Year-Round</span>
+              <button class="btn btn-whatsapp btn-sm" onclick="openBookingWhatsApp('Lake Eyasi Cultural Safari', 'Cultural Expedition', '1-2 Days', 'Hello Okie Dokie Safaris! I want to visit Lake Eyasi for the Hadzabe Bushmen & Datoga Cultural Experience. Please send details.')">
+                <i class="fa-brands fa-whatsapp"></i> Inquire Lake Eyasi
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. LAKE NATRON & OL DOINYO LENGAI -->
+        <div class="park-card filterable-item" data-category="north">
+          <div class="park-media">
+            <img src="assets/img/lake-natron.jpg" alt="Lake Natron Flamingos & Ol Doinyo Lengai" loading="lazy" decoding="async">
+            <div class="park-overlay"></div>
+            <span class="park-size-badge">1,040 km²</span>
+            <span class="park-badge"><i class="fa-solid fa-volcano"></i> Mountain of God</span>
+          </div>
+          <div class="park-body">
+            <h3 class="park-title">Lake Natron & Ol Doinyo Lengai</h3>
+            <div class="park-known-for">
+              <i class="fa-solid fa-feather"></i> 2.5 Million Lesser Flamingos & Active Volcano
+            </div>
+            <p class="park-desc">
+              A surreal, crimson-tinted mineral lake nestled at the base of Ol Doinyo Lengai (the Maasai sacred "Mountain of God"). Lake Natron is the single regular breeding site for East Africa's 2.5 million lesser flamingos, featuring stunning moonscapes, natural hominid footprints, and Rift Valley waterfalls.
+            </p>
+            <div class="park-wildlife-tags">
+              <span class="wildlife-tag">🦩 2.5M Breeding Flamingos</span>
+              <span class="wildlife-tag">🌋 Ol Doinyo Lengai Trekking</span>
+              <span class="wildlife-tag">🌊 Engare Sero Waterfalls</span>
+              <span class="wildlife-tag">👣 Prehistoric Footprints</span>
+            </div>
+            <div class="park-itinerary-box">
+              <span class="itinerary-day-tag"><i class="fa-solid fa-calendar-days"></i> Itinerary in Package: Day 7 (7-Day Flagship Expedition)</span>
+              <strong>Expedition Role:</strong> Mineral crust soda flats walk, photography of 2.5M flamingos against Ol Doinyo Lengai, scenic Rift Valley return drive to Arusha / JRO.
+              <span class="itinerary-lodge-tag"><i class="fa-solid fa-hotel"></i> Lodges: Lake Natron Camp / Lengai Eco-Camp / Seven Skies Hotel</span>
+            </div>
+            <div class="park-footer-action">
+              <span style="font-size: 0.85rem; font-weight: 700; color: var(--logo-brown);">Best Time: June – Dec</span>
+              <button class="btn btn-whatsapp btn-sm" onclick="openBookingWhatsApp('Lake Natron Safari', 'Adventure Safari', '1-2 Days', 'Hello Okie Dokie Safaris! I want to visit Lake Natron and Ol Doinyo Lengai. Please share tour details.')">
+                <i class="fa-brands fa-whatsapp"></i> Inquire Lake Natron
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 7. ARUSHA NATIONAL PARK & MOUNT MERU -->
+        <div class="park-card filterable-item" data-category="north">
+          <div class="park-media">
+            <img src="assets/img/arusha-np.jpg" alt="Arusha National Park & Mount Meru" loading="lazy" decoding="async">
+            <div class="park-overlay"></div>
+            <span class="park-size-badge">137 km²</span>
+            <span class="park-badge"><i class="fa-solid fa-mountain"></i> Mount Meru</span>
+          </div>
+          <div class="park-body">
+            <h3 class="park-title">Arusha National Park & Mount Meru</h3>
+            <div class="park-known-for">
+              <i class="fa-solid fa-person-hiking"></i> Black-and-White Colobus & Walking Safaris
+            </div>
+            <p class="park-desc">
+              The closest park to Arusha and Moshi, crowned by Mount Meru (4,562m). It is the only northern park where you can take armed ranger walking safaris and canoe excursions on the tranquil Momella Lakes, viewing waterbucks, giraffes, and acrobat black-and-white Colobus monkeys in lush rainforest canopy.
+            </p>
+            <div class="park-wildlife-tags">
+              <span class="wildlife-tag">🐒 Colobus Monkeys</span>
+              <span class="wildlife-tag">🚶 Armed Walking Safaris</span>
+              <span class="wildlife-tag">🛶 Momella Lake Canoeing</span>
+              <span class="wildlife-tag">🌋 Ngurdoto Crater Rim</span>
+            </div>
+            <div class="park-itinerary-box">
+              <span class="itinerary-day-tag"><i class="fa-solid fa-calendar-days"></i> Itinerary in Package: Day Tour / Pre-Safari Acclimatization</span>
+              <strong>Expedition Role:</strong> Foot safari with armed park ranger under Mount Meru, black-and-white colobus canopy spotting, canoeing on Momella Lakes.
+              <span class="itinerary-lodge-tag"><i class="fa-solid fa-hotel"></i> Lodges: Seven Skies Hotel Arusha / Mount Meru Game Lodge</span>
+            </div>
+            <div class="park-footer-action">
+              <span style="font-size: 0.85rem; font-weight: 700; color: var(--logo-brown);">Best Time: Year-Round</span>
+              <button class="btn btn-whatsapp btn-sm" onclick="openBookingWhatsApp('Arusha National Park Safari', 'Day Tour', '1 Day', 'Hello Okie Dokie Safaris! I would like to book a day trip to Arusha National Park & walking safari.')">
+                <i class="fa-brands fa-whatsapp"></i> Inquire Arusha NP
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 8. MKOMAZI NATIONAL PARK -->
+        <div class="park-card filterable-item" data-category="north">
+          <div class="park-media">
+            <img src="assets/img/mkomazi.jpg" alt="Mkomazi National Park" loading="lazy" decoding="async">
+            <div class="park-overlay"></div>
+            <span class="park-size-badge">3,245 km²</span>
+            <span class="park-badge"><i class="fa-solid fa-shield-halved"></i> Rhino Sanctuary</span>
+          </div>
+          <div class="park-body">
+            <h3 class="park-title">Mkomazi National Park</h3>
+            <div class="park-known-for">
+              <i class="fa-solid fa-shield"></i> Black Rhino Sanctuary & African Wild Dogs
+            </div>
+            <p class="park-desc">
+              Bridging the gap between Kilimanjaro and Tanga Region against the dramatic backdrop of the Pare and Usambara Mountains. Mkomazi is the vital conservation haven for the intensely protected Eastern Black Rhinos and the successful breeding refuge of endangered African Wild Dogs.
+            </p>
+            <div class="park-wildlife-tags">
+              <span class="wildlife-tag">🦏 Rhino Breeding Sanctuary</span>
+              <span class="wildlife-tag">🐕 African Wild Dogs</span>
+              <span class="wildlife-tag">🦒 Gerenuk & Lesser Kudu</span>
+              <span class="wildlife-tag">⛰️ Usambara Backdrop</span>
+            </div>
+            <div class="park-itinerary-box">
+              <span class="itinerary-day-tag"><i class="fa-solid fa-calendar-days"></i> Itinerary in Package: 2-3 Day Rhino & Wild Dog Specialized Tour</span>
+              <strong>Expedition Role:</strong> Exclusive entry into the secured Black Rhino breeding sanctuary, viewing African wild dogs, gerenuk antelopes under Usambara peaks.
+              <span class="itinerary-lodge-tag"><i class="fa-solid fa-hotel"></i> Lodges: Babu's Camp Mkomazi</span>
+            </div>
+            <div class="park-footer-action">
+              <span style="font-size: 0.85rem; font-weight: 700; color: var(--logo-brown);">Best Time: June – March</span>
+              <button class="btn btn-whatsapp btn-sm" onclick="openBookingWhatsApp('Mkomazi National Park Safari', 'Special Expeditions', '2-3 Days', 'Hello Okie Dokie Safaris! I want to visit Mkomazi National Park Rhino Sanctuary. Please share itinerary.')">
+                <i class="fa-brands fa-whatsapp"></i> Inquire Mkomazi
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ==========================================
+           CIRCUIT 2: THE WILD SOUTHERN CIRCUIT
+           ========================================== -->
+      <div class="circuit-heading-bar filterable-item" data-category="south">
+        <h3><i class="fa-solid fa-compass" style="color: var(--primary);"></i> Southern Safari Circuit</h3>
+        <span class="circuit-region-tag">Nyerere (Selous) • Ruaha • Mikumi • Udzungwa</span>
+      </div>
+
+      <div class="parks-grid">
+
+        <!-- 7. NYERERE NATIONAL PARK (SELOUS) -->
+        <div class="park-card filterable-item" data-category="south">
+          <div class="park-media">
+            <img src="assets/img/nyerere.jpg" alt="Nyerere National Park Selous" loading="lazy" decoding="async">
+            <div class="park-overlay"></div>
+            <span class="park-size-badge">30,893 km²</span>
+            <span class="park-badge"><i class="fa-solid fa-water"></i> Africa's Largest</span>
+          </div>
+          <div class="park-body">
+            <h3 class="park-title">Nyerere National Park (formerly Selous)</h3>
+            <div class="park-known-for">
+              <i class="fa-solid fa-ship"></i> Rufiji River Boat Safaris & Africa's Wildest Reserve
+            </div>
+            <p class="park-desc">
+              Formerly part of the famed Selous Game Reserve, Nyerere is now Africa's largest stand-alone national park. Carved by the mighty Rufiji River, it offers unforgettable motorboat safaris alongside pods of hippos and basking Nile crocodiles, thrilling foot safaris, and significant packs of African wild dogs.
+            </p>
+            <div class="park-wildlife-tags">
+              <span class="wildlife-tag">🚤 Rufiji Boat Safaris</span>
+              <span class="wildlife-tag">🐕 African Wild Dogs</span>
+              <span class="wildlife-tag">🦛 Massive Hippo Pods</span>
+              <span class="wildlife-tag">🚶 Fly Camping Safaris</span>
+            </div>
+            <div class="park-itinerary-box">
+              <span class="itinerary-day-tag"><i class="fa-solid fa-calendar-days"></i> Itinerary in Package: 3-4 Day Southern Wilderness Safari</span>
+              <strong>Expedition Role:</strong> Rufiji River boat safari alongside hippo pods and basking crocodiles, open savannah game drives, walking foot safaris and fly-camping.
+              <span class="itinerary-lodge-tag"><i class="fa-solid fa-hotel"></i> Lodges: Rufiji River Camp / Serena Mivumo River Lodge</span>
+            </div>
+            <div class="park-footer-action">
+              <span style="font-size: 0.85rem; font-weight: 700; color: var(--logo-brown);">Best Time: June – Nov</span>
+              <button class="btn btn-whatsapp btn-sm" onclick="openBookingWhatsApp('Nyerere National Park Safari', 'Southern Wilderness', '3-4 Days', 'Hello Okie Dokie Safaris! I want to book a safari to Nyerere (Selous) National Park. Please send itinerary & prices.')">
+                <i class="fa-brands fa-whatsapp"></i> Inquire Nyerere
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 8. RUAHA NATIONAL PARK -->
+        <div class="park-card filterable-item" data-category="south">
+          <div class="park-media">
+            <img src="assets/img/ruaha.jpg" alt="Ruaha National Park" loading="lazy" decoding="async">
+            <div class="park-overlay"></div>
+            <span class="park-size-badge">20,226 km²</span>
+            <span class="park-badge"><i class="fa-solid fa-paw"></i> Lion Heartland</span>
+          </div>
+          <div class="park-body">
+            <h3 class="park-title">Ruaha National Park</h3>
+            <div class="park-known-for">
+              <i class="fa-solid fa-crown"></i> 10% of World's Wild Lions & Raw Wilderness
+            </div>
+            <p class="park-desc">
+              Tanzania's second-largest national park and a remote wilderness dream. Ruaha harbors 10% of the entire planet's remaining wild lions, celebrated for pride super-groups numbering up to 30 individuals. Its rugged baobab landscape alongside the Great Ruaha River is home to both Greater and Lesser Kudu.
+            </p>
+            <div class="park-wildlife-tags">
+              <span class="wildlife-tag">🦁 Super Lion Prides</span>
+              <span class="wildlife-tag">🦌 Greater & Lesser Kudu</span>
+              <span class="wildlife-tag">🌊 Great Ruaha River</span>
+              <span class="wildlife-tag">🐆 Cheetahs & Wild Dogs</span>
+            </div>
+            <div class="park-itinerary-box">
+              <span class="itinerary-day-tag"><i class="fa-solid fa-calendar-days"></i> Itinerary in Package: 3-5 Day Lion Heartland Expedition</span>
+              <strong>Expedition Role:</strong> Tracking super-prides of 30+ lions along Great Ruaha River, tracking Greater & Lesser Kudu among ancient baobabs.
+              <span class="itinerary-lodge-tag"><i class="fa-solid fa-hotel"></i> Lodges: Ruaha River Lodge / Asanja Ruaha Luxury Camp</span>
+            </div>
+            <div class="park-footer-action">
+              <span style="font-size: 0.85rem; font-weight: 700; color: var(--logo-brown);">Best Time: May – Dec</span>
+              <button class="btn btn-whatsapp btn-sm" onclick="openBookingWhatsApp('Ruaha National Park Safari', 'Southern Wilderness', '3-5 Days', 'Hello Okie Dokie Safaris! I want to visit Ruaha National Park. Please provide details and pricing.')">
+                <i class="fa-brands fa-whatsapp"></i> Inquire Ruaha
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 9. MIKUMI NATIONAL PARK -->
+        <div class="park-card filterable-item" data-category="south">
+          <div class="park-media">
+            <img src="assets/img/mikumi.jpg" alt="Mikumi National Park" loading="lazy" decoding="async">
+            <div class="park-overlay"></div>
+            <span class="park-size-badge">3,230 km²</span>
+            <span class="park-badge"><i class="fa-solid fa-sun"></i> Little Serengeti</span>
+          </div>
+          <div class="park-body">
+            <h3 class="park-title">Mikumi National Park</h3>
+            <div class="park-known-for">
+              <i class="fa-solid fa-binoculars"></i> The Mkata Floodplain & Accessible Big Game
+            </div>
+            <p class="park-desc">
+              Bordering the Uluguru Mountains, Mikumi's open horizons and Mkata Floodplain draw immediate comparisons to the Serengeti. Highly accessible from Dar es Salaam and Morogoro, it offers year-round sightings of massive eland antelopes, lions, giraffes, zebras, and wallowing hippo pools.
+            </p>
+            <div class="park-wildlife-tags">
+              <span class="wildlife-tag">🦁 Floodplain Lions</span>
+              <span class="wildlife-tag">🦒 Giraffes & Zebras</span>
+              <span class="wildlife-tag">🦛 Hippo Pools</span>
+              <span class="wildlife-tag">🚗 Dar es Salaam Accessible</span>
+            </div>
+            <div class="park-itinerary-box">
+              <span class="itinerary-day-tag"><i class="fa-solid fa-calendar-days"></i> Itinerary in Package: 2-3 Day Accessible Southern Safari</span>
+              <strong>Expedition Role:</strong> Mkata Floodplain game drives, accessible lion prides, massive elands, giraffes, zebras, and wallowing hippo pools.
+              <span class="itinerary-lodge-tag"><i class="fa-solid fa-hotel"></i> Lodges: Vuma Hills Tented Camp / Mikumi Safari Lodge</span>
+            </div>
+            <div class="park-footer-action">
+              <span style="font-size: 0.85rem; font-weight: 700; color: var(--logo-brown);">Best Time: Year-Round</span>
+              <button class="btn btn-whatsapp btn-sm" onclick="openBookingWhatsApp('Mikumi National Park Safari', 'Southern Circuit', '2-3 Days', 'Hello Okie Dokie Safaris! I want to book a Mikumi National Park safari tour. Please quote.')">
+                <i class="fa-brands fa-whatsapp"></i> Inquire Mikumi
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 10. UDZUNGWA MOUNTAINS NATIONAL PARK -->
+        <div class="park-card filterable-item" data-category="south">
+          <div class="park-media">
+            <img src="assets/img/udzungwa.jpg" alt="Udzungwa Mountains National Park" loading="lazy" decoding="async">
+            <div class="park-overlay"></div>
+            <span class="park-size-badge">1,990 km²</span>
+            <span class="park-badge"><i class="fa-solid fa-waterfall"></i> Galapagos of Africa</span>
+          </div>
+          <div class="park-body">
+            <h3 class="park-title">Udzungwa Mountains National Park</h3>
+            <div class="park-known-for">
+              <i class="fa-solid fa-person-walking"></i> 170m Sanje Waterfalls & Endemic Primates
+            </div>
+            <p class="park-desc">
+              Part of the ancient Eastern Arc Mountains. Known as the "Galapagos of Africa" due to its incredible endemism of flora and fauna. Hike through primary equatorial rainforests to swim beneath the breathtaking 170-meter Sanje Waterfall and encounter the rare Sanje Mangabey and Iringa Red Colobus monkeys.
+            </p>
+            <div class="park-wildlife-tags">
+              <span class="wildlife-tag">🌊 170m Sanje Waterfalls</span>
+              <span class="wildlife-tag">🐒 Rare Sanje Mangabey</span>
+              <span class="wildlife-tag">🥾 Rainforest Hiking</span>
+              <span class="wildlife-tag">🏊 Mountain Plunge Pools</span>
+            </div>
+            <div class="park-itinerary-box">
+              <span class="itinerary-day-tag"><i class="fa-solid fa-calendar-days"></i> Itinerary in Package: 2-3 Day Primate & Waterfall Trek</span>
+              <strong>Expedition Role:</strong> Guided rainforest trek to 170m Sanje Waterfalls, natural plunge pool swimming, tracking endemic Sanje Mangabey primates.
+              <span class="itinerary-lodge-tag"><i class="fa-solid fa-hotel"></i> Lodges: Hondo Hondo Udzungwa Tented Camp</span>
+            </div>
+            <div class="park-footer-action">
+              <span style="font-size: 0.85rem; font-weight: 700; color: var(--logo-brown);">Best Time: Year-Round</span>
+              <button class="btn btn-whatsapp btn-sm" onclick="openBookingWhatsApp('Udzungwa Mountains Safari', 'Hiking Expedition', '2-3 Days', 'Hello Okie Dokie Safaris! I want to hike Udzungwa Mountains and Sanje Falls. Please send details.')">
+                <i class="fa-brands fa-whatsapp"></i> Inquire Udzungwa
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ==========================================
+           CIRCUIT 3: THE WESTERN CIRCUIT
+           ========================================== -->
+      <div class="circuit-heading-bar filterable-item" data-category="west">
+        <h3><i class="fa-solid fa-feather-pointed" style="color: var(--primary);"></i> Western Safari Circuit</h3>
+        <span class="circuit-region-tag">Gombe • Mahale Mountains • Katavi • Lake Tanganyika</span>
+      </div>
+
+      <div class="parks-grid">
+
+        <!-- 11. GOMBE STREAM NATIONAL PARK -->
+        <div class="park-card filterable-item" data-category="west">
+          <div class="park-media">
+            <img src="assets/img/gombe.jpg" alt="Gombe Stream National Park" loading="lazy" decoding="async">
+            <div class="park-overlay"></div>
+            <span class="park-size-badge">52 km²</span>
+            <span class="park-badge"><i class="fa-solid fa-heart"></i> Jane Goodall Legacy</span>
+          </div>
+          <div class="park-body">
+            <h3 class="park-title">Gombe Stream National Park</h3>
+            <div class="park-known-for">
+              <i class="fa-solid fa-dna"></i> World's Premier Chimpanzee Trekking Haven
+            </div>
+            <p class="park-desc">
+              World-renowned as the living laboratory where Dr. Jane Goodall pioneered modern primatology beginning in 1960. Located on the crystal-clear shores of Lake Tanganyika, Gombe offers intimate on-foot encounters with habituated wild chimpanzees, olive baboons, red-tailed monkeys, and scenic waterfalls.
+            </p>
+            <div class="park-wildlife-tags">
+              <span class="wildlife-tag">🦍 Habituated Chimpanzees</span>
+              <span class="wildlife-tag">🔬 Jane Goodall Kasekela Site</span>
+              <span class="wildlife-tag">⛵ Lake Tanganyika Dhow</span>
+              <span class="wildlife-tag">🌊 Kakombe Waterfall</span>
+            </div>
+            <div class="park-itinerary-box">
+              <span class="itinerary-day-tag"><i class="fa-solid fa-calendar-days"></i> Itinerary in Package: 4-5 Day Western Chimpanzee Trek</span>
+              <strong>Expedition Role:</strong> Boat cruise across Lake Tanganyika, intimate on-foot tracking of wild habituated chimpanzees, Jane Goodall research site & Kakombe Falls.
+              <span class="itinerary-lodge-tag"><i class="fa-solid fa-hotel"></i> Lodges: Gombe Forest Lodge / Kigoma Hilltop Hotel</span>
+            </div>
+            <div class="park-footer-action">
+              <span style="font-size: 0.85rem; font-weight: 700; color: var(--logo-brown);">Best Time: July – Oct</span>
+              <button class="btn btn-whatsapp btn-sm" onclick="openBookingWhatsApp('Gombe Stream Chimpanzee Safari', 'Primate Expedition', '4-5 Days', 'Hello Okie Dokie Safaris! I want to book a Chimpanzee Trekking expedition to Gombe Stream National Park.')">
+                <i class="fa-brands fa-whatsapp"></i> Inquire Gombe
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 12. MAHALE MOUNTAINS NATIONAL PARK -->
+        <div class="park-card filterable-item" data-category="west">
+          <div class="park-media">
+            <img src="assets/img/mahale.jpg" alt="Mahale Mountains National Park" loading="lazy" decoding="async">
+            <div class="park-overlay"></div>
+            <span class="park-size-badge">1,613 km²</span>
+            <span class="park-badge"><i class="fa-solid fa-umbrella-beach"></i> Beach & Primates</span>
+          </div>
+          <div class="park-body">
+            <h3 class="park-title">Mahale Mountains National Park</h3>
+            <div class="park-known-for">
+              <i class="fa-solid fa-mountain-sun"></i> Pristine Beaches & 1,000+ Wild Chimpanzees
+            </div>
+            <p class="park-desc">
+              Widely considered one of Africa's most breathtaking sanctuaries. Accessible exclusively by boat or chartered aircraft, Mahale features powdery white-sand freshwater beaches on Lake Tanganyika against lush jungle peaks sheltering over 1,000 wild chimpanzees, leopards, and giant forest squirrels.
+            </p>
+            <div class="park-wildlife-tags">
+              <span class="wildlife-tag">🦍 1,000+ Chimpanzees</span>
+              <span class="wildlife-tag">🏖️ White Sand Freshwater Beaches</span>
+              <span class="wildlife-tag">🛶 Snorkeling & Kayaking</span>
+              <span class="wildlife-tag">✈️ Remote Fly-in Safaris</span>
+            </div>
+            <div class="park-itinerary-box">
+              <span class="itinerary-day-tag"><i class="fa-solid fa-calendar-days"></i> Itinerary in Package: 4-6 Day Remote Fly-in Primate & Beach Safari</span>
+              <strong>Expedition Role:</strong> Chartered fly-in over crystal Lake Tanganyika, white sand beach relaxation, tracking 1,000+ wild chimpanzees in virgin mountain forests.
+              <span class="itinerary-lodge-tag"><i class="fa-solid fa-hotel"></i> Lodges: Greystoke Mahale / Kungwe Beach Lodge</span>
+            </div>
+            <div class="park-footer-action">
+              <span style="font-size: 0.85rem; font-weight: 700; color: var(--logo-brown);">Best Time: May – Oct</span>
+              <button class="btn btn-whatsapp btn-sm" onclick="openBookingWhatsApp('Mahale Mountains Safari', 'VIP Fly-in Safari', '4-6 Days', 'Hello Okie Dokie Safaris! I want to visit Mahale Mountains National Park. Please send itinerary & fly-in pricing.')">
+                <i class="fa-brands fa-whatsapp"></i> Inquire Mahale
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 13. KATAVI NATIONAL PARK -->
+        <div class="park-card filterable-item" data-category="west">
+          <div class="park-media">
+            <img src="assets/img/katavi.jpg" alt="Katavi National Park" loading="lazy" decoding="async">
+            <div class="park-overlay"></div>
+            <span class="park-size-badge">4,471 km²</span>
+            <span class="park-badge"><i class="fa-solid fa-shield-cat"></i> True Raw Africa</span>
+          </div>
+          <div class="park-body">
+            <h3 class="park-title">Katavi National Park</h3>
+            <div class="park-known-for">
+              <i class="fa-solid fa-skull"></i> 4,000+ Buffalo Herds & Enormous Hippo Pods
+            </div>
+            <p class="park-desc">
+              The epitome of untamed Africa. During the dry season, the muddy Katuma River becomes the epic stage for hundreds of ferocious hippos and crocodiles crowded into dwindling pools, while colossal herds of thousands of Cape buffalo roam the open floodplains pursued by fearless lion prides.
+            </p>
+            <div class="park-wildlife-tags">
+              <span class="wildlife-tag">🐂 4,000+ Buffalo Herds</span>
+              <span class="wildlife-tag">🦛 Mud Hippo Gatherings</span>
+              <span class="wildlife-tag">🦁 Fierce Apex Predators</span>
+              <span class="wildlife-tag">⛺ Exclusive Wilderness</span>
+            </div>
+            <div class="park-itinerary-box">
+              <span class="itinerary-day-tag"><i class="fa-solid fa-calendar-days"></i> Itinerary in Package: 4-5 Day Raw Untamed Wildlife Expedition</span>
+              <strong>Expedition Role:</strong> Dramatic dry season gatherings of hundreds of hippos in dwindling mud pools, tracking 4,000-strong buffalo herds and fearless lion prides.
+              <span class="itinerary-lodge-tag"><i class="fa-solid fa-hotel"></i> Lodges: Katuma Bush Lodge / Chada Katavi</span>
+            </div>
+            <div class="park-footer-action">
+              <span style="font-size: 0.85rem; font-weight: 700; color: var(--logo-brown);">Best Time: July – Oct</span>
+              <button class="btn btn-whatsapp btn-sm" onclick="openBookingWhatsApp('Katavi National Park Safari', 'Wild Expedition', '4-5 Days', 'Hello Okie Dokie Safaris! I want to explore Katavi National Park. Please provide expedition quote.')">
+                <i class="fa-brands fa-whatsapp"></i> Inquire Katavi
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ==========================================
+           CIRCUIT 4: EASTERN & SPECIAL SANCTUARIES
+           ========================================== -->
+      <div class="circuit-heading-bar filterable-item" data-category="east">
+        <h3><i class="fa-solid fa-umbrella-beach" style="color: var(--primary);"></i> Eastern Coastal & Special Sanctuaries</h3>
+        <span class="circuit-region-tag">Saadani (Bush Meets Beach) • Kitulo (Garden of God) • Grumeti & Maswa Reserves</span>
+      </div>
+
+      <div class="parks-grid">
+
+        <!-- 14. SAADANI NATIONAL PARK -->
+        <div class="park-card filterable-item" data-category="east">
+          <div class="park-media">
+            <img src="assets/img/saadani.jpg" alt="Saadani National Park" loading="lazy" decoding="async">
+            <div class="park-overlay"></div>
+            <span class="park-size-badge">1,100 km²</span>
+            <span class="park-badge"><i class="fa-solid fa-water"></i> Bush Meets Beach</span>
+          </div>
+          <div class="park-body">
+            <h3 class="park-title">Saadani National Park</h3>
+            <div class="park-known-for">
+              <i class="fa-solid fa-umbrella-beach"></i> Where the African Bush Meets the Indian Ocean
+            </div>
+            <p class="park-desc">
+              The only wildlife sanctuary in East Africa bordering the warm Indian Ocean. Witness elephants and lions strolling along coastal palm-fringed sands, take boat trips down the mangrove-rich Wami River to spot river hippos, and discover endangered Green Turtle breeding beaches.
+            </p>
+            <div class="park-wildlife-tags">
+              <span class="wildlife-tag">🐘 Elephants on the Beach</span>
+              <span class="wildlife-tag">🚤 Wami River Boat Safari</span>
+              <span class="wildlife-tag">🐢 Green Turtle Nesting</span>
+              <span class="wildlife-tag">🏝️ Bush & Beach in One</span>
+            </div>
+            <div class="park-itinerary-box">
+              <span class="itinerary-day-tag"><i class="fa-solid fa-calendar-days"></i> Itinerary in Package: 2-3 Day Bush Meets Beach Escape</span>
+              <strong>Expedition Role:</strong> Game viewing where savannah touches the Indian Ocean, elephants walking along the beach, Wami River mangrove boat cruise.
+              <span class="itinerary-lodge-tag"><i class="fa-solid fa-hotel"></i> Lodges: Saadani Safari Lodge / Sanctuary Saadani River Lodge</span>
+            </div>
+            <div class="park-footer-action">
+              <span style="font-size: 0.85rem; font-weight: 700; color: var(--logo-brown);">Best Time: Year-Round</span>
+              <button class="btn btn-whatsapp btn-sm" onclick="openBookingWhatsApp('Saadani National Park Safari', 'Bush & Beach', '2-3 Days', 'Hello Okie Dokie Safaris! I want to visit Saadani National Park where bush meets beach.')">
+                <i class="fa-brands fa-whatsapp"></i> Inquire Saadani
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 15. KITULO NATIONAL PARK -->
+        <div class="park-card filterable-item" data-category="east">
+          <div class="park-media">
+            <img src="assets/img/kitulo.jpg" alt="Kitulo National Park" loading="lazy" decoding="async">
+            <div class="park-overlay"></div>
+            <span class="park-size-badge">412 km²</span>
+            <span class="park-badge"><i class="fa-solid fa-seedling"></i> Garden of God</span>
+          </div>
+          <div class="park-body">
+            <h3 class="park-title">Kitulo National Park (Bustani ya Mungu)</h3>
+            <div class="park-known-for">
+              <i class="fa-solid fa-spa"></i> The Serengeti of Flowers & Wild Orchids
+            </div>
+            <p class="park-desc">
+              Known locally in Kiswahili as *"Bustani ya Mungu"* (The Garden of God). Located in the volcanic Southern Highlands at 2,600m, it is the first national park in tropical Africa protected specifically for its rare alpine flora. Boasts over 350 species of wildflowers including 45 terrestrial orchid varieties.
+            </p>
+            <div class="park-wildlife-tags">
+              <span class="wildlife-tag">🌺 45+ Wild Orchid Species</span>
+              <span class="wildlife-tag">🏔️ 2,600m High Plateau</span>
+              <span class="wildlife-tag">🦋 Rare Alpine Butterflies</span>
+              <span class="wildlife-tag">📸 Botanical Photo Tours</span>
+            </div>
+            <div class="park-itinerary-box">
+              <span class="itinerary-day-tag"><i class="fa-solid fa-calendar-days"></i> Itinerary in Package: 3-4 Day Botanical Wildflower Tour</span>
+              <strong>Expedition Role:</strong> Walking trek across the 2,600m high-altitude plateau, discovering 45+ wild orchid species and over 350 wildflowers in "The Garden of God."
+              <span class="itinerary-lodge-tag"><i class="fa-solid fa-hotel"></i> Lodges: Mbeya Hotel / Matamba Eco-Campsite</span>
+            </div>
+            <div class="park-footer-action">
+              <span style="font-size: 0.85rem; font-weight: 700; color: var(--logo-brown);">Best Time: Nov – April</span>
+              <button class="btn btn-whatsapp btn-sm" onclick="openBookingWhatsApp('Kitulo National Park Tour', 'Botanical Safari', '3-4 Days', 'Hello Okie Dokie Safaris! I want to book a botanical safari to Kitulo National Park (Garden of God).')">
+                <i class="fa-brands fa-whatsapp"></i> Inquire Kitulo
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 16. FAMOUS GAME RESERVES & CONSERVANCIES -->
+        <div class="park-card filterable-item" data-category="east">
+          <div class="park-media">
+            <img src="assets/img/safari-card-3.jpg" alt="Tanzania Game Reserves" loading="lazy" decoding="async">
+            <div class="park-overlay"></div>
+            <span class="park-size-badge">Buffer Ecosystems</span>
+            <span class="park-badge"><i class="fa-solid fa-shield"></i> Exclusive Reserves</span>
+          </div>
+          <div class="park-body">
+            <h3 class="park-title">Grumeti, Maswa & Ikorongo Game Reserves</h3>
+            <div class="park-known-for">
+              <i class="fa-solid fa-moon"></i> Private Concessions, Night Game Drives & Walking
+            </div>
+            <p class="park-desc">
+              Surrounding the Serengeti ecosystem, these elite game reserves allow unique off-road tracking, thrilling night game drives spotlighting nocturnal predators, and guided bush walks that are not permitted in core national parks. An extraordinary exclusive wilderness experience.
+            </p>
+            <div class="park-wildlife-tags">
+              <span class="wildlife-tag">🌙 Night Game Drives</span>
+              <span class="wildlife-tag">🚙 Off-Road Tracking</span>
+              <span class="wildlife-tag">🚶 Guided Bush Walking</span>
+              <span class="wildlife-tag">💎 Ultra-Luxury Lodges</span>
+            </div>
+            <div class="park-itinerary-box">
+              <span class="itinerary-day-tag"><i class="fa-solid fa-calendar-days"></i> Itinerary in Package: 3-5 Day Ultra-Exclusive Concession Expedition</span>
+              <strong>Expedition Role:</strong> Off-road Great Migration tracking, spotlight night game drives for elusive predators, and private guided bush walks with armed scouts.
+              <span class="itinerary-lodge-tag"><i class="fa-solid fa-hotel"></i> Lodges: Singita Sasakwa Lodge / Singita Faru Faru / Mwiba Lodge</span>
+            </div>
+            <div class="park-footer-action">
+              <span style="font-size: 0.85rem; font-weight: 700; color: var(--logo-brown);">Best Time: Year-Round</span>
+              <button class="btn btn-whatsapp btn-sm" onclick="openBookingWhatsApp('Private Game Reserve Safari', 'Exclusive Concession', '4-7 Days', 'Hello Okie Dokie Safaris! I want to inquire about private game reserve safaris in Grumeti / Maswa.')">
+                <i class="fa-brands fa-whatsapp"></i> Inquire Reserves
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       SECTION 3: OFFICIAL SAFARI CIRCUIT PRICING MATRIX TABLE
+       (Exact Party Size Tiers: 1-3 Pax, 4-6 Pax, 7-10+ Pax)
+       =================================================================== -->
+  <section id="pricing" style="padding: 5.5rem 0; background: #FFF;">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle"><i class="fa-solid fa-tags"></i> Official Expedition Tariffs</span>
+        <h2 class="section-title">Tanzania Safari Circuit Pricing Matrix</h2>
+        <div class="logo-arc-divider"></div>
+        <p class="section-desc">
+          Transparent, fully inclusive per-person safari rates by party size. All tariffs include custom 4x4 safari cruiser, professional driver-guide, unlimited game drive mileage, TANAPA park conservation fees, Ngorongoro Crater service fee, full-board accommodation, bottled water, and hotel transfers.
+        </p>
+      </div>
+
+      <div class="table-mobile-hint">
+        <i class="fa-solid fa-arrows-left-right"></i> Scroll sideways on mobile to compare party sizes (1–3 Pax, 4–6 Pax, 7–10+ Pax)
+      </div>
+
+      <div class="pricing-table-container">
+        <table class="pricing-table">
+          <thead>
+            <tr>
+              <th>Circuit Itinerary & Duration</th>
+              <th>1 – 3 Pax</th>
+              <th>4 – 6 Pax</th>
+              <th>7 – 10+ Pax</th>
+              <th>Inquire / Book</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="background: rgba(199, 158, 68, 0.08); border-left: 4px solid var(--primary);">
+              <td>
+                <span class="route-title">7 Days / 6 Nights Great Migration & Cultural VIP (Doc Verified)</span>
+                <span class="vip-badge" style="background: var(--primary); color: var(--dark); font-weight: 800;"><i class="fa-solid fa-crown"></i> Document VIP</span>
+                <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 3px;">Includes $570 Balloon Safari + AMREF Emergency Evacuation Cover</div>
+              </td>
+              <td class="price-val">$3,750 – $5,650<br><span style="font-size: 0.72rem; color: var(--text-muted); font-weight: 400;">($5,650 solo / $3,950 2pax / $3,750 3pax)</span></td>
+              <td class="price-val">$3,650</td>
+              <td class="price-val">$3,650</td>
+              <td>
+                <button class="btn btn-whatsapp btn-sm" onclick="openBookingWhatsApp('7 Days Great Migration VIP Safari (Doc Tariff)', 'Flagship VIP', '7 Days ($5,650 solo / $3,950 2pax / $3,750 3pax / $3,650 4+pax)', 'Hello Okie Dokie Safaris! I want to book the 7 Days Great Migration VIP Safari.')">
+                  <i class="fa-brands fa-whatsapp"></i> Book
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <span class="route-title">7 Days / 6 Nights Grand Northern Safari</span>
+                <span class="vip-badge">Most Popular</span>
+              </td>
+              <td class="price-val">$3,150</td>
+              <td class="price-val">$2,850</td>
+              <td class="price-val">$2,600</td>
+              <td>
+                <button class="btn btn-whatsapp btn-sm" onclick="openBookingWhatsApp('7 Days / 6 Nights Grand Northern Safari', 'Luxury / Mid-Range', '7 Days', 'Hello Okie Dokie Safaris! I want to book the 7 Days / 6 Nights Grand Northern Safari.')">
+                  <i class="fa-brands fa-whatsapp"></i> Book
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <span class="route-title">6 Days / 5 Nights Serengeti & Ngorongoro Explorer</span>
+                <span class="vip-badge">Big Five Pick</span>
+              </td>
+              <td class="price-val">$2,850</td>
+              <td class="price-val">$2,600</td>
+              <td class="price-val">$2,350</td>
+              <td>
+                <button class="btn btn-whatsapp btn-sm" onclick="openBookingWhatsApp('6 Days / 5 Nights Serengeti Explorer', 'Luxury / Mid-Range', '6 Days', 'Hello Okie Dokie Safaris! I want to book the 6 Days / 5 Nights Serengeti Explorer.')">
+                  <i class="fa-brands fa-whatsapp"></i> Book
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <span class="route-title">5 Days / 4 Nights Northern Classic Wildlife Safari</span>
+                <span class="vip-badge">Classic Safari</span>
+              </td>
+              <td class="price-val">$2,450</td>
+              <td class="price-val">$2,200</td>
+              <td class="price-val">$1,950</td>
+              <td>
+                <button class="btn btn-whatsapp btn-sm" onclick="openBookingWhatsApp('5 Days / 4 Nights Classic Safari', 'Luxury / Mid-Range', '5 Days', 'Hello Okie Dokie Safaris! I want to book the 5 Days / 4 Nights Classic Safari.')">
+                  <i class="fa-brands fa-whatsapp"></i> Book
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <span class="route-title">4 Days / 3 Nights Tarangire, Ngorongoro & Manyara</span>
+                <span class="vip-badge">Short Safari</span>
+              </td>
+              <td class="price-val">$1,950</td>
+              <td class="price-val">$1,750</td>
+              <td class="price-val">$1,550</td>
+              <td>
+                <button class="btn btn-whatsapp btn-sm" onclick="openBookingWhatsApp('4 Days / 3 Nights Tarangire & Ngorongoro', 'Standard/VIP', '4 Days', 'Hello Okie Dokie Safaris! I want to book the 4 Days Tarangire, Ngorongoro & Manyara Safari.')">
+                  <i class="fa-brands fa-whatsapp"></i> Book
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <span class="route-title">3 Days / 2 Nights Ngorongoro & Lake Manyara Express</span>
+                <span class="vip-badge">Quick Getaway</span>
+              </td>
+              <td class="price-val">$1,450</td>
+              <td class="price-val">$1,280</td>
+              <td class="price-val">$1,150</td>
+              <td>
+                <button class="btn btn-whatsapp btn-sm" onclick="openBookingWhatsApp('3 Days / 2 Nights Express Safari', 'Standard/VIP', '3 Days', 'Hello Okie Dokie Safaris! I want to book the 3 Days Ngorongoro & Manyara Express Safari.')">
+                  <i class="fa-brands fa-whatsapp"></i> Book
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <span class="route-title">2 Days / 1 Night Tarangire & Ngorongoro Crater Weekend</span>
+                <span class="vip-badge">Weekend Trip</span>
+              </td>
+              <td class="price-val">$980</td>
+              <td class="price-val">$850</td>
+              <td class="price-val">$750</td>
+              <td>
+                <button class="btn btn-whatsapp btn-sm" onclick="openBookingWhatsApp('2 Days / 1 Night Weekend Safari', 'Standard/VIP', '2 Days', 'Hello Okie Dokie Safaris! I want to book the 2 Days Tarangire & Ngorongoro Weekend Safari.')">
+                  <i class="fa-brands fa-whatsapp"></i> Book
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <span class="route-title">5 Days / 4 Nights Gombe Chimpanzee Expedition (Lake Tanganyika)</span>
+                <span class="vip-badge">Western Primates</span>
+              </td>
+              <td class="price-val">$2,650</td>
+              <td class="price-val">$2,380</td>
+              <td class="price-val">$2,150</td>
+              <td>
+                <button class="btn btn-whatsapp btn-sm" onclick="openBookingWhatsApp('5 Days Gombe Chimpanzee Safari', 'Primate Expedition', '5 Days', 'Hello Okie Dokie Safaris! I want to book the 5 Days Gombe Chimpanzee Expedition.')">
+                  <i class="fa-brands fa-whatsapp"></i> Book
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <span class="route-title">4 Days / 3 Nights Nyerere (Selous) Southern Wilderness Safari</span>
+                <span class="vip-badge">Southern Wild</span>
+              </td>
+              <td class="price-val">$2,250</td>
+              <td class="price-val">$1,980</td>
+              <td class="price-val">$1,790</td>
+              <td>
+                <button class="btn btn-whatsapp btn-sm" onclick="openBookingWhatsApp('4 Days Nyerere Selous Safari', 'Southern Wilderness', '4 Days', 'Hello Okie Dokie Safaris! I want to book the 4 Days Nyerere Southern Wilderness Safari.')">
+                  <i class="fa-brands fa-whatsapp"></i> Book
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <span class="route-title">4 Days / 3 Nights Kitulo "Garden of God" Wildflower Tour</span>
+                <span class="vip-badge">Botanical Tour</span>
+              </td>
+              <td class="price-val">$1,750</td>
+              <td class="price-val">$1,550</td>
+              <td class="price-val">$1,380</td>
+              <td>
+                <button class="btn btn-whatsapp btn-sm" onclick="openBookingWhatsApp('4 Days Kitulo Wildflower Tour', 'Botanical Safari', '4 Days', 'Hello Okie Dokie Safaris! I want to book the 4 Days Kitulo Garden of God Tour.')">
+                  <i class="fa-brands fa-whatsapp"></i> Book
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div style="text-align: center; color: var(--text-muted); font-size: 0.92rem; margin-top: 1.8rem;">
+        Official Website: <a href="http://www.okiedokiesafaris.com" target="_blank" style="color: var(--primary); font-weight: 700;">www.okiedokiesafaris.com</a> • Direct Inquiries: <a href="mailto:info@okiedokiesafaris.co.tz" style="color: var(--primary); font-weight: 700;">info@okiedokiesafaris.co.tz</a>
+      </div>
+
+      <!-- Luxury VIP vs Budget Comparison Table -->
+      <div class="section-header" style="text-align: left; margin: 4.5rem 0 1.5rem 0;">
+        <span class="section-subtitle"><i class="fa-solid fa-scale-balanced"></i> Package Comparison</span>
+        <h3 class="section-title" style="font-size: 1.8rem;">Tanzania Safari: Luxury VIP vs Standard / Mid-Range</h3>
+      </div>
+
+      <div class="table-mobile-hint">
+        <i class="fa-solid fa-arrows-left-right"></i> Scroll sideways on mobile to compare Luxury VIP vs Standard/Mid-Range
+      </div>
+
+      <div class="comparison-container">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th class="col-feature">Service / Feature</th>
+              <th class="col-vip"><i class="fa-solid fa-crown"></i> Luxury VIP Safari Package</th>
+              <th class="col-budget"><i class="fa-solid fa-compass"></i> Standard / Mid-Range Safari</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="feature-name">Lodge & Camp Tier</td>
+              <td class="vip-cell">5-Star luxury safari tented suites (Four Seasons, Serena Lodges, luxury bush suites with private plunge pools).</td>
+              <td>Carefully selected, comfortable en-suite 3-4 star safari tented camps & lodges.</td>
+            </tr>
+            <tr>
+              <td class="feature-name">Safari Vehicle</td>
+              <td class="vip-cell">Exclusive brand-new 4x4 VIP Safari Cruiser with air-con, inverter plugs, onboard fridge, and binoculars.</td>
+              <td>Custom 4x4 pop-up roof Safari Land Cruiser with guaranteed window seating.</td>
+            </tr>
+            <tr>
+              <td class="feature-name">Dining Experience</td>
+              <td class="vip-cell">Chef-curated gourmet 3-course meals, bush breakfasts, champagne sunset sundowners in the wild savannah.</td>
+              <td>Full-board hot buffet breakfasts, delicious picnic lunch boxes, and hearty 3-course dinners.</td>
+            </tr>
+            <tr>
+              <td class="feature-name">Safari Guides</td>
+              <td class="vip-cell">Senior Master Naturalist Guides with 15+ years experience and specialized wildlife photography knowledge.</td>
+              <td>Licensed, certified, highly knowledgeable English-speaking professional driver-guides.</td>
+            </tr>
+            <tr>
+              <td class="feature-name">Beverages & Amenities</td>
+              <td class="vip-cell">Complimentary premium wines, local beers, sodas, and unlimited mountain spring water throughout.</td>
+              <td>Unlimited purified bottled drinking water provided daily on all game drives.</td>
+            </tr>
+            <tr>
+              <td class="feature-name">Hotel in Arusha / Moshi</td>
+              <td class="vip-cell">2 Nights at Seven Skies Luxury Suite Hotel (before & after safari) with complimentary transfers.</td>
+              <td>2 Nights at Seven Skies Hotel Standard Deluxe Rooms (before & after safari).</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Two Distinct Booking Packages: Luxury VIP vs Standard / Mid-Range -->
+      <div class="section-header" style="text-align: center; margin: 3.5rem 0 1rem 0;">
+        <span class="section-subtitle"><i class="fa-brands fa-whatsapp"></i> Direct Booking</span>
+        <h3 class="section-title" style="font-size: 1.9rem;">Choose Your Safari Experience</h3>
+        <p class="section-desc" style="max-width: 680px; margin: 0 auto;">
+          Select your preferred tier below. Clicking either button opens an instant WhatsApp chat with our safari specialist to finalize your custom route and dates.
+        </p>
+      </div>
+
+      <div class="route-booking-packages-grid">
+        <!-- 1. LUXURY VIP SAFARI CARD -->
+        <div class="package-booking-card vip-tier">
+          <div class="pkg-header">
+            <span class="pkg-badge"><i class="fa-solid fa-crown"></i> Luxury VIP Package</span>
+            <h3 class="pkg-title">Tanzania Luxury VIP Safari</h3>
+            <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 0.5rem;">5-Star wilderness lodges, private cruiser, and bespoke field service</p>
+            <div class="pkg-price">
+              <span class="price-val">$2,600 – $3,150</span>
+              <span class="price-sub">/ person (7-Day rate)</span>
+            </div>
+            <div class="pkg-tier-info">
+              1–3 Pax: <strong>$3,150</strong> | 4–6 Pax: <strong>$2,850</strong> | 7–10+ Pax: <strong>$2,600</strong>
+            </div>
+          </div>
+          <ul class="pkg-features">
+            <li><i class="fa-solid fa-circle-check"></i> <strong>5-Star Luxury Bush Lodges:</strong> Stay in iconic luxury tented suites inside Serengeti & Ngorongoro rim.</li>
+            <li><i class="fa-solid fa-circle-check"></i> <strong>VIP 4x4 Land Cruiser:</strong> Exclusive use with onboard fridge, Wi-Fi hotspot, inverter chargers & premium binoculars.</li>
+            <li><i class="fa-solid fa-circle-check"></i> <strong>Champagne Bush Sundowner:</strong> Sunset celebration drinks and hors d'oeuvres in the wild savannah.</li>
+            <li><i class="fa-solid fa-circle-check"></i> <strong>All TANAPA Fees Included:</strong> Park conservation fees, crater floor descent permits, and concession fees.</li>
+            <li><i class="fa-solid fa-circle-check"></i> <strong>Master Naturalist Guide:</strong> Exceptional tracking ability for elusive leopards, cheetahs, and rhinos.</li>
+            <li><i class="fa-solid fa-circle-check"></i> <strong>2 Hotel Nights in Arusha:</strong> Seven Skies Hotel Suite before & after your safari.</li>
+          </ul>
+          <button class="btn btn-whatsapp btn-block" onclick="openBookingWhatsApp('Tanzania Wildlife Safari (Luxury VIP)', 'Luxury VIP Package', '7 Days ($3,150 1-3pax / $2,850 4-6pax / $2,600 7-10+pax)', 'Hello Okie Dokie Safaris! I want to book the LUXURY VIP Safari Package in Tanzania.\n• Party size: ___\n• Dates preferred: ___\nPlease confirm lodge availability and custom itinerary.')">
+            <i class="fa-brands fa-whatsapp"></i> Book Luxury VIP on WhatsApp
+          </button>
+        </div>
+
+        <!-- 2. STANDARD / MID-RANGE SAFARI CARD -->
+        <div class="package-booking-card">
+          <div class="pkg-header">
+            <span class="pkg-badge budget"><i class="fa-solid fa-compass"></i> Standard / Mid-Range</span>
+            <h3 class="pkg-title">Tanzania Standard Safari</h3>
+            <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 0.5rem;">Authentic wildlife immersion with premium comfort & certified guides</p>
+            <div class="pkg-price">
+              <span class="price-val" style="color: var(--dark);">$2,200 – $2,850</span>
+              <span class="price-sub">/ person (7-Day rate)</span>
+            </div>
+            <div class="pkg-tier-info">
+              1–3 Pax: <strong>$2,850</strong> | 4–6 Pax: <strong>$2,450</strong> | 7–10+ Pax: <strong>$2,200</strong>
+            </div>
+          </div>
+          <ul class="pkg-features">
+            <li><i class="fa-solid fa-circle-check" style="color: var(--logo-brown);"></i> <strong>Comfortable En-Suite Tented Camps:</strong> Full hot showers, flush toilets, and cozy bedding in pristine wilderness.</li>
+            <li><i class="fa-solid fa-circle-check" style="color: var(--logo-brown);"></i> <strong>Custom 4x4 Land Cruiser:</strong> Pop-up photographic roof and guaranteed window seat for all guests.</li>
+            <li><i class="fa-solid fa-circle-check" style="color: var(--logo-brown);"></i> <strong>Full-Board Dining:</strong> Wholesome hot buffet breakfasts, picnic lunches, and multi-course dinners.</li>
+            <li><i class="fa-solid fa-circle-check" style="color: var(--logo-brown);"></i> <strong>All National Park Fees:</strong> TANAPA entry fees and crater descent licenses covered.</li>
+            <li><i class="fa-solid fa-circle-check" style="color: var(--logo-brown);"></i> <strong>Professional Wildlife Guide:</strong> Licensed Tanzanian safari driver-guide with deep natural history expertise.</li>
+            <li><i class="fa-solid fa-circle-check" style="color: var(--logo-brown);"></i> <strong>2 Hotel Nights in Arusha:</strong> Seven Skies Hotel before & after your safari.</li>
+          </ul>
+          <button class="btn btn-primary btn-block" style="background: var(--dark-surface); color: #FFF; border-color: var(--primary);" onclick="openBookingWhatsApp('Tanzania Wildlife Safari (Standard/Mid-Range)', 'Standard Package', '7 Days ($2,850 1-3pax / $2,450 4-6pax / $2,200 7-10+pax)', 'Hello Okie Dokie Safaris! I want to book the STANDARD / MID-RANGE Safari Package in Tanzania.\n• Party size: ___\n• Dates preferred: ___\nPlease share pricing details and availability.')">
+            <i class="fa-brands fa-whatsapp"></i> Book Standard on WhatsApp
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Modern Luxury Footer -->
+  <footer class="footer" id="contact">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="assets/img/logo.png" alt="Okie Dokie Safaris">
+          <p class="footer-desc">
+            <strong>Okie Dokie Safaris</strong> — "We take the world to the nature." Registered and fully licensed Tanzanian safari outfitter based in Arusha and Moshi.
+          </p>
+          <div class="footer-accreditations">
+            <span class="footer-badge"><i class="fa-solid fa-check"></i> TANAPA Licensed</span>
+            <span class="footer-badge"><i class="fa-solid fa-check"></i> TTB Registered</span>
+            <span class="footer-badge"><i class="fa-solid fa-check"></i> WFR Certified</span>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">National Parks</h4>
+          <ul class="footer-links">
+            <li><a href="#parks"><i class="fa-solid fa-angle-right"></i> Serengeti National Park</a></li>
+            <li><a href="#parks"><i class="fa-solid fa-angle-right"></i> Ngorongoro Crater</a></li>
+            <li><a href="#parks"><i class="fa-solid fa-angle-right"></i> Tarangire National Park</a></li>
+            <li><a href="#parks"><i class="fa-solid fa-angle-right"></i> Lake Manyara</a></li>
+            <li><a href="#parks"><i class="fa-solid fa-angle-right"></i> Nyerere (Selous)</a></li>
+            <li><a href="#parks"><i class="fa-solid fa-angle-right"></i> Gombe Chimpanzees</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">All Destinations</h4>
+          <ul class="footer-links">
+            <li><a href="kilimanjaro.html"><i class="fa-solid fa-angle-right"></i> Mount Kilimanjaro</a></li>
+            <li><a href="safari.html"><i class="fa-solid fa-angle-right"></i> Tanzania Safari Packages</a></li>
+            <li><a href="day trips.html#materuni-section"><i class="fa-solid fa-angle-right"></i> Coffee & Hot Springs</a></li>
+            <li><a href="day trips.html#magoroto-section"><i class="fa-solid fa-angle-right"></i> Magoroto Forest Estate</a></li>
+            <li><a href="beach-safari.html"><i class="fa-solid fa-angle-right"></i> Zanzibar Beach Safari</a></li>
+            <li><a href="volunteers.html"><i class="fa-solid fa-angle-right"></i> Volunteer in Tanzania</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Contact Head Office</h4>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>Arusha & Moshi, Tanzania</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <a href="tel:+255744779970" style="color: inherit;">+255 744 779 970</a>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-envelope"></i>
+            <a href="mailto:info@okiedokiesafaris.co.tz" style="color: inherit;">info@okiedokiesafaris.co.tz</a>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-globe"></i>
+            <span>www.okiedokiesafaris.com</span>
+          </div>
+          <div style="margin-top: 1.2rem;">
+            <button class="btn btn-whatsapp btn-sm" onclick="openBookingWhatsApp('Instant Chat', 'Quick Help', '', 'Hello Okie Dokie Safaris! I need quick assistance regarding Tanzania Safari Packages.')">
+              <i class="fa-brands fa-whatsapp"></i> Instant WhatsApp Chat
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; <span id="currentYear">2026</span> Okie Dokie Safaris. All Rights Reserved. "We take the world to the nature."
+        </div>
+        <div>
+          Designed for Excellence • Global Tourism Platform
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Action -->
+  <a href="https://wa.me/255744779970?text=Hello%20Okie%20Dokie%20Safaris!%20I%20would%20like%20to%20book%20a%20wildlife%20safari%20in%20Tanzania." target="_blank" class="floating-whatsapp" aria-label="Chat on WhatsApp">
+    <div class="whatsapp-pulse"></div>
+    <i class="fa-brands fa-whatsapp" style="font-size: 1.4rem;"></i>
+    <span>Chat on WhatsApp</span>
+  </a>
+
+  <!-- Video Modal -->
+  <div class="modal" id="videoModal">
+    <div class="modal-content">
+      <button class="modal-close" id="videoModalClose" aria-label="Close modal">&times;</button>
+      <div class="modal-video-wrapper">
+        <iframe id="videoModalFrame" src="" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
